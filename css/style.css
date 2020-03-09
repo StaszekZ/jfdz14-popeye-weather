@@ -41,23 +41,25 @@ html {
   grid-area: hero;
   background-image: url("../img/austin-neill.jpg");
   background-size: cover;
-  display: ;
 }
 .hero__txt {
   display: flex;
   width: 45vw;
   height: 600px;
   line-height: 1.2em;
-  margin: 100px 40px;
+  margin-top: 100px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 .hero__header {
   color: var(--light-text-color);
-  font-size: 4vw;
-  padding-bottom: 50px;
+  font-size: 3.8vw;
+  padding-bottom: 70px;
+  padding-left: 4vw;
+  font-family: var(--header-font);
+  font-weight: normal;
 }
 .hero__description {
   width: 80%;
@@ -66,6 +68,7 @@ html {
   line-height: 1.2em;
   text-align: center;
   align-self: center;
+  font-family: var(--content-font);
 }
 /* .heroForm {
   border: 2px solid greenyellow;
@@ -74,20 +77,24 @@ html {
 .features {
   grid-area: features;
   background-color: var(--bgr-color);
+  font-size: 40px;
 }
 .form {
   grid-area: form;
-  background-color: aqua;
+  background-color: #afcbe3;
+  font-size: 40px;
 }
 .team {
   grid-area: team;
   background-color: cadetblue;
+  font-size: 40px;
 }
 
 @media (max-width: 770px) {
-  .hero__txt {
+  .hero .hero__txt {
     width: 80vw;
     height: 60vh;
+    margin: auto;
   }
   .hero__header {
     font-size: 7vw;
