@@ -95,10 +95,22 @@ html {
   text-align: center;
   align-self: center;
 }
-.hero__form--description::before {
+.hero__form--description {
+  position: relative;
+  animation-name: link;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.hero__link::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f2f5";
+  padding-right: 20px;
+}
+.hero__move {
+  overflow: hidden;
+  white-space: nowrap;
 }
 .features {
   grid-area: features;
@@ -114,6 +126,20 @@ html {
   grid-area: team;
   background-color: cadetblue;
   font-size: 40px;
+}
+
+@keyframes link {
+  0% {
+    color: #a194ad;
+    transform: translateX(100%);
+  }
+  50% {
+    color: #b4a08d;
+  }
+  100% {
+    color: #9fab96;
+    transform: translateX(-100%);
+  }
 }
 @media (max-width: 1500px) {
   .hero__txt {
