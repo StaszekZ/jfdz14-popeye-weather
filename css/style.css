@@ -49,19 +49,19 @@ html {
 }
 .hero__name {
   display: flex;
-  width: 45vw;
+  width: 42vw;
   height: 600px;
   line-height: 1.2em;
-  margin-top: 100px;
+  margin-top: 40px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  /* border: 1px solid red; */
 }
 .hero__header {
   color: var(--light-text-color);
-  font-size: 3.8vw;
+  font-size: 3.6vw;
   padding-bottom: 70px;
-  padding-left: 4vw;
   font-family: var(--header-font);
   font-weight: normal;
   text-align: center;
@@ -69,7 +69,7 @@ html {
   /* border: 1px dotted palevioletred; */
 }
 .hero__description {
-  width: 80%;
+  width: 90%;
   color: antiquewhite;
   font-size: 24px;
   line-height: 1.2em;
@@ -81,7 +81,6 @@ html {
   align-self: center;
   /* border: 2px solid red; */
   width: 40vw;
-  padding-top: 100px;
 }
 .hero__link {
   font-family: var(--content-font);
@@ -97,10 +96,7 @@ html {
 }
 .hero__form--description {
   position: relative;
-  animation-name: link;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: link 10s linear infinite;
 }
 .hero__link::before {
   font-family: "Font Awesome 5 Free";
@@ -142,15 +138,28 @@ html {
   }
 }
 @media (max-width: 1500px) {
+  .hero__move {
+    width: 20vw;
+  }
+}
+@media (max-width: 1200px) {
   .hero__txt {
-    width: 50vw;
+    width: 60vw;
     height: 60vh;
+    margin-top: 100px;
     flex-direction: column;
     align-items: center;
     /* border: 1px solid greenyellow; */
   }
+  .hero__header {
+    font-size: 6vw;
+    padding-bottom: 50px;
+    line-height: 1.2em;
+  }
+  .hero__move {
+    width: 60vw;
+  }
 }
-
 @media (max-width: 770px) {
   .hero .hero__txt {
     width: 100vw;
@@ -173,9 +182,9 @@ html {
     width: 50vw;
     padding-top: 10px;
   }
+
   .hero__link {
-    font-size: 20px;
-    align-items: center;
+    font-size: 25px;
   }
 }
 @media (max-width: 420px) {
