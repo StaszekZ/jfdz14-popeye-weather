@@ -59,13 +59,23 @@ html {
   /* border: 1px solid red; */
 }
 .hero__header {
-  color: var(--light-text-color);
+  /* color: var(--light-text-color); */
   font-size: 3.6vw;
-  padding-bottom: 70px;
+  background: -webkit-linear-gradient(
+    right,
+    hsl(192, 96%, 57%),
+    hsl(192, 96%, 90%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  padding-top: 20px;
+  padding-bottom: 60px;
   font-family: var(--header-font);
   font-weight: normal;
   text-align: center;
   margin: 0px auto;
+  /* text-shadow: 1px 1px white; */
   /* border: 1px dotted palevioletred; */
 }
 .hero__description {
@@ -96,6 +106,7 @@ html {
 }
 .hero__form--description {
   position: relative;
+  text-shadow: 2px 2px black;
   animation: link 10s linear infinite;
 }
 .hero__link::before {
@@ -103,7 +114,9 @@ html {
   font-weight: 900;
   content: "\f2f5";
   padding-right: 20px;
+  text-shadow: 1px 2px gray;
 }
+
 .hero__move {
   overflow: hidden;
   white-space: nowrap;
@@ -126,14 +139,14 @@ html {
 
 @keyframes link {
   0% {
-    color: #a194ad;
+    color: #cfe0e8;
     transform: translateX(100%);
   }
   50% {
-    color: #b4a08d;
+    color: #b7d7e8;
   }
   100% {
-    color: #9fab96;
+    color: #87bdd8;
     transform: translateX(-100%);
   }
 }
