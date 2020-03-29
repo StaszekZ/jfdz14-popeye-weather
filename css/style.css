@@ -18,11 +18,13 @@ html {
     "form form form form"
     "team team team team";
 }
+
 .header {
   display: flex;
   align-content: space-between;
   width: 100%;
 }
+
 .nav {
   background-color: transparent;
   color: white;
@@ -30,6 +32,7 @@ html {
   border: 1px solid palevioletred;
   width: 100%;
 }
+
 .logo {
   background-color: transparent;
   color: antiquewhite;
@@ -37,16 +40,19 @@ html {
   width: 100%;
   border: 1px solid aqua;
 }
+
 .hero {
   grid-area: hero;
   background-image: url("../img/austin-neill.jpg");
   background-size: cover;
 }
+
 .hero__txt {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
+
 .hero__name {
   display: flex;
   width: 42vw;
@@ -58,14 +64,13 @@ html {
   justify-content: center;
   /* border: 1px solid red; */
 }
+
 .hero__header {
   /* color: var(--light-text-color); */
   font-size: 3.6vw;
-  background: -webkit-linear-gradient(
-    right,
-    hsl(192, 96%, 57%),
-    hsl(192, 96%, 90%)
-  );
+  background: -webkit-linear-gradient(right,
+      hsl(192, 96%, 57%),
+      hsl(192, 96%, 90%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -78,6 +83,7 @@ html {
   /* text-shadow: 1px 1px white; */
   /* border: 1px dotted palevioletred; */
 }
+
 .hero__description {
   width: 90%;
   color: antiquewhite;
@@ -87,11 +93,13 @@ html {
   align-self: center;
   font-family: var(--content-font);
 }
+
 .hero__form {
   align-self: center;
   /* border: 2px solid red; */
   width: 40vw;
 }
+
 .hero__link {
   font-family: var(--content-font);
   color: var(--light-text-color);
@@ -104,11 +112,13 @@ html {
   text-align: center;
   align-self: center;
 }
+
 .hero__form--description {
   position: relative;
   text-shadow: 2px 2px black;
   animation: link 10s linear infinite;
 }
+
 .hero__link::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -121,16 +131,19 @@ html {
   overflow: hidden;
   white-space: nowrap;
 }
+
 .features {
   grid-area: features;
   background-color: var(--bgr-color);
   font-size: 40px;
 }
+
 .form {
   grid-area: form;
   background-color: #afcbe3;
   font-size: 40px;
 }
+
 .team {
   grid-area: team;
   background-color: cadetblue;
@@ -142,19 +155,23 @@ html {
     color: #cfe0e8;
     transform: translateX(100%);
   }
+
   50% {
     color: #b7d7e8;
   }
+
   100% {
     color: #87bdd8;
     transform: translateX(-100%);
   }
 }
+
 @media (max-width: 1500px) {
   .hero__move {
     width: 20vw;
   }
 }
+
 @media (max-width: 1200px) {
   .hero__txt {
     width: 60vw;
@@ -164,33 +181,40 @@ html {
     align-items: center;
     /* border: 1px solid greenyellow; */
   }
+
   .hero__header {
     font-size: 6vw;
     padding-bottom: 50px;
     line-height: 1.2em;
   }
+
   .hero__move {
     width: 60vw;
   }
 }
+
 @media (max-width: 770px) {
   .hero .hero__txt {
     width: 100vw;
   }
+
   .hero__txt {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
+
   .hero__header {
     font-size: 7vw;
     line-height: 1.2em;
     padding-bottom: 20px;
   }
+
   .hero__description {
     font-size: 4vw;
     line-height: 1em;
   }
+
   .hero__form {
     width: 50vw;
     padding-top: 10px;
@@ -200,6 +224,7 @@ html {
     font-size: 25px;
   }
 }
+
 @media (max-width: 420px) {
   .hero__description {
     font-size: 5vw;
