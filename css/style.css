@@ -11,21 +11,21 @@ html {
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 100vh);
+  grid-template-rows: repeat(5, 100vh);
   grid-template-areas:
     "hero hero hero hero"
     "features features features features"
+    "description description description description"
     "form form form form"
     "team team team team";
 }
-
-
 
 .header {
   display: flex;
   align-content: space-between;
   width: 100%;
 }
+
 .nav {
   position: fixed;
   top: 0;
@@ -66,32 +66,52 @@ html {
   width: 100%;
   border: 1px solid aqua;
 }
+
 .hero {
   grid-area: hero;
   background-image: url("../img/austin-neill.jpg");
   background-size: cover;
 }
+
 .hero__txt {
   display: flex;
-  width: 45vw;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.hero__name {
+  display: flex;
+  width: 42vw;
   height: 600px;
   line-height: 1.2em;
-  margin-top: 100px;
+  margin-top: 40px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  /* border: 2px solid red; */
+  /* border: 1px solid red; */
 }
+
 .hero__header {
-  color: var(--light-text-color);
-  font-size: 3.8vw;
-  padding-bottom: 70px;
-  padding-left: 4vw;
+  /* color: var(--light-text-color); */
+  font-size: 3.6vw;
+  background: -webkit-linear-gradient(right,
+      hsl(192, 96%, 57%),
+      hsl(192, 96%, 90%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  padding-top: 20px;
+  padding-bottom: 60px;
   font-family: var(--header-font);
   font-weight: normal;
+  text-align: center;
+  margin: 0px auto;
+  /* text-shadow: 1px 1px white; */
+  /* border: 1px dotted palevioletred; */
 }
+
 .hero__description {
-  width: 80%;
+  width: 90%;
   color: antiquewhite;
   font-size: 24px;
   line-height: 1.2em;
@@ -99,37 +119,146 @@ html {
   align-self: center;
   font-family: var(--content-font);
 }
-/* .heroForm {
-  border: 2px solid greenyellow;
-  height: 200px;
-} */
+
+.hero__form {
+  align-self: center;
+  /* border: 2px solid red; */
+  width: 40vw;
+}
+
+.hero__link {
+  font-family: var(--content-font);
+  color: var(--light-text-color);
+  font-size: 36px;
+  line-height: 1.2em;
+  text-decoration: none;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+}
+
+.hero__form--description {
+  position: relative;
+  text-shadow: 2px 2px black;
+  animation: link 10s linear infinite;
+}
+
+.hero__link::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f2f5";
+  padding-right: 20px;
+  text-shadow: 1px 2px gray;
+}
+
+.hero__move {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .features {
   grid-area: features;
   background-color: var(--bgr-color);
   font-size: 40px;
 }
+
+.description {
+  grid-area: description;
+  background-color: hotpink;
+  font-size: 40px;
+}
+
 .form {
   grid-area: form;
   background-color: #afcbe3;
   font-size: 40px;
 }
+
 .team {
   grid-area: team;
   background-color: cadetblue;
   font-size: 40px;
 }
 
+@keyframes link {
+  0% {
+    color: #cfe0e8;
+    transform: translateX(100%);
+  }
+
+  50% {
+    color: #b7d7e8;
+  }
+
+  100% {
+    color: #87bdd8;
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1500px) {
+  .hero__move {
+    width: 20vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero__txt {
+    width: 60vw;
+    height: 60vh;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid greenyellow; */
+  }
+
+  .hero__header {
+    font-size: 6vw;
+    padding-bottom: 50px;
+    line-height: 1.2em;
+  }
+
+  .hero__move {
+    width: 60vw;
+  }
+}
+
 @media (max-width: 770px) {
   .hero .hero__txt {
-    width: 80vw;
-    height: 60vh;
-    margin: auto;
+    width: 100vw;
   }
+
+  .hero__txt {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
   .hero__header {
     font-size: 7vw;
+    line-height: 1.2em;
+    padding-bottom: 20px;
   }
+
+  .hero__description {
+    font-size: 4vw;
+    line-height: 1em;
+  }
+
+  .hero__form {
+    width: 50vw;
+    padding-top: 10px;
+  }
+
+  .hero__link {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 420px) {
   .hero__description {
     font-size: 5vw;
-    line-height: 1em;
   }
 }
