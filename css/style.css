@@ -71,13 +71,6 @@ html {
   color: var(--main-text-color);
   text-shadow: var(--shadow);
   opacity: 0.9;
-
-  /* background: -webkit-linear-gradient(right,
-      hsl(237, 96%, 19%, 0.9),
-      hsl(237, 96%, 19%, 0.6)); */
-  /* -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-
   padding-top: 40px;
   padding-bottom: 60px;
   font-family: var(--header-font);
@@ -122,7 +115,9 @@ html {
 
 .hero__form--description {
   position: relative;
-  /* text-shadow: 1px 1px black; */
+  color: var(--main-text-color);
+  font-size: 2rem;
+  text-shadow: 1px 1px black;
   animation: link 10s linear infinite;
 }
 
@@ -166,16 +161,25 @@ html {
 
 @keyframes link {
   0% {
-    color: red;
+
+    opacity: 0.2;
     transform: translateX(100%);
   }
 
+  15% {
+    opacity: 0.8;
+  }
+
   50% {
-    color: red;
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.9;
   }
 
   100% {
-    color: red;
+    opacity: 0.2;
     transform: translateX(-100%);
   }
 }
