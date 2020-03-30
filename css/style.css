@@ -161,7 +161,6 @@ html {
 
 @keyframes link {
   0% {
-
     opacity: 0.2;
     transform: translateX(100%);
   }
@@ -183,9 +182,6 @@ html {
     transform: translateX(-100%);
   }
 }
-
-
-
 
 @media (max-width: 768px) {
   .hero {
@@ -220,7 +216,7 @@ html {
   }
 
   .hero__link {
-    font-size: 6vw;
+    display: none;
   }
 }
 
@@ -230,7 +226,7 @@ html {
   }
 }
 
-@media (max-height: 414px) {
+@media (max-height: 443px) {
   .hero__form {
     display: none;
   }
@@ -245,7 +241,7 @@ html {
   }
 
   .hero__description {
-    font-size: 7vh;
+    font-size: 6vh;
     line-height: 1em;
   }
 
@@ -255,8 +251,12 @@ html {
   }
 }
 
-@media (max-height: 245px) and (min-width: 768px) {
+@media (max-height: 490px) and (min-width: 768px) {
   .hero__description {
     display: none;
+  }
+
+  .hero__form--description {
+    font-size: 3vw;
   }
 }
