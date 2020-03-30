@@ -217,6 +217,8 @@ html {
 
   .hero__link {
     display: none;
+    /* font-size: 6vw; */
+
   }
 }
 
@@ -226,7 +228,7 @@ html {
   }
 }
 
-@media (max-height: 443px) {
+@media (max-height: 4px) {
   .hero__form {
     display: none;
   }
@@ -251,12 +253,13 @@ html {
   }
 }
 
-@media (max-height: 490px) and (min-width: 768px) {
+@media (max-height: 490px) {
   .hero__description {
     display: none;
   }
 
-  .hero__form--description {
-    font-size: 3vw;
+  @media ((min-width: 768px)) {
+    .hero__form--description {
+      font-size: 3vw;
+    }
   }
-}
