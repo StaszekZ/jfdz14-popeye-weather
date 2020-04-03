@@ -1,7 +1,27 @@
 :root {
-  --text-color: #080a17;
+  --main-text-color: navy;
+  --second-text-color: white;
   --bgr-color: #ebf2f7;
-  --light-text-color: #ebf2f7;
   --header-font: "Lobster", cursive;
-  --content-font: "Bellota", cursive;
+  --content-font: 'Baloo 2', cursive;
+  --shadow: 1px 1px 1px white,
+    1px 2px 1px white,
+    1px 3px 1px white,
+    1px 4px 1px white,
+    1px 5px 1px white,
+    1px 6px 1px white,
+    1px 7px 1px white,
+    1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2),
+    1px 25px 35px rgba(16, 16, 16, 0.2);
+  --shadow-2: 0 1px 1px black,
+    0 2px 0 #999,
+    0 3px 0 #888,
+    0 4px 0 #777,
+    /* 0 5px 0 #666,
+    0 6px 0 #555, */
+    /*0 7px 0 #444,
+    0 8px 0 #333, */
+    0 9px 10px navy;
+
 }

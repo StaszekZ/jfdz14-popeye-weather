@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 body,
@@ -61,30 +62,29 @@ html {
 
 .logo {
   background-color: transparent;
-  color: antiquewhite;
+  color: black;
   height: 70px;
   width: 100%;
-  border: 1px solid aqua;
+  border: 1px solid hotpink;
 }
 
 .hero {
   grid-area: hero;
-  background-image: url("../img/austin-neill.jpg");
+  background-image: url("../img/742112.png");
   background-size: cover;
 }
 
 .hero__txt {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .hero__name {
   display: flex;
   width: 42vw;
-  height: 600px;
-  line-height: 1.2em;
-  margin-top: 40px;
+  min-height: 60vh;
+  line-height: 1.2rem;
+  margin-top: 70px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -92,44 +92,43 @@ html {
 }
 
 .hero__header {
-  /* color: var(--light-text-color); */
   font-size: 3.6vw;
-  background: -webkit-linear-gradient(right,
-      hsl(192, 96%, 57%),
-      hsl(192, 96%, 90%));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  padding-top: 20px;
+  color: var(--main-text-color);
+  text-shadow: var(--shadow);
+  opacity: 0.9;
+  padding-top: 40px;
   padding-bottom: 60px;
   font-family: var(--header-font);
   font-weight: normal;
   text-align: center;
-  margin: 0px auto;
-  /* text-shadow: 1px 1px white; */
+  margin: 0 auto;
   /* border: 1px dotted palevioletred; */
 }
 
 .hero__description {
   width: 90%;
-  color: antiquewhite;
-  font-size: 24px;
-  line-height: 1.2em;
+  color: white;
+  font-size: 1.7rem;
+  line-height: 1.8rem;
   text-align: center;
   align-self: center;
   font-family: var(--content-font);
+  padding-top: 20px;
+  text-shadow: var(--shadow-2);
+  /* transform: skew(5deg); */
+
 }
 
 .hero__form {
   align-self: center;
-  /* border: 2px solid red; */
   width: 40vw;
+  /* border: 2px solid red; */
 }
 
 .hero__link {
   font-family: var(--content-font);
-  color: var(--light-text-color);
-  font-size: 36px;
+  opacity: 0.9;
+  font-size: 2.25rem;
   line-height: 1.2em;
   text-decoration: none;
   font-style: italic;
@@ -141,7 +140,9 @@ html {
 
 .hero__form--description {
   position: relative;
-  text-shadow: 2px 2px black;
+  color: var(--main-text-color);
+  font-size: 2rem;
+  text-shadow: 1px 1px black;
   animation: link 10s linear infinite;
 }
 
@@ -150,7 +151,8 @@ html {
   font-weight: 900;
   content: "\f2f5";
   padding-right: 20px;
-  text-shadow: 1px 2px gray;
+  color: var(--main-text-color);
+  text-shadow: var(--shadow);
 }
 
 .hero__move {
@@ -184,49 +186,30 @@ html {
 
 @keyframes link {
   0% {
-    color: #cfe0e8;
+    opacity: 0.2;
     transform: translateX(100%);
   }
 
+  15% {
+    opacity: 0.8;
+  }
+
   50% {
-    color: #b7d7e8;
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.9;
   }
 
   100% {
-    color: #87bdd8;
+    opacity: 0.2;
     transform: translateX(-100%);
   }
 }
 
-@media (max-width: 1500px) {
-  .hero__move {
-    width: 20vw;
-  }
-}
-
-@media (max-width: 1200px) {
-  .hero__txt {
-    width: 60vw;
-    height: 60vh;
-    margin-top: 100px;
-    flex-direction: column;
-    align-items: center;
-    /* border: 1px solid greenyellow; */
-  }
-
-  .hero__header {
-    font-size: 6vw;
-    padding-bottom: 50px;
-    line-height: 1.2em;
-  }
-
-  .hero__move {
-    width: 60vw;
-  }
-}
-
-@media (max-width: 770px) {
-  .hero .hero__txt {
+@media (max-width: 768px) {
+  .hero {
     width: 100vw;
   }
 
@@ -236,8 +219,12 @@ html {
     justify-content: space-evenly;
   }
 
+  .hero__name {
+    width: 90vw;
+  }
+
   .hero__header {
-    font-size: 7vw;
+    font-size: 8.8vw;
     line-height: 1.2em;
     padding-bottom: 20px;
   }
@@ -248,12 +235,15 @@ html {
   }
 
   .hero__form {
-    width: 50vw;
+    width: 100%;
     padding-top: 10px;
+    /* font-size: 8vw; */
   }
 
   .hero__link {
-    font-size: 25px;
+    display: none;
+    /* font-size: 6vw; */
+
   }
 }
 
@@ -262,3 +252,39 @@ html {
     font-size: 5vw;
   }
 }
+
+@media (max-height: 4px) {
+  .hero__form {
+    display: none;
+  }
+
+  .hero__txt {
+    justify-content: center;
+  }
+
+  .hero__name {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .hero__description {
+    font-size: 6vh;
+    line-height: 1em;
+  }
+
+  .hero__header {
+    font-size: 6vw;
+    line-height: 1.4;
+  }
+}
+
+@media (max-height: 490px) {
+  .hero__description {
+    display: none;
+  }
+
+  @media ((min-width: 768px)) {
+    .hero__form--description {
+      font-size: 3vw;
+    }
+  }
