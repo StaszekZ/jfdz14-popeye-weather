@@ -11,7 +11,7 @@ html {
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 100vh);
+  grid-template-rows: repeat(6, 100vh);
   grid-template-areas:
     "hero hero hero hero"
     "features features features features"
@@ -26,36 +26,37 @@ html {
   width: 100%;
 }
 
-.nav {
+.navigation {
   position: fixed;
   top: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.2);
   color: white;
   width: 100%;
-  height: 70px;  
+  height: 40px;  
 }
 
-.nav ul {
+.nav__list {
   display: flex;
   list-style: none;
   width: 100%;
-  justify-content: left;
+  justify-content: center;
+  font-family: var(--content-font);
 }
 
-.nav ul li {
+.nav__list--item {
   margin: 0 16px;
   padding: 16px;
 }
 
-.nav ul li a {
+.nav__list--item a {
   text-decoration: none;
   text-transform: uppercase;
   color: #f4f4f4;
   cursor: pointer;
 }
 
-.nav ul li a:hover {
+.nav__list--item a:hover {
   color: skyblue;
 }
 
