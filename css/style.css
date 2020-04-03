@@ -34,7 +34,6 @@ html {
   background: rgba(0, 0, 0, 0.2);
   color: white;
   width: 100%;
-<<<<<<< HEAD
   height: 40px; 
 }
 
@@ -46,19 +45,6 @@ html {
   font-family: var(--content-font);
 }
 
-=======
-  height: 40px;  
-}
-
-.nav__list {
-  display: flex;
-  list-style: none;
-  width: 100%;
-  justify-content: center;
-  font-family: var(--content-font);
-}
-
->>>>>>> ce31e451406ef3239ba41beff8b2c0facc017369
 .nav__list--item {
   margin: 0 16px;
   padding: 16px;
@@ -132,7 +118,6 @@ html {
   text-shadow: var(--shadow-2);
   /* transform: skew(5deg); */
 
-<<<<<<< HEAD
 }
 
 .hero__form {
@@ -141,16 +126,6 @@ html {
   /* border: 2px solid red; */
 }
 
-=======
-}
-
-.hero__form {
-  align-self: center;
-  width: 40vw;
-  /* border: 2px solid red; */
-}
-
->>>>>>> ce31e451406ef3239ba41beff8b2c0facc017369
 .hero__link {
   font-family: var(--content-font);
   opacity: 0.9;
@@ -203,11 +178,7 @@ html {
   background-color: #afcbe3;
   font-size: 40px;
 }
-<<<<<<< HEAD
 /* team */
-=======
-
->>>>>>> ce31e451406ef3239ba41beff8b2c0facc017369
 .team {
   display: flex;
   align-items: center;
@@ -239,7 +210,6 @@ html {
   text-transform: uppercase;
 }
 
-<<<<<<< HEAD
 .team-img > p {
   font-size: 30px;
   text-transform: uppercase;
@@ -295,8 +265,6 @@ html {
 
 
 
-=======
->>>>>>> ce31e451406ef3239ba41beff8b2c0facc017369
 @keyframes link {
   0% {
     opacity: 0.2;
@@ -313,21 +281,12 @@ html {
 
   80% {
     opacity: 0.9;
-<<<<<<< HEAD
   }
 
   100% {
     opacity: 0.2;
     transform: translateX(-100%);
   }
-=======
-  }
-
-  100% {
-    opacity: 0.2;
-    transform: translateX(-100%);
-  }
->>>>>>> ce31e451406ef3239ba41beff8b2c0facc017369
 }
 
 @media (max-width: 768px) {
@@ -354,7 +313,6 @@ html {
   .hero__description {
     font-size: 4vw;
     line-height: 1em;
-<<<<<<< HEAD
   }
 
   .hero__form {
@@ -408,21 +366,6 @@ html {
     height: auto;
   }
 
-=======
-  }
-
-  .hero__form {
-    width: 100%;
-    padding-top: 10px;
-    /* font-size: 8vw; */
-  }
-
-  .hero__link {
-    display: none;
-    /* font-size: 6vw; */
-
-  }
->>>>>>> ce31e451406ef3239ba41beff8b2c0facc017369
 }
 
 @media (max-width: 420px) {
@@ -461,17 +404,9 @@ html {
     display: none;
   }
 
-<<<<<<< HEAD
   @media (min-width: 768px) {
     .hero__form--description {
       font-size: 3vw;
     }
   }
 }
-=======
-  @media ((min-width: 768px)) {
-    .hero__form--description {
-      font-size: 3vw;
-    }
-  }
->>>>>>> ce31e451406ef3239ba41beff8b2c0facc017369
