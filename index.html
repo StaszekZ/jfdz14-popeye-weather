@@ -1,95 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,400;0,700;1,300&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/variables.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/variables.css" />
 
-    <title>Popeye Weathere - best weather app</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  </head>
-  <body>
-    <section class="hero">
-      <header class="header">
-        <nav class="nav">
-          navigation
-        </nav>
-        <div class="logo">
-          logo
-        </div>
-      </header>
-      <div class="hero__txt">
+  <title>Popeye Weathere - best weather app</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      logo
+    </div>
+
+    <div class="navigation">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list--item"><a href="#home">Home</a></li>
+          <li class="nav__list--item"><a href="#features">Features</a></li>
+          <li class="nav__list--item"><a href="#form">Form</a></li>
+          <li class="nav__list--item"><a href="#team">Teams</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__txt" id="home">
+      <div class="hero__name">
         <h1 class="hero__header">The Popey Weather App</h1>
         <p class="hero__description">
-          Najnowsza i najlepsza aplikacja pogodowa dla żeglazy i nie tylko.
+
           Wszystko czego potrzebujesz podczas żeglowania w jednym miejscu.
           Zapisz się już dziś i otrzymaj informację o nadchodzacej premierze.
         </p>
       </div>
-      <!-- <div class="heroForm">
+      <div class="hero__form">
+        <a class="hero__link" href="#form">
+          <div class="hero__move">
+            <p class="hero__form--description">
+              Nie czekaj! Zapisz się już dziś!
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- <div class="heroForm">
         <p class="heroForm__description">
           Ustaw przypomnienie
         </p>
       </div> -->
-    </section>
-    <section class="features">features</section>
-    <section class="form">form</section>
-    <section class="team">
-      <div class="jumbotron jumbotron-fluid team-cards">
-        <h2 class="wrapper">o nas</h2>
-        <div class="underline"></div>
-        <div class="card-deck">
-          <div class="card">
-            <img src="/img/architect-1080589_1920.jpg" class="card-img-top" alt="test123">
-            <div class="card-body">
-              <h5 class="card-title">Agnieszka</h5>
-              <p class="card-text">Opis Agnieszki</p>
-            </div>
+  </section>
+  <section class="features" id="features">features</section>
+  <section class="description">features Description</section>
+  <section class="form" id="form">form</section>
+  <section class="team" id="team">
+    <div class="team-img">
+      <h2>Team</h2>
+      <p>Zespol sklada sie z: </p>
+      <div class="team-cards">
+        <div class="team-card card1">
+          <div class="card-bcg">
+          <p class="card-name">Agnieszka</p>
+          <div class="card-info"><a href=""><i class="fab fa-github"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a></div>
           </div>
-          <div class="card">
-            <img src="/img/women-1209678_1920.jpg" class="card-img-top" alt="test123">
-            <div class="card-body">
-              <h5 class="card-title">Kasia</h5>
-              <p class="card-text">Opis Kasi</p>
-            </div>              
+        </div>
+        <div class="team-card card2">
+          <div class="card-bcg">
+          <p class="card-name">Kasia</p>
+          <div class="card-info"><a href=""><i class="fab fa-github"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a></div>
           </div>
-          <div class="card">
-            <img src="img/work-3383831_1920.jpg" class="card-img-top" alt="test123">
-            <div class="card-body">
-              <h5 class="card-title">Staszek</h5>
-              <p class="card-text">Opis Staszka</p>
-            </div>
+        </div>
+        <div class="team-card card3">
+          <div class="card-bcg">
+          <p class="card-name">Staszek</p>
+          <div class="card-info"><a href=""><i class="fab fa-github"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a></div>
           </div>
-          <div class="card">
-            <img src="img/work-3383831_1920.jpg" class="card-img-top" alt="test123">
-            <div class="card-body">
-              <h5 class="card-title">Mateusz</h5>
-              <p class="card-text">Opis Mateusza</p>
-            </div>
+        </div>
+        <div class="team-card card4">
+          <div class="card-bcg">
+          <p class="card-name">Mateusz</p>
+          <div class="card-info"><a href=""><i class="fab fa-github"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a></div>
           </div>
-          <div class="card">
-            <img src="img/work-3383831_1920.jpg" class="card-img-top" alt="test123">
-            <div class="card-body">
-              <h5 class="card-title">Lukasz</h5>
-              <p class="card-text">Opis Lukasza</p>
-            </div>
+        </div>
+        <div class="team-card card5">
+          <div class="card-bcg">
+          <p class="card-name">Lukasz</p>
+          <div class="card-info"><a href=""><i class="fab fa-github"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a></div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+  </section>
+
+</body>
+
 </html>
