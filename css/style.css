@@ -181,6 +181,7 @@ html {
 /* team */
 .team {
   display: flex;
+  align-items: center;
   grid-area: team;
   background-color: #afcbe3;
 }
@@ -194,7 +195,7 @@ html {
 }
 
 .card-bcg {
-  margin-top: 70%;
+  margin-top: 60%;
   background-color: rgba(0, 0, 0, 0.6); 
 }
 
@@ -215,8 +216,8 @@ html {
 }
 
 .team-card {
-  width: 320px;
-  height: 320px;
+  width: 270px;
+  height: 270px;
   border: 1px solid black;
   border-radius: 50%;
   margin: 30px;
@@ -261,6 +262,8 @@ html {
   color: white;
   text-transform: uppercase;
 }
+
+
 
 @keyframes link {
   0% {
@@ -406,3 +409,4 @@ html {
       font-size: 3vw;
     }
   }
+}
