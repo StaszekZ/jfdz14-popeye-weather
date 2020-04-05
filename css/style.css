@@ -79,6 +79,12 @@ html {
   background-color: var(--bgr-color);
   font-size: 40px;
 }
+
+.other {
+ background-color: pink;
+}
+
+
 .form {
   grid-area: form;
   background-color: #afcbe3;
