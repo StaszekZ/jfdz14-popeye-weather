@@ -161,11 +161,15 @@ html {
   white-space: nowrap;
 }
 
+/* features */
 .features {
   grid-area: features;
   background-color: var(--bgr-color);
   font-size: 40px;
 }
+
+
+/* description */
 
 .description {
   grid-area: description;
@@ -178,6 +182,7 @@ html {
   background-color: #afcbe3;
   font-size: 40px;
 }
+
 /* team */
 .team {
   display: flex;
@@ -185,6 +190,8 @@ html {
   grid-area: team;
   background-color: #afcbe3;
 }
+
+
 
 
 .team-cards {
