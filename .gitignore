@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-.vcsode
-=======
-
 # Created by https://www.gitignore.io/api/linux,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=linux,visualstudiocode
 
@@ -32,4 +28,3 @@
 .history
 
 # End of https://www.gitignore.io/api/linux,visualstudiocode
->>>>>>> jfdz14pw-13-hero
