@@ -12,13 +12,18 @@ html {
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 100vh);
+  grid-template-rows: 100vh repeat(4, auto) 10vh;
   grid-template-areas:
     "hero hero hero hero"
     "features features features features"
     "description description description description"
     "form form form form"
-    "team team team team";
+    "team team team team"
+    "footer footer footer footer";
+  background-color: white;
+  background-image: linear-gradient(white, navy);
+
+
 }
 
 .header {
@@ -29,12 +34,20 @@ html {
 
 .navigation {
   position: fixed;
+  display: flex;
   top: 0;
   z-index: 1;
   background: rgba(0, 0, 0, 0.2);
   color: white;
   width: 100%;
-  height: 40px; 
+  height: 40px;
+}
+
+.logo {
+  background-color: red;
+  color: black;
+  min-width: 10vw;
+  text-align: center;
 }
 
 .nav__list {
@@ -61,13 +74,6 @@ html {
   color: skyblue;
 }
 
-.logo {
-  background-color: transparent;
-  color: black;
-  height: 70px;
-  width: 100%;
-  border: 1px solid hotpink;
-}
 
 .hero {
   grid-area: hero;
@@ -164,7 +170,7 @@ html {
 /* features */
 .features {
   grid-area: features;
-  background-color: var(--bgr-color);
+  /* background-color: var(--bgr-color); */
   font-size: 40px;
 }
 
@@ -173,13 +179,13 @@ html {
 
 .description {
   grid-area: description;
-  background-color: hotpink;
+  /* background-color: hotpink; */
   font-size: 40px;
 }
 
 .form {
   grid-area: form;
-  background-color: #afcbe3;
+  /* background-color: #afcbe3; */
   font-size: 40px;
 }
 
@@ -188,7 +194,7 @@ html {
   display: flex;
   align-items: center;
   grid-area: team;
-  background-color: #afcbe3;
+  /* background-color: #afcbe3; */
 }
 
 
@@ -203,7 +209,7 @@ html {
 
 .card-bcg {
   margin-top: 60%;
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .team-img {
@@ -211,13 +217,14 @@ html {
   top: 50px;
   text-align: center;
 }
-.team-img > h2 {
+
+.team-img>h2 {
   font-size: 40px;
   padding: 20px;
   text-transform: uppercase;
 }
 
-.team-img > p {
+.team-img>p {
   font-size: 30px;
   text-transform: uppercase;
 }
@@ -238,31 +245,39 @@ html {
 .team-card:hover {
   transform: scale(1.1);
 }
-.card-info > a > i{
+
+.card-info>a>i {
   list-style: none;
   color: white;
   font-size: 2rem;
   padding: 30px;
   transition: color .5s;
 }
-.card-info > a > i:hover {
+
+.card-info>a>i:hover {
   color: rgb(112, 201, 236);
 }
+
 .card1 {
   background-image: url(/img/architect-1080589_1920.jpg);
 }
+
 .card2 {
-  background-image: url(/img/architect-1080589_1920.jpg);  
+  background-image: url(/img/architect-1080589_1920.jpg);
 }
+
 .card3 {
-  background-image: url(/img/architect-1080589_1920.jpg);  
+  background-image: url(/img/architect-1080589_1920.jpg);
 }
+
 .card4 {
-  background-image: url(/img/architect-1080589_1920.jpg);  
+  background-image: url(/img/architect-1080589_1920.jpg);
 }
+
 .card5 {
-  background-image: url(/img/architect-1080589_1920.jpg);  
+  background-image: url(/img/architect-1080589_1920.jpg);
 }
+
 .card-name {
   font-weight: bold;
   font-size: 1.2rem;
@@ -270,6 +285,10 @@ html {
   text-transform: uppercase;
 }
 
+.footer {
+  grid-area: footer;
+  background-color: tomato;
+}
 
 
 @keyframes link {
@@ -333,7 +352,8 @@ html {
     /* font-size: 6vw; */
   }
 
-  body, html {
+  body,
+  html {
     grid-template-rows: repeat(6, auto);
   }
 
@@ -341,10 +361,12 @@ html {
   .team {
     height: auto;
   }
+
   .team-img {
     height: auto;
-    
+
   }
+
   .team-cards {
     display: flex;
     flex-direction: column;
@@ -355,17 +377,21 @@ html {
 }
 
 @media (max-width: 1200px) {
-  body, html {
+
+  body,
+  html {
     grid-template-rows: repeat(6, auto);
   }
 
   .team {
     height: auto;
   }
+
   .team-img {
     height: auto;
-    
+
   }
+
   .team-cards {
     display: flex;
     flex-direction: column;
