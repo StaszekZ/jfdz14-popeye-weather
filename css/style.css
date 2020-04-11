@@ -3,16 +3,17 @@
   margin: 0;
   padding: 0;
   font-size: 16px;
+
 }
 
-body,
-html {
+html,
+body {
   width: 100vw;
   height: 100vh;
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100vh repeat(4, auto) 10vh;
+  grid-template-rows: 100vh repeat(4, 100vh) 10vh;
   grid-template-areas:
     "hero hero hero hero"
     "features features features features"
@@ -20,11 +21,9 @@ html {
     "form form form form"
     "team team team team"
     "footer footer footer footer";
-  background-color: white;
-  background-image: linear-gradient(white, navy);
-
-
+  background-color: turquoise;
 }
+
 
 .header {
   display: flex;
@@ -79,6 +78,7 @@ html {
   grid-area: hero;
   background-image: url("../img/742112.png");
   background-size: cover;
+  background-color: white;
 }
 
 .hero__txt {
@@ -96,6 +96,12 @@ html {
   align-items: flex-start;
   justify-content: center;
   /* border: 1px solid red; */
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  /* animation-iteration-count: infinite; */
 }
 
 .hero__header {
@@ -191,9 +197,9 @@ html {
 
 /* team */
 .team {
+  grid-area: team;
   display: flex;
   align-items: center;
-  grid-area: team;
   /* background-color: #afcbe3; */
 }
 
@@ -315,6 +321,31 @@ html {
   }
 }
 
+@media (max-width: 1200px) {
+
+  body,
+  html {
+    grid-template-rows: repeat(6, auto);
+  }
+
+  .team {
+    height: auto;
+  }
+
+  .team-img {
+    height: auto;
+
+  }
+
+  .team-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+}
+
 @media (max-width: 768px) {
   .hero {
     width: 100vw;
@@ -351,8 +382,9 @@ html {
     display: none;
     /* font-size: 6vw; */
   }
+}
 
-  body,
+/* body,
   html {
     grid-template-rows: repeat(6, auto);
   }
@@ -374,32 +406,8 @@ html {
     height: auto;
   }
 
-}
+} */
 
-@media (max-width: 1200px) {
-
-  body,
-  html {
-    grid-template-rows: repeat(6, auto);
-  }
-
-  .team {
-    height: auto;
-  }
-
-  .team-img {
-    height: auto;
-
-  }
-
-  .team-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-}
 
 @media (max-width: 420px) {
   .hero__description {
