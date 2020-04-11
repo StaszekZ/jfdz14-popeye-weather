@@ -25,9 +25,9 @@ body {
 }
 
 .gradient {
-  height: 400vh;
+  height: 410vh;
   background: #29c7fb;
-  background: linear-gradient(to bottom, #29c7fb, #1181bc);
+  background: linear-gradient(to bottom, #29c7fb, #00ade7 30%, #08538c);
 }
 
 section {
@@ -301,8 +301,12 @@ section {
 
 .footer {
   grid-area: footer;
-  background-color: #1181bc;
+  color: aliceblue;
+  font-size: 1.5rem;
   text-align: center;
+  text-shadow: var(--shadow-3);
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  line-height: 10vh;
 }
 
 
