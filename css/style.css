@@ -341,6 +341,10 @@ section {
     grid-template-rows: repeat(6, auto);
   }
 
+  .gradient {
+    height: fit-content;
+  }
+
   .team {
     height: auto;
   }
@@ -357,9 +361,14 @@ section {
     height: auto;
   }
 
+  .footer {
+    background: #08538c;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
+
   .hero {
     width: 100vw;
   }
