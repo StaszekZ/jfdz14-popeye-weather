@@ -23,5 +23,9 @@
     /*0 7px 0 #444,
     0 8px 0 #333, */
     0 9px 10px navy;
-
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
 }
