@@ -161,12 +161,88 @@ html {
   white-space: nowrap;
 }
 
-/* features */
+/* Kasia- features */
+
 .features {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #00BFFF;
+  flex-direction: column;
   grid-area: features;
-  background-color: var(--bgr-color);
-  font-size: 40px;
+  flex-wrap: wrap;
+  margin: 10px;
+  background-image: linear-gradient(to right, rgba(179, 200, 219, 0.692), rgb(0, 191, 255));
 }
+
+.features_question {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  color: antiquewhite;
+  height: 25%;
+
+}
+.features_title {
+  font-size: 2.6vw;
+  color: white;
+  text-shadow: var(--shadow-2);
+  opacity: 0.9;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: var(--content-font);
+  font-weight: normal;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.features_description {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 75%;
+}
+
+.img_box {
+  width: 100%;
+
+}
+
+.features_box1 {
+  background-color: azure;
+  padding: 15px;
+  width: 20%;
+  border-radius: 15px 50px 30px;
+}
+
+.features_box2 {
+  background-color: azure;
+  padding: 15px;
+  width: 20%;
+  border-radius: 15px 50px 30px;
+}
+
+.features_box3 {
+  background-color: azure;
+  padding: 15px;
+  width: 20%;
+  border-radius: 15px 50px 30px;
+}
+
+.features_box4 {
+  background-color: azure;
+  padding: 15px;
+  width: 20%;
+  margin-right: 15px;
+  border-radius: 15px 50px 30px;
+}
+
+
 
 
 /* description */
@@ -190,8 +266,6 @@ html {
   grid-area: team;
   background-color: #afcbe3;
 }
-
-
 
 
 .team-cards {
