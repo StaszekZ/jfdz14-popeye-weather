@@ -3,22 +3,34 @@
   margin: 0;
   padding: 0;
   font-size: 16px;
+  font-family: "Baloo 2";
 }
 
-body,
-html {
+html,
+body {
   width: 100vw;
   height: 100vh;
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 100vh);
+  grid-template-rows: 100vh repeat(4, 100vh) 10vh;
   grid-template-areas:
     "hero hero hero hero"
     "features features features features"
     "description description description description"
     "form form form form"
-    "team team team team";
+    "team team team team"
+    "footer footer footer footer";
+}
+
+.gradient {
+  height: 410vh;
+  background: #29c7fb;
+  background: linear-gradient(to bottom, #29c7fb, #00ade7 30%, #08538c);
+}
+
+section {
+  height: 100vh;
 }
 
 .header {
@@ -29,12 +41,20 @@ html {
 
 .navigation {
   position: fixed;
+  display: flex;
   top: 0;
   z-index: 1;
   background: rgba(0, 0, 0, 0.2);
   color: white;
   width: 100%;
-  height: 40px; 
+  height: 40px;
+}
+
+.logo {
+  background-color: red;
+  color: black;
+  min-width: 10vw;
+  text-align: center;
 }
 
 .nav__list {
@@ -61,18 +81,12 @@ html {
   color: skyblue;
 }
 
-.logo {
-  background-color: transparent;
-  color: black;
-  height: 70px;
-  width: 100%;
-  border: 1px solid hotpink;
-}
 
 .hero {
   grid-area: hero;
   background-image: url("../img/742112.png");
   background-size: cover;
+  background-color: white;
 }
 
 .hero__txt {
@@ -85,11 +99,16 @@ html {
   width: 42vw;
   min-height: 60vh;
   line-height: 1.2rem;
-  margin-top: 70px;
+  margin-top: 100px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  /* border: 1px solid red; */
+}
+
+/* animation in hero section */
+.animated {
+  animation-duration: 1.5s;
+  animation-delay: 0.4s;
 }
 
 .hero__header {
@@ -103,7 +122,6 @@ html {
   font-weight: normal;
   text-align: center;
   margin: 0 auto;
-  /* border: 1px dotted palevioletred; */
 }
 
 .hero__description {
@@ -116,7 +134,6 @@ html {
   font-family: var(--content-font);
   padding-top: 20px;
   text-shadow: var(--shadow-2);
-  /* transform: skew(5deg); */
 
 }
 
@@ -164,7 +181,7 @@ html {
 /* features */
 .features {
   grid-area: features;
-  background-color: var(--bgr-color);
+  /* background-color: var(--bgr-color); */
   font-size: 40px;
 }
 
@@ -173,22 +190,22 @@ html {
 
 .description {
   grid-area: description;
-  background-color: hotpink;
+  /* background-color: hotpink; */
   font-size: 40px;
 }
 
 .form {
   grid-area: form;
-  background-color: #afcbe3;
+  /* background-color: #afcbe3; */
   font-size: 40px;
 }
 
 /* team */
 .team {
+  grid-area: team;
   display: flex;
   align-items: center;
-  grid-area: team;
-  background-color: #afcbe3;
+  /* background-color: #afcbe3; */
 }
 
 
@@ -203,7 +220,7 @@ html {
 
 .card-bcg {
   margin-top: 60%;
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .team-img {
@@ -211,13 +228,14 @@ html {
   top: 50px;
   text-align: center;
 }
-.team-img > h2 {
+
+.team-img>h2 {
   font-size: 40px;
   padding: 20px;
   text-transform: uppercase;
 }
 
-.team-img > p {
+.team-img>p {
   font-size: 30px;
   text-transform: uppercase;
 }
@@ -238,31 +256,39 @@ html {
 .team-card:hover {
   transform: scale(1.1);
 }
-.card-info > a > i{
+
+.card-info>a>i {
   list-style: none;
   color: white;
   font-size: 2rem;
   padding: 30px;
   transition: color .5s;
 }
-.card-info > a > i:hover {
+
+.card-info>a>i:hover {
   color: rgb(112, 201, 236);
 }
+
 .card1 {
-  background-image: url(/img/architect-1080589_1920.jpg);
+  background-image: url(../img/architect-1080589_1920.jpg);
 }
+
 .card2 {
-  background-image: url(/img/architect-1080589_1920.jpg);  
+  background-image: url(../img/architect-1080589_1920.jpg);
 }
+
 .card3 {
-  background-image: url(/img/architect-1080589_1920.jpg);  
+  background-image: url(../img/architect-1080589_1920.jpg);
 }
+
 .card4 {
-  background-image: url(/img/architect-1080589_1920.jpg);  
+  background-image: url(../img/architect-1080589_1920.jpg);
 }
+
 .card5 {
-  background-image: url(/img/architect-1080589_1920.jpg);  
+  background-image: url(../img/architect-1080589_1920.jpg);
 }
+
 .card-name {
   font-weight: bold;
   font-size: 1.2rem;
@@ -270,6 +296,15 @@ html {
   text-transform: uppercase;
 }
 
+.footer {
+  grid-area: footer;
+  color: aliceblue;
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: var(--shadow-3);
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  line-height: 10vh;
+}
 
 
 @keyframes link {
@@ -296,7 +331,41 @@ html {
   }
 }
 
+@media (max-width: 1200px) {
+
+  body,
+  html {
+    grid-template-rows: repeat(6, auto);
+  }
+
+  .gradient {
+    height: fit-content;
+  }
+
+  .team {
+    height: auto;
+  }
+
+  .team-img {
+    height: auto;
+
+  }
+
+  .team-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .footer {
+    background: #08538c;
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
+
   .hero {
     width: 100vw;
   }
@@ -332,8 +401,10 @@ html {
     display: none;
     /* font-size: 6vw; */
   }
+}
 
-  body, html {
+/* body,
+  html {
     grid-template-rows: repeat(6, auto);
   }
 
@@ -341,10 +412,12 @@ html {
   .team {
     height: auto;
   }
+
   .team-img {
     height: auto;
-    
+
   }
+
   .team-cards {
     display: flex;
     flex-direction: column;
@@ -352,28 +425,8 @@ html {
     height: auto;
   }
 
-}
+} */
 
-@media (max-width: 1200px) {
-  body, html {
-    grid-template-rows: repeat(6, auto);
-  }
-
-  .team {
-    height: auto;
-  }
-  .team-img {
-    height: auto;
-    
-  }
-  .team-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-}
 
 @media (max-width: 420px) {
   .hero__description {
