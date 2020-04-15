@@ -81,6 +81,46 @@ section {
   color: rgb(27, 47, 112);
 }
 
+/* navigation burger */
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 16px;
+  left: 48px;
+
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle input {
+  display: block;
+  width: 2.5rem;
+  height: 2rem;
+  position: absolute;
+  top: -8px;
+  left: -4px;
+
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+
+  -webkit-touch-callout: none;
+}
+
+
+
 
 .hero {
   grid-area: hero;

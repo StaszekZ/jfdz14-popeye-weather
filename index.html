@@ -16,13 +16,21 @@
 <body>
   <div class="container">
     <header class="header">
-      <nav class="navigation">
-        <ul class="nav__list">
+      <nav class="navigation" role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        <ul class="nav__list" id="menu">
           <li class="nav__list--item"><a href="#home">Home</a></li>
           <li class="nav__list--item"><a href="#features">Features</a></li>
           <li class="nav__list--item"><a href="#form">Form</a></li>
           <li class="nav__list--item"><a href="#team">Teams</a></li>
         </ul>
+      </div>
         <div class="logo">logo logo logo</div>
       </nav>
   </div>
