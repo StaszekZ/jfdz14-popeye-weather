@@ -52,7 +52,6 @@ section {
 
 .logo {
   min-width: 10vw;
-  text-align: center;
   background-image: url(/img/Popyeye-logo.svg.png);
   background-size: contain;
   background-repeat: no-repeat;
