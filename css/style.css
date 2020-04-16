@@ -81,12 +81,15 @@ section {
   color: rgb(27, 47, 112);
 }
 
-/* navigation burger */
+
+
+
+/* Aga - navigation burger */
 
 #menuToggle {
   display: block;
   position: relative;
-  top: 16px;
+  top: 10px;
   left: 48px;
 
   z-index: 1;
@@ -106,20 +109,104 @@ section {
 
 #menuToggle input {
   display: block;
-  width: 2.5rem;
-  height: 2rem;
+  width: 40px;
+  height: 32px;
   position: absolute;
   top: -8px;
   left: -4px;
 
   cursor: pointer;
-  opacity: 0;
-  z-index: 2;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
 
   -webkit-touch-callout: none;
 }
 
 
+/*quick hamburger lines */
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+              background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-child(2) {
+  transform-origin: 0% 100%;
+}
+
+
+/* transform hamburger slices into crossmark */
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: rgb(27, 47, 112);
+}
+
+
+/* hiding middle slice when transforming */
+
+#menuToggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+/* the last slice goes other direction when crossmarked */
+
+#menuToggle input:checked ~ span:nth-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+/* make burger absolute positioned at top left */
+
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+
+  background: #ededed;
+  list-style-type: none;
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+
+/* slide it in from the left */
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
 
 
 .hero {
@@ -479,6 +566,13 @@ section {
   }
 }
 
+
+
+
+
+
+
+
 @media (max-width: 768px) {
 
   .hero {
@@ -517,6 +611,9 @@ section {
     /* font-size: 6vw; */
   }
 }
+
+
+
 
 /* body,
   html {
