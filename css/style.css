@@ -81,7 +81,6 @@ section {
   color: skyblue;
 }
 
-
 .hero {
   grid-area: hero;
   background-image: url("../img/742112.png");
@@ -134,7 +133,6 @@ section {
   font-family: var(--content-font);
   padding-top: 20px;
   text-shadow: var(--shadow-2);
-
 }
 
 .hero__form {
@@ -180,26 +178,32 @@ section {
 
 /* Kasia- features */
 
+
+#features {
+  height: auto;
+}
+
+.container {
+justify-content: space-around;
+}
+
 .features {
   display: flex;
-  align-items: center;
+  justify-content: center;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
   grid-area: features;
   flex-wrap: wrap;
 }
 
-.features_question {
-  padding: 10px;
+.features__question {
   width: 100%;
   text-align: center;
   color: antiquewhite;
-  height: 25%;
-
 }
 
-.features_title {
-  font-size: 2.6vw;
+.features__title {
+  font-size: 45px;
   color: white;
   text-shadow: var(--shadow-2);
   opacity: 0.9;
@@ -211,52 +215,86 @@ section {
   margin: 0 auto;
 }
 
-.features_description {
+@media (max-width: 420px) {
+  .features__title {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features__title {
+    font-size: 35px;
+  }
+}
+
+
+
+.features__description {
   display: flex;
   flex-direction: row;
   margin: 10px;
   padding: 10px;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: centre;
   flex-wrap: wrap;
-  align-content: center;
-  height: 75%;
+  align-content: space-between;
+  align-items: center;
 }
 
-.img_box {
+@media (max-width: 420px) {
+  .features__description {
+    flex-direction: column;
+  }
+}
+
+.h__box {
+  text-align: center;
+}
+
+.features__image {
+  width: 260px;
+  height: 310px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 420px) {
+  .features__image {
+    width: auto;
+    height: auto;
+  }
+}
+
+
+.img__box {
   width: 100%;
-
 }
 
-.features_box1 {
+.features__box {
+  display: flex;
+  flex-direction: column;
   background-color: azure;
   padding: 15px;
-  width: 20%;
+  margin: 10px;
+  width: 325px;
+  height: 500px;
   border-radius: 15px 50px 30px;
 }
 
-.features_box2 {
-  background-color: azure;
-  padding: 15px;
-  width: 20%;
-  border-radius: 15px 50px 30px;
+@media (max-width: 420px) {
+  .features__box {
+    width: 80%;
+  }
 }
 
-.features_box3 {
-  background-color: azure;
-  padding: 15px;
-  width: 20%;
-  border-radius: 15px 50px 30px;
+.description__box {
+  align-items: center;
 }
 
-.features_box4 {
-  background-color: azure;
-  padding: 15px;
-  width: 20%;
-  margin-right: 15px;
-  border-radius: 15px 50px 30px;
+.text__box {
+  text-align: center;
 }
-
 
 
 
@@ -282,7 +320,6 @@ section {
   /* background-color: #afcbe3; */
 }
 
-
 .team-cards {
   display: flex;
   justify-content: center;
@@ -301,13 +338,13 @@ section {
   text-align: center;
 }
 
-.team-img>h2 {
+.team-img > h2 {
   font-size: 40px;
   padding: 20px;
   text-transform: uppercase;
 }
 
-.team-img>p {
+.team-img > p {
   font-size: 30px;
   text-transform: uppercase;
 }
@@ -320,7 +357,7 @@ section {
   margin: 30px;
   box-shadow: 10px 10px 10px black;
   text-align: center;
-  transition: .5s;
+  transition: 0.5s;
   background-size: cover;
   overflow: hidden;
 }
@@ -329,15 +366,15 @@ section {
   transform: scale(1.1);
 }
 
-.card-info>a>i {
+.card-info > a > i {
   list-style: none;
   color: white;
   font-size: 2rem;
   padding: 30px;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
-.card-info>a>i:hover {
+.card-info > a > i:hover {
   color: rgb(112, 201, 236);
 }
 
@@ -378,7 +415,6 @@ section {
   line-height: 10vh;
 }
 
-
 @keyframes link {
   0% {
     opacity: 0.2;
@@ -404,7 +440,6 @@ section {
 }
 
 @media (max-width: 1200px) {
-
   body,
   html {
     grid-template-rows: repeat(6, auto);
@@ -420,7 +455,6 @@ section {
 
   .team-img {
     height: auto;
-
   }
 
   .team-cards {
@@ -437,7 +471,6 @@ section {
 }
 
 @media (max-width: 768px) {
-
   .hero {
     width: 100vw;
   }
@@ -498,7 +531,6 @@ section {
   }
 
 } */
-
 
 @media (max-width: 420px) {
   .hero__description {
