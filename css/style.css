@@ -291,7 +291,7 @@ section {
 }
 
 .card-bcg {
-  margin-top: 60%;
+  margin-top: 51%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -313,8 +313,8 @@ section {
 }
 
 .team-card {
-  width: 270px;
-  height: 270px;
+  width: 235px;
+  height: 235px;
   border: 1px solid black;
   border-radius: 50%;
   margin: 30px;
@@ -350,11 +350,11 @@ section {
 }
 
 .card3 {
-  background-image: url(../img/architect-1080589_1920.jpg);
+  background-image: url(/img/o_mnie/Mateusz.jpeg);
 }
 
 .card4 {
-  background-image: url(../img/architect-1080589_1920.jpg);
+  background-image: url(/img/o_mnie/Staszek.jpeg);
 }
 
 .card5 {
