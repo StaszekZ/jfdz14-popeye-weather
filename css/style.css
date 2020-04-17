@@ -13,7 +13,7 @@ body {
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100vh repeat(4, 100vh) 10vh;
+  grid-template-rows: 100vh repeat(6, 100vh) 10vh;
   grid-template-areas:
     "hero hero hero hero"
     "features features features features"
@@ -51,10 +51,10 @@ section {
 }
 
 .logo {
-  background-color: red;
-  color: black;
   min-width: 10vw;
-  text-align: center;
+  background-image: url(/img/Popyeye-logo.svg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .nav__list {
@@ -80,7 +80,6 @@ section {
 .nav__list--item a:hover {
   color: rgb(27, 47, 112);
 }
-
 
 .hero {
   grid-area: hero;
@@ -134,7 +133,6 @@ section {
   font-family: var(--content-font);
   padding-top: 20px;
   text-shadow: var(--shadow-2);
-
 }
 
 .hero__form {
@@ -180,27 +178,33 @@ section {
 
 /* Kasia- features */
 
+
+#features {
+  height: auto;
+}
+
+.container {
+justify-content: space-around;
+}
+
 .features {
   display: flex;
-  align-items: center;
+  justify-content: center;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
   grid-area: features;
   flex-wrap: wrap;
   padding-top: 2.5rem;
 }
 
-.features_question {
-  padding: 10px;
+.features__question {
   width: 100%;
   text-align: center;
   color: antiquewhite;
-  height: 25%;
-
 }
 
-.features_title {
-  font-size: 2.6vw;
+.features__title {
+  font-size: 45px;
   color: white;
   text-shadow: var(--shadow-2);
   opacity: 0.9;
@@ -212,52 +216,86 @@ section {
   margin: 0 auto;
 }
 
-.features_description {
+@media (max-width: 420px) {
+  .features__title {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features__title {
+    font-size: 35px;
+  }
+}
+
+
+
+.features__description {
   display: flex;
   flex-direction: row;
   margin: 10px;
   padding: 10px;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: centre;
   flex-wrap: wrap;
-  align-content: center;
-  height: 75%;
+  align-content: space-between;
+  align-items: center;
 }
 
-.img_box {
+@media (max-width: 420px) {
+  .features__description {
+    flex-direction: column;
+  }
+}
+
+.h__box {
+  text-align: center;
+}
+
+.features__image {
+  width: 260px;
+  height: 310px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 420px) {
+  .features__image {
+    width: auto;
+    height: auto;
+  }
+}
+
+
+.img__box {
   width: 100%;
-
 }
 
-.features_box1 {
+.features__box {
+  display: flex;
+  flex-direction: column;
   background-color: azure;
   padding: 15px;
-  width: 20%;
+  margin: 10px;
+  width: 325px;
+  height: 500px;
   border-radius: 15px 50px 30px;
 }
 
-.features_box2 {
-  background-color: azure;
-  padding: 15px;
-  width: 20%;
-  border-radius: 15px 50px 30px;
+@media (max-width: 420px) {
+  .features__box {
+    width: 80%;
+  }
 }
 
-.features_box3 {
-  background-color: azure;
-  padding: 15px;
-  width: 20%;
-  border-radius: 15px 50px 30px;
+.description__box {
+  align-items: center;
 }
 
-.features_box4 {
-  background-color: azure;
-  padding: 15px;
-  width: 20%;
-  margin-right: 15px;
-  border-radius: 15px 50px 30px;
+.text__box {
+  text-align: center;
 }
-
 
 
 
@@ -269,12 +307,128 @@ section {
   font-size: 40px;
 }
 
+
+/* form *************************************************************/
+
 .form {
+<<<<<<< HEAD
   grid-area: form;
   /* background-color: #afcbe3; */
   font-size: 40px;
   padding-top: 2.5rem;
+=======
+display: flex;
+align-content: center;
+grid-area: form;
+font-size: 40px;
 }
+
+.form__box {
+  width: auto;
+  height: auto;
+  justify-content: center;
+  margin: auto;
+
+}
+
+form {
+  border: 4px solid #f1f1f1;
+
+}
+
+.form__title {
+  font-size: 45px;
+  color: white;
+  text-shadow: var(--shadow-2);
+  opacity: 0.9;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  font-family: var(--content-font);
+  font-weight: normal;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.container__form {
+  display: flex;
+  padding: 20px;
+  background-color: #f1f1f1;
+  flex-direction: column;
+}
+
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: navy;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+.form__notification {
+  font-style: italic;
+  font-size: 15px;
+>>>>>>> 36168b5ce52e64d5752dccc1002c90f04f6d4712
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* form */
 
 /* team */
 .team {
@@ -285,7 +439,6 @@ section {
   /* background-color: #afcbe3; */
 }
 
-
 .team-cards {
   display: flex;
   justify-content: center;
@@ -294,7 +447,7 @@ section {
 }
 
 .card-bcg {
-  margin-top: 60%;
+  margin-top: 51%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -304,26 +457,26 @@ section {
   text-align: center;
 }
 
-.team-img>h2 {
+.team-img > h2 {
   font-size: 40px;
   padding: 20px;
   text-transform: uppercase;
 }
 
-.team-img>p {
+.team-img > p {
   font-size: 30px;
   text-transform: uppercase;
 }
 
 .team-card {
-  width: 270px;
-  height: 270px;
+  width: 235px;
+  height: 235px;
   border: 1px solid black;
   border-radius: 50%;
   margin: 30px;
   box-shadow: 10px 10px 10px black;
   text-align: center;
-  transition: .5s;
+  transition: 0.5s;
   background-size: cover;
   overflow: hidden;
 }
@@ -332,15 +485,15 @@ section {
   transform: scale(1.1);
 }
 
-.card-info>a>i {
+.card-info > a > i {
   list-style: none;
   color: white;
   font-size: 2rem;
   padding: 30px;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
-.card-info>a>i:hover {
+.card-info > a > i:hover {
   color: rgb(112, 201, 236);
 }
 
@@ -353,11 +506,11 @@ section {
 }
 
 .card3 {
-  background-image: url(../img/architect-1080589_1920.jpg);
+  background-image: url(/img/o_mnie/Mateusz.jpeg);
 }
 
 .card4 {
-  background-image: url(../img/architect-1080589_1920.jpg);
+  background-image: url(/img/o_mnie/Staszek.jpeg);
 }
 
 .card5 {
@@ -380,7 +533,6 @@ section {
   border-top: 1px solid rgba(0, 0, 0, 0.4);
   line-height: 10vh;
 }
-
 
 @keyframes link {
   0% {
@@ -407,7 +559,6 @@ section {
 }
 
 @media (max-width: 1200px) {
-
   body,
   html {
     grid-template-rows: repeat(6, auto);
@@ -423,7 +574,6 @@ section {
 
   .team-img {
     height: auto;
-
   }
 
   .team-cards {
@@ -440,7 +590,6 @@ section {
 }
 
 @media (max-width: 768px) {
-
   .hero {
     width: 100vw;
   }
@@ -501,7 +650,6 @@ section {
   }
 
 } */
-
 
 @media (max-width: 420px) {
   .hero__description {
