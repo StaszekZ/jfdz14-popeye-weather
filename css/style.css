@@ -44,10 +44,10 @@ section {
   display: flex;
   top: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(38, 145, 192, 0.7);
   color: white;
   width: 100vw;
-  height: 40px;
+  height: 2.5rem;
 }
 
 .logo {
@@ -78,7 +78,7 @@ section {
 }
 
 .nav__list--item a:hover {
-  color: skyblue;
+  color: rgb(27, 47, 112);
 }
 
 .hero {
@@ -194,6 +194,7 @@ justify-content: space-around;
   flex-direction: row;
   grid-area: features;
   flex-wrap: wrap;
+  padding-top: 2.5rem;
 }
 
 .features__question {
@@ -382,6 +383,7 @@ input[type=submit]:hover {
   grid-area: team;
   display: flex;
   align-items: center;
+  padding-top: 2.5rem;
   /* background-color: #afcbe3; */
 }
 
