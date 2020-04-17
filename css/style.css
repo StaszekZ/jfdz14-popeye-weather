@@ -473,7 +473,7 @@ input[type=submit]:hover {
 }
 
 .team-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
 .card-info > a > i {
@@ -493,7 +493,9 @@ input[type=submit]:hover {
 }
 
 .card2 {
-  background-image: url(/img/Kasia_info/Kasia_img.jpg);
+  background-image: url(/img/Kasia_info/Kasia_img1.jpg);
+  /* background-repeat: no-repeat;
+  background-position: left; */
 }
 
 .card3 {
