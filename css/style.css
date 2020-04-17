@@ -438,7 +438,7 @@ input[type=submit]:hover {
 }
 
 .card-bcg {
-  margin-top: 51%;
+  margin-top: 65%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -480,7 +480,7 @@ input[type=submit]:hover {
   list-style: none;
   color: white;
   font-size: 2rem;
-  padding: 30px;
+  padding: 10px;
   transition: color 0.5s;
 }
 
@@ -493,7 +493,7 @@ input[type=submit]:hover {
 }
 
 .card2 {
-  background-image: url(../img/architect-1080589_1920.jpg);
+  background-image: url(/img/Kasia_info/Kasia_img.jpg);
 }
 
 .card3 {
