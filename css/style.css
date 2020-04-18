@@ -343,11 +343,13 @@ form {
   margin: 0 auto;
 }
 
+
 .container__form {
   display: flex;
   padding: 20px;
   background-color: #f1f1f1;
   flex-direction: column;
+  border-radius: 15px 50px 30px;
 }
 
 input[type=text], input[type=submit] {
@@ -368,7 +370,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .form__notification {
@@ -376,7 +378,12 @@ input[type=submit]:hover {
   font-size: 15px;
 }
 
-/* form */
+
+
+
+
+
+
 
 /* team */
 .team {
