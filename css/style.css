@@ -13,7 +13,7 @@ body {
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100vh repeat(6, 100vh) 10vh;
+  grid-template-rows: 100vh repeat(4, 100vh) 10vh;
   grid-template-areas:
     "hero hero hero hero"
     "features features features features"
@@ -24,7 +24,7 @@ body {
 }
 
 .gradient {
-  height: 410vh;
+  min-height: 410vh;
   background: #29c7fb;
   background: linear-gradient(to bottom, #29c7fb, #00ade7 30%, #08538c);
 }
@@ -55,6 +55,7 @@ section {
   background-image: url(/img/Popyeye-logo.svg.png);
   background-size: contain;
   background-repeat: no-repeat;
+
 }
 
 .nav__list {
@@ -180,17 +181,17 @@ section {
 
 
 #features {
-  height: auto;
+  /* height: auto; */
 }
 
 .container {
-justify-content: space-around;
+  justify-content: space-around;
 }
 
 .features {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   flex-direction: row;
   grid-area: features;
   flex-wrap: wrap;
@@ -302,7 +303,6 @@ justify-content: space-around;
 
 .description {
   grid-area: description;
-  /* background-color: hotpink; */
   font-size: 40px;
 }
 
@@ -310,10 +310,10 @@ justify-content: space-around;
 /* form *************************************************************/
 
 .form {
-display: flex;
-align-content: center;
-grid-area: form;
-font-size: 40px;
+  display: flex;
+  align-content: center;
+  grid-area: form;
+  font-size: 40px;
 }
 
 .form__box {
@@ -349,13 +349,14 @@ form {
   flex-direction: column;
 }
 
-input[type=text], input[type=submit] {
-  width: 100%;
+input[type=text],
+input[type=submit] {
+  width: 100;
   padding: 12px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 
@@ -448,13 +449,13 @@ input[type=submit]:hover {
   text-align: center;
 }
 
-.team-img > h2 {
+.team-img>h2 {
   font-size: 40px;
   padding: 20px;
   text-transform: uppercase;
 }
 
-.team-img > p {
+.team-img>p {
   font-size: 30px;
   text-transform: uppercase;
 }
@@ -476,7 +477,7 @@ input[type=submit]:hover {
   transform: scale(1.1);
 }
 
-.card-info > a > i {
+.card-info>a>i {
   list-style: none;
   color: white;
   font-size: 2rem;
@@ -484,7 +485,7 @@ input[type=submit]:hover {
   transition: color 0.5s;
 }
 
-.card-info > a > i:hover {
+.card-info>a>i:hover {
   color: rgb(112, 201, 236);
 }
 
@@ -550,6 +551,7 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 1200px) {
+
   body,
   html {
     grid-template-rows: repeat(6, auto);
