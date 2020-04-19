@@ -299,12 +299,44 @@ justify-content: space-around;
 
 
 
-/* description */
+/* functionality */
 
 .description {
   grid-area: description;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 2.5rem;
   /* background-color: hotpink; */
   font-size: 40px;
+  width: 100vw;
+  top: 10px;
+}
+
+.functionality__box {
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 20px 20px 20px 20px;
+  margin: 30px;
+  box-shadow: 10px 10px 10px black;
+  transition: 0.5s;
+  background-size: cover;
+  overflow: hidden;
+  text-align: center;
+  background-color: aliceblue;
+}
+.functionality__image {
+ 
+}
+
+.f__box {
+
+}
+.functionality__description {
+
 }
 
 
@@ -343,11 +375,13 @@ form {
   margin: 0 auto;
 }
 
+
 .container__form {
   display: flex;
   padding: 20px;
   background-color: #f1f1f1;
   flex-direction: column;
+  border-radius: 15px 50px 30px;
 }
 
 input[type=text], input[type=submit] {
@@ -368,7 +402,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .form__notification {
@@ -376,7 +410,12 @@ input[type=submit]:hover {
   font-size: 15px;
 }
 
-/* form */
+
+
+
+
+
+
 
 /* team */
 .team {
@@ -464,7 +503,7 @@ input[type=submit]:hover {
 }
 
 .card5 {
-  background-image: url(../img/architect-1080589_1920.jpg);
+  background-image: url(../img/o_mnie/lukasz.jpg));
 }
 
 .card-name {
