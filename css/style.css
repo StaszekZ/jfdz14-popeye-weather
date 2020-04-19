@@ -139,7 +139,6 @@ section {
 .hero__form {
   align-self: center;
   width: 40vw;
-  /* border: 2px solid red; */
 }
 
 .hero__link {
@@ -180,9 +179,9 @@ section {
 /* Kasia- features */
 
 
-#features {
-  /* height: auto; */
-}
+/* #features {
+height: auto;
+} */
 
 .container {
   justify-content: space-around;
