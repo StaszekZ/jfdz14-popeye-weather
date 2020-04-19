@@ -299,12 +299,44 @@ justify-content: space-around;
 
 
 
-/* description */
+/* functionality */
 
 .description {
   grid-area: description;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 2.5rem;
   /* background-color: hotpink; */
   font-size: 40px;
+  width: 100vw;
+  top: 10px;
+}
+
+.functionality__box {
+  width: 500px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 20px 20px 20px 20px;
+  margin: 30px;
+  box-shadow: 10px 10px 10px black;
+  transition: 0.5s;
+  background-size: cover;
+  overflow: hidden;
+  text-align: center;
+  background-color: aliceblue;
+}
+.functionality__image {
+ 
+}
+
+.f__box {
+
+}
+.functionality__description {
+  overflow-y: scroll;
 }
 
 
@@ -471,7 +503,7 @@ input[type=submit]:hover {
 }
 
 .card5 {
-  background-image: url(../img/architect-1080589_1920.jpg);
+  background-image: url(../img/o_mnie/lukasz.jpg));
 }
 
 .card-name {
