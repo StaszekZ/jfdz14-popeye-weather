@@ -336,7 +336,7 @@ justify-content: space-around;
 
 }
 .functionality__description {
-
+  overflow-y: scroll;
 }
 
 
