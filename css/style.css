@@ -13,7 +13,7 @@ body {
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100vh repeat(6, 100vh) 10vh;
+  grid-template-rows: 100vh repeat(4, 100vh) 10vh;
   grid-template-areas:
     "hero hero hero hero"
     "features features features features"
@@ -73,12 +73,12 @@ section {
 .nav__list--item a {
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--second-text-color);
+  color: #f4f4f4;
   cursor: pointer;
 }
 
 .nav__list--item a:hover {
-  color: var(--main-text-color);
+  color: rgb(27, 47, 112);
 }
 
 .hero {
@@ -143,7 +143,7 @@ section {
 
 .hero__link {
   font-family: var(--content-font);
-  opacity: 0.9;
+  /* opacity: 0.9; */
   font-size: 2.25rem;
   line-height: 1.2em;
   text-decoration: none;
@@ -167,7 +167,7 @@ section {
   font-weight: 900;
   content: "\f2f5";
   padding-right: 20px;
-  color: red;
+  color: var(--popeye-color);
   text-shadow: var(--shadow);
 }
 
@@ -179,9 +179,9 @@ section {
 /* Kasia- features */
 
 
-#features {
+/* #features {
   height: 100vh;
-}
+} */
 
 .container {
   justify-content: space-around;
@@ -275,7 +275,7 @@ section {
 .features__box {
   display: flex;
   flex-direction: column;
-  background-color: azure;
+  background-color: var(--bgr-color);
   padding: 15px;
   margin: 10px;
   width: 325px;
@@ -309,7 +309,7 @@ section {
   flex-wrap: wrap;
   align-items: center;
   padding-top: 2.5rem;
-  /* background-color: hotpink; */
+
   font-size: 40px;
   width: 100vw;
   top: 10px;
@@ -326,13 +326,14 @@ section {
   background-size: cover;
   overflow: hidden;
   text-align: center;
-  background-color: aliceblue;
+  background-color: var(--bgr-color);
 }
 
-.functionality__image {}
+/* .functionality__image {}
 
 .f__box {}
 
+*/
 .functionality__description {
   overflow-y: scroll;
 }
@@ -362,12 +363,12 @@ form {
 
 .form__title {
   font-size: 45px;
-  color: white;
+  color: var(--second-text-color);
   text-shadow: var(--shadow-2);
   opacity: 0.9;
   padding-top: 15px;
   padding-bottom: 30px;
-  font-family: var(--content-font);
+  /* font-family: var(--content-font); */
   font-weight: normal;
   text-align: center;
   margin: 0 auto;
@@ -389,14 +390,14 @@ input[type=submit] {
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 
 /* Style the submit button */
 input[type=submit] {
   background-color: navy;
-  color: white;
+  color: var(--second-text-color);
   border: none;
 }
 
@@ -473,7 +474,7 @@ input[type=submit]:hover {
 
 .card-info>a>i {
   list-style: none;
-  color: white;
+  color: var(--second-text-color);
   font-size: 2rem;
   padding: 10px;
   transition: color 0.5s;
@@ -508,13 +509,15 @@ input[type=submit]:hover {
 .card-name {
   font-weight: bold;
   font-size: 1.2rem;
-  color: white;
+  color: var(--second-text-color);
   text-transform: uppercase;
 }
 
 .footer {
   grid-area: footer;
-  color: aliceblue;
+  width: 100%;
+  color: var(--second-text-color);
+  background-color: #08538c;
   font-size: 1.5rem;
   text-align: center;
   text-shadow: var(--shadow-3);
