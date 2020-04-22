@@ -24,7 +24,7 @@ body {
 }
 
 .gradient {
-  height: 410vh;
+  min-height: 410vh;
   background: #29c7fb;
   background: linear-gradient(to bottom, #29c7fb, #00ade7 30%, #08538c);
 }
@@ -55,6 +55,7 @@ section {
   background-image: url(/img/Popyeye-logo.svg.png);
   background-size: contain;
   background-repeat: no-repeat;
+
 }
 
 .nav__list {
@@ -138,7 +139,6 @@ section {
 .hero__form {
   align-self: center;
   width: 40vw;
-  /* border: 2px solid red; */
 }
 
 .hero__link {
@@ -180,7 +180,11 @@ section {
 
 
 /* #features {
+<<<<<<< HEAD
   height: 100vh;
+=======
+height: auto;
+>>>>>>> jfdz14pw-13-hero
 } */
 
 .container {
@@ -190,7 +194,7 @@ section {
 .features {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   flex-direction: row;
   grid-area: features;
   flex-wrap: wrap;
@@ -303,6 +307,7 @@ section {
 
 .description {
   grid-area: description;
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -310,6 +315,8 @@ section {
   align-items: center;
   padding-top: 2.5rem;
 
+=======
+>>>>>>> jfdz14pw-13-hero
   font-size: 40px;
   width: 100vw;
   top: 10px;
@@ -385,7 +392,11 @@ form {
 
 input[type=text],
 input[type=submit] {
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 100;
+>>>>>>> jfdz14pw-13-hero
   padding: 12px;
   margin: 8px 0;
   display: inline-block;
