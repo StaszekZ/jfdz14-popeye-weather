@@ -73,12 +73,12 @@ section {
 .nav__list--item a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #f4f4f4;
+  color: var(--second-text-color);
   cursor: pointer;
 }
 
 .nav__list--item a:hover {
-  color: rgb(27, 47, 112);
+  color: var(--main-text-color);
 }
 
 .hero {
