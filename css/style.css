@@ -180,11 +180,7 @@ section {
 
 
 /* #features {
-<<<<<<< HEAD
   height: 100vh;
-=======
-height: auto;
->>>>>>> jfdz14pw-13-hero
 } */
 
 .container {
@@ -307,7 +303,6 @@ height: auto;
 
 .description {
   grid-area: description;
-<<<<<<< HEAD
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -315,8 +310,6 @@ height: auto;
   align-items: center;
   padding-top: 2.5rem;
 
-=======
->>>>>>> jfdz14pw-13-hero
   font-size: 40px;
   width: 100vw;
   top: 10px;
@@ -392,11 +385,7 @@ form {
 
 input[type=text],
 input[type=submit] {
-<<<<<<< HEAD
   width: 100%;
-=======
-  width: 100;
->>>>>>> jfdz14pw-13-hero
   padding: 12px;
   margin: 8px 0;
   display: inline-block;
