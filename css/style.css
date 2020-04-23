@@ -270,41 +270,54 @@ section {
 
 
 /* functionality */
-
 .description {
   grid-area: description;
   display: flex;
+  flex: 0 50%;
   justify-content: center;
-  flex-direction: row;
   flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
-  padding-top: 2.5rem;
-  font-size: 3rem;
+  font-size: 2rem;
   width: 100vw;
-  top: 10px;
 }
-
 .functionality__box {
-  width: 500px;
-  height: 400px;
+  width: 30%;
   border: 1px solid black;
-  border-radius: 20px 20px 20px 20px;
-  margin: 2rem;
-  box-shadow: 10px 10px 10px black;
+  border-radius: 1rem 1rem 1rem 1rem;
+  box-shadow: 0,8rem 0,8rem 0,8rem black;
   transition: 0.5s;
   background-size: cover;
-  overflow: hidden;
   text-align: center;
-  background-color: var(--bgr-color);
+  background-color: aliceblue;
+  overflow: hidden;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-
-/* .functionality__image {}
-
-.f__box {}
-
-*/
+.functionality__image {
+  display: block;
+  margin: 0 auto;
+}
+.f__box {
+  margin: 0 auto;
+}
 .functionality__description {
-  overflow-y: scroll;
+  width: 90%;
+  height: 3rem;
+  margin: 0 auto;
+  font-family: var(--content-font);
+  text-overflow: ellipsis;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  overflow:hidden;
+  white-space: nowrap;
+}
+.functionality__description:hover{
+  height: 100%;
+  overflow: visible;
+  white-space: normal;
 }
 
 
