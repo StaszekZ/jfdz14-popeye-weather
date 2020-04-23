@@ -468,21 +468,21 @@ input[type=submit]:hover {
 }
 
 .card1 {
-  background-image: url(/img/o_mnie/IMG_2686.jpg);
+  background-image: url(../img/o_mnie/IMG_2686.jpg);
 }
 
 .card2 {
-  background-image: url(/img/Kasia_info/Kasia_img1.jpg);
+  background-image: url(../img/Kasia_info/Kasia_img1.jpg);
   /* background-repeat: no-repeat;
   background-position: left; */
 }
 
 .card3 {
-  background-image: url(/img/o_mnie/Mateusz.jpeg);
+  background-image: url(../img/o_mnie/Mateusz.jpeg);
 }
 
 .card4 {
-  background-image: url(/img/o_mnie/Staszek.jpeg);
+  background-image: url(../img/o_mnie/Staszek.jpeg);
 }
 
 .card5 {
