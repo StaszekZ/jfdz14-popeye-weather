@@ -257,11 +257,6 @@ section {
   border-radius: 15px 50px 30px;
 }
 
-@media (max-width: 420px) {
-  .features__box {
-    width: 80%;
-  }
-}
 
 .description__box {
   align-items: center;
@@ -593,29 +588,6 @@ input[type=submit]:hover {
   }
 }
 
-/* body,
-  html {
-    grid-template-rows: repeat(6, auto);
-  }
-
-
-  .team {
-    height: auto;
-  }
-
-  .team-img {
-    height: auto;
-
-  }
-
-  .team-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-} */
 
 @media (max-width: 420px) {
   .hero__description {
@@ -682,5 +654,11 @@ input[type=submit]:hover {
   .features__image {
     width: auto;
     height: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .features__box {
+    width: 80%;
   }
 }
