@@ -179,11 +179,9 @@ section {
 /* Kasia- features */
 
 
-/* #features {
-  height: 100vh;
-} */
 
 .container {
+  display: flex;
   justify-content: space-around;
 }
 
@@ -191,26 +189,24 @@ section {
   display: flex;
   justify-content: center;
   width: 100vw;
+  height: 100vh;
   flex-direction: row;
   grid-area: features;
   flex-wrap: wrap;
-  padding-top: 2.5rem;
+  padding: 2.5rem 0 0 0;
 }
 
 .features__question {
   width: 100%;
   text-align: center;
-  color: antiquewhite;
 }
 
 .features__title {
-  font-size: 45px;
-  color: white;
+  font-size: 3rem;
+  color: var(--second-text-color);
   text-shadow: var(--shadow-2);
   opacity: 0.9;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-family: var(--content-font);
+  padding: 2rem 0 2rem 0;
   font-weight: normal;
   text-align: center;
   margin: 0 auto;
@@ -220,7 +216,6 @@ section {
 .features__description {
   display: flex;
   flex-direction: row;
-  margin: 10px;
   padding: 10px;
   width: 100%;
   justify-content: centre;
@@ -250,12 +245,17 @@ section {
   display: flex;
   flex-direction: column;
   background-color: var(--bgr-color);
-  padding: 15px;
-  margin: 10px;
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem;
   width: 325px;
   height: 500px;
   border-radius: 15px 50px 30px;
+  color: var(--main-text-color);
+  box-shadow: 10px 10px 10px black;
 }
+
+
 
 
 .description__box {
@@ -264,47 +264,60 @@ section {
 
 .text__box {
   text-align: center;
+  margin: 1rem;
 }
 
 
 
 /* functionality */
-
 .description {
   grid-area: description;
   display: flex;
+  flex: 0 50%;
   justify-content: center;
-  flex-direction: row;
   flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
-  padding-top: 2.5rem;
-
-  font-size: 40px;
+  font-size: 2rem;
   width: 100vw;
-  top: 10px;
 }
-
 .functionality__box {
-  width: 500px;
-  height: 400px;
+  width: 30%;
   border: 1px solid black;
-  border-radius: 20px 20px 20px 20px;
-  margin: 30px;
-  box-shadow: 10px 10px 10px black;
+  border-radius: 1rem 1rem 1rem 1rem;
+  box-shadow: 0,8rem 0,8rem 0,8rem black;
   transition: 0.5s;
   background-size: cover;
-  overflow: hidden;
   text-align: center;
-  background-color: var(--bgr-color);
+  background-color: aliceblue;
+  overflow: hidden;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-
-/* .functionality__image {}
-
-.f__box {}
-
-*/
+.functionality__image {
+  display: block;
+  margin: 0 auto;
+}
+.f__box {
+  margin: 0 auto;
+}
 .functionality__description {
-  overflow-y: scroll;
+  width: 90%;
+  height: 3rem;
+  margin: 0 auto;
+  font-family: var(--content-font);
+  text-overflow: ellipsis;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  overflow:hidden;
+  white-space: nowrap;
+}
+.functionality__description:hover{
+  height: 100%;
+  overflow: visible;
+  white-space: normal;
 }
 
 
@@ -314,7 +327,8 @@ section {
   display: flex;
   align-content: center;
   grid-area: form;
-  font-size: 40px;
+  font-size: 3rem;
+  width: 100vw;
 }
 
 .form__box {
@@ -335,9 +349,7 @@ form {
   color: var(--second-text-color);
   text-shadow: var(--shadow-2);
   opacity: 0.9;
-  padding-top: 15px;
-  padding-bottom: 30px;
-  /* font-family: var(--content-font); */
+  padding: 2rem 0 2rem 0;
   font-weight: normal;
   text-align: center;
   margin: 0 auto;
@@ -346,17 +358,19 @@ form {
 
 .container__form {
   display: flex;
-  padding: 20px;
-  background-color: #f1f1f1;
+  margin: 2rem 0 1rem 0;
+  padding: 2rem 2rem 2rem 2rem;
+  background-color: var(--bgr-color);
   flex-direction: column;
   border-radius: 15px 50px 30px;
+  box-shadow: 10px 10px 10px black;
 }
 
 input[type=text],
 input[type=submit] {
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
+  padding: 1rem;
+  margin: 1rem 0;
   display: inline-block;
   border: 1px solid #ccc;
   /* box-sizing: border-box; */
@@ -376,7 +390,7 @@ input[type=submit]:hover {
 
 .form__notification {
   font-style: italic;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 
@@ -454,21 +468,21 @@ input[type=submit]:hover {
 }
 
 .card1 {
-  background-image: url(/img/o_mnie/IMG_2686.jpg);
+  background-image: url(../img/o_mnie/IMG_2686.jpg);
 }
 
 .card2 {
-  background-image: url(/img/Kasia_info/Kasia_img1.jpg);
+  background-image: url(../img/Kasia_info/Kasia_img1.jpg);
   /* background-repeat: no-repeat;
   background-position: left; */
 }
 
 .card3 {
-  background-image: url(/img/o_mnie/Mateusz.jpeg);
+  background-image: url(../img/o_mnie/Mateusz.jpeg);
 }
 
 .card4 {
-  background-image: url(/img/o_mnie/Staszek.jpeg);
+  background-image: url(../img/o_mnie/Staszek.jpeg);
 }
 
 .card5 {
@@ -648,60 +662,3 @@ input[type=submit]:hover {
     margin-left: 40%;
   }
 }
-
-
-/* @media (max-height: 490px) {
-  .hero__description {
-    display: none;
-  }
-  
-  @media (min-width: 768px) {
-    .hero__form--description {
-      font-size: 3vw;
-    }
-  }
-} */
-/* @media (max-height: 4px) {
-  .hero__form {
-    display: none;
-  }
-
-  .hero__txt {
-    justify-content: center;
-  }
-
-  .hero__name {
-    width: 90vw;
-    margin: auto;
-  }
-
-  .hero__description {
-    font-size: 6vh;
-    line-height: 1em;
-  }
-
-  .hero__header {
-    font-size: 6vw;
-    line-height: 1.4;
-  }
-} */
-
-/* @media (max-width: 420px) {
-  
-} */
-
-/* @media (max-width: 768px) {
-  
-} */
-
-/* @media (max-width: 420px) {
-  
-}
-
-@media (max-width: 420px) {
-  
-}
-
-@media (max-width: 420px) {
-  
-} */
