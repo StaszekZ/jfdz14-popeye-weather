@@ -179,11 +179,9 @@ section {
 /* Kasia- features */
 
 
-/* #features {
-  height: 100vh;
-} */
 
 .container {
+  display: flex;
   justify-content: space-around;
 }
 
@@ -191,26 +189,24 @@ section {
   display: flex;
   justify-content: center;
   width: 100vw;
+  height: 100vh;
   flex-direction: row;
   grid-area: features;
   flex-wrap: wrap;
-  padding-top: 2.5rem;
+  padding: 2.5rem 0 0 0;
 }
 
 .features__question {
   width: 100%;
   text-align: center;
-  color: antiquewhite;
 }
 
 .features__title {
-  font-size: 45px;
-  color: white;
+  font-size: 3rem;
+  color: var(--second-text-color);
   text-shadow: var(--shadow-2);
   opacity: 0.9;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-family: var(--content-font);
+  padding: 2rem 0 2rem 0;
   font-weight: normal;
   text-align: center;
   margin: 0 auto;
@@ -220,7 +216,6 @@ section {
 .features__description {
   display: flex;
   flex-direction: row;
-  margin: 10px;
   padding: 10px;
   width: 100%;
   justify-content: centre;
@@ -250,12 +245,17 @@ section {
   display: flex;
   flex-direction: column;
   background-color: var(--bgr-color);
-  padding: 15px;
-  margin: 10px;
+  padding: 1rem  0 1rem 0;
+  margin: 1rem;
   width: 325px;
   height: 500px;
   border-radius: 15px 50px 30px;
+  color: var(--main-text-color);
+  box-shadow: 10px 10px 10px black;
+
 }
+
+
 
 
 .description__box {
@@ -264,6 +264,7 @@ section {
 
 .text__box {
   text-align: center;
+  margin: 1rem;
 }
 
 
@@ -278,8 +279,7 @@ section {
   flex-wrap: wrap;
   align-items: center;
   padding-top: 2.5rem;
-
-  font-size: 40px;
+  font-size: 3rem;
   width: 100vw;
   top: 10px;
 }
@@ -289,7 +289,7 @@ section {
   height: 400px;
   border: 1px solid black;
   border-radius: 20px 20px 20px 20px;
-  margin: 30px;
+  margin: 2rem;
   box-shadow: 10px 10px 10px black;
   transition: 0.5s;
   background-size: cover;
@@ -314,7 +314,8 @@ section {
   display: flex;
   align-content: center;
   grid-area: form;
-  font-size: 40px;
+  font-size: 3rem;
+  width: 100vw;
 }
 
 .form__box {
@@ -335,9 +336,7 @@ form {
   color: var(--second-text-color);
   text-shadow: var(--shadow-2);
   opacity: 0.9;
-  padding-top: 15px;
-  padding-bottom: 30px;
-  /* font-family: var(--content-font); */
+  padding: 2rem 0 2rem 0;
   font-weight: normal;
   text-align: center;
   margin: 0 auto;
@@ -346,17 +345,19 @@ form {
 
 .container__form {
   display: flex;
-  padding: 20px;
-  background-color: #f1f1f1;
+  margin: 2rem 0 1rem 0;
+  padding: 2rem 2rem 2rem 2rem;
+  background-color: var(--bgr-color);
   flex-direction: column;
   border-radius: 15px 50px 30px;
+  box-shadow: 10px 10px 10px black;
 }
 
 input[type=text],
 input[type=submit] {
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
+  padding: 1rem;
+  margin: 1rem 0;
   display: inline-block;
   border: 1px solid #ccc;
   /* box-sizing: border-box; */
@@ -376,7 +377,7 @@ input[type=submit]:hover {
 
 .form__notification {
   font-style: italic;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 
