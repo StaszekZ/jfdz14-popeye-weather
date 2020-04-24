@@ -30,7 +30,7 @@ body {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .header {
@@ -182,10 +182,9 @@ section {
   display: flex;
   justify-content: center;
   width: 100vw;
-  flex-direction: row;
+  flex-direction: column;
   grid-area: features;
-  flex-wrap: wrap;
-  padding: 2.5rem 0 0 0;
+  padding: 2.5rem 0;
 }
 
 .features__question {
@@ -208,18 +207,13 @@ section {
 .features__description {
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  padding: 0.8rem;
   width: 100vw;
-  justify-content: centre;
+  justify-content: center;
   flex-wrap: wrap;
-  align-content: space-between;
+  align-content: center; 
   align-items: center;
 }
-
-.h__box {
-  text-align: center;
-}
-
 
 .features__box {
   display: flex;
@@ -228,16 +222,16 @@ section {
   padding: 1rem;
   text-align: center;
   margin: 1rem;
-  width: 250px;
-  height: 450px;
+  width: 20vw;
+  height: 85vh;
   border-radius: 15px 50px 30px;
   color: var(--main-text-color);
   box-shadow: 10px 10px 10px black;
+  justify-content: space-evenly;
 }
 
 .features__image {
-  width: 230px;
-  height: 230px;
+  width: 18vw;
   display: block;
 }
 
@@ -245,17 +239,21 @@ section {
   width: 100%;
   height: 100%;
   padding: 0.5rem;
+  align-self: center;
 }
 
 
-.description__box {
-  align-items: center;
+.h__box {
+  text-align: center;
+
 }
+
+
 
 .text__box {
   text-align: center;
-  margin: 1rem;
-  font-size: 0.5rem;
+  margin: 0.5rem;
+  font-size: 0.9rem;
 }
 
 
@@ -578,6 +576,16 @@ input[type=submit]:hover {
     margin: auto;
     padding: 10px;
   }
+
+  .features__title {
+    font-size: 2.5rem;
+  }
+
+  .features__description {
+    flex: 0 50%;
+  }
+
+
 }
 
 @media (max-width: 768px) {
@@ -615,9 +623,6 @@ input[type=submit]:hover {
     display: none;
   }
 
-  .features__title {
-    font-size: 35px;
-  }
 
   .nav__list--item a {
     font-size: 15px;
@@ -635,25 +640,24 @@ input[type=submit]:hover {
     margin: auto;
     padding: 10px;
   }
+
+  .features__title {
+    font-size: 2rem;
+  }
+
+  .features__box {
+    width: 35vw;
+    height: 90vh;
+  }
+
+  .features__image {
+    width: 33vw;
 }
 
 
 @media (max-width: 420px) {
   .hero__description {
     font-size: 5vw;
-  }
-
-  .features__title {
-    font-size: 25px;
-  }
-
-  .features__box {
-    width: 80%;
-  }
-
-  .features__image {
-    width: auto;
-    height: auto;
   }
 
   .features__description {
@@ -677,4 +681,16 @@ input[type=submit]:hover {
     height: 1.75rem;
     margin-left: 40%;
   }
+
+  .features__title {
+    font-size: 1.5rem;
+  }
+  
+  .features__box {
+    width: 50vw;
+  }
+
+  .features__image {
+    width: 48vw;
+}
 }
