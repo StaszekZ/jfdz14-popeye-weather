@@ -178,18 +178,10 @@ section {
 
 /* Kasia- features */
 
-
-
-.container {
-  display: flex;
-  justify-content: space-around;
-}
-
 .features {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
   flex-direction: row;
   grid-area: features;
   flex-wrap: wrap;
@@ -206,7 +198,7 @@ section {
   color: var(--second-text-color);
   text-shadow: var(--shadow-2);
   opacity: 0.9;
-  padding: 2rem 0 2rem 0;
+  padding: 1rem 0;
   font-weight: normal;
   text-align: center;
   margin: 0 auto;
@@ -217,7 +209,7 @@ section {
   display: flex;
   flex-direction: row;
   padding: 10px;
-  width: 100%;
+  width: 100vw;
   justify-content: centre;
   flex-wrap: wrap;
   align-content: space-between;
@@ -228,18 +220,6 @@ section {
   text-align: center;
 }
 
-.features__image {
-  width: 260px;
-  height: 310px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-.img__box {
-  width: 100%;
-}
 
 .features__box {
   display: flex;
@@ -248,14 +228,24 @@ section {
   padding: 1rem;
   text-align: center;
   margin: 1rem;
-  width: 325px;
-  height: 500px;
+  width: 250px;
+  height: 450px;
   border-radius: 15px 50px 30px;
   color: var(--main-text-color);
   box-shadow: 10px 10px 10px black;
 }
 
+.features__image {
+  width: 230px;
+  height: 230px;
+  display: block;
+}
 
+.img__box {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+}
 
 
 .description__box {
@@ -265,12 +255,15 @@ section {
 .text__box {
   text-align: center;
   margin: 1rem;
+  font-size: 0.5rem;
 }
 
 
 
 /* functionality */
-.description {
+
+
+.funcionality {
   grid-area: description;
   display: flex;
   flex: 0 50%;
@@ -538,7 +531,6 @@ input[type=submit]:hover {
 }
 
 /* Media Queries */
-
 @media (max-width: 1200px) {
 
   body,
