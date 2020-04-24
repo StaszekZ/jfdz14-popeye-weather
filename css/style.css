@@ -281,11 +281,12 @@ section {
   font-size: 2rem;
   width: 100vw;
 }
+
 .functionality__box {
   width: 30%;
   border: 1px solid black;
   border-radius: 1rem 1rem 1rem 1rem;
-  box-shadow: 0,8rem 0,8rem 0,8rem black;
+  box-shadow: 0, 8rem 0, 8rem 0, 8rem black;
   transition: 0.5s;
   background-size: cover;
   text-align: center;
@@ -296,13 +297,16 @@ section {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
 .functionality__image {
   display: block;
   margin: 0 auto;
 }
+
 .f__box {
   margin: 0 auto;
 }
+
 .functionality__description {
   width: 90%;
   height: 3rem;
@@ -311,10 +315,11 @@ section {
   text-overflow: ellipsis;
   margin-bottom: 2rem;
   cursor: pointer;
-  overflow:hidden;
+  overflow: hidden;
   white-space: nowrap;
 }
-.functionality__description:hover{
+
+.functionality__description:hover {
   height: 100%;
   overflow: visible;
   white-space: normal;
@@ -531,6 +536,7 @@ input[type=submit]:hover {
     transform: translateX(-100%);
   }
 }
+
 /* Media Queries */
 
 @media (max-width: 1200px) {
@@ -563,16 +569,20 @@ input[type=submit]:hover {
     background: #08538c;
     font-size: 1rem;
   }
+
   .nav__list--item a {
     font-size: 15px;
   }
+
   .nav__list {
     width: 80%;
   }
+
   .logo {
     margin-top: 8px;
-   }
-   .nav__list--item {
+  }
+
+  .nav__list--item {
     margin: auto;
     padding: 10px;
   }
@@ -608,22 +618,28 @@ input[type=submit]:hover {
     width: 100%;
     padding-top: 10px;
   }
+
   .hero__link {
     display: none;
   }
+
   .features__title {
     font-size: 35px;
   }
+
   .nav__list--item a {
     font-size: 15px;
   }
+
   .nav__list {
     width: 80%;
   }
+
   .logo {
     margin-top: 8px;
-   }
-   .nav__list--item {
+  }
+
+  .nav__list--item {
     margin: auto;
     padding: 10px;
   }
@@ -634,29 +650,37 @@ input[type=submit]:hover {
   .hero__description {
     font-size: 5vw;
   }
+
   .features__title {
     font-size: 25px;
   }
+
   .features__box {
     width: 80%;
   }
+
   .features__image {
     width: auto;
     height: auto;
   }
+
   .features__description {
     flex-direction: column;
   }
+
   .nav__list--item {
     margin: auto;
     padding: 10px;
   }
+
   .nav__list--item a {
     font-size: 12px;
   }
+
   .navigation {
     display: inline;
   }
+
   .logo {
     height: 1.75rem;
     margin-left: 40%;
