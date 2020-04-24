@@ -280,6 +280,7 @@ section {
   align-items: center;
   font-size: 2rem;
   width: 100vw;
+  height: auto;
 }
 .functionality__box {
   width: 30%;
