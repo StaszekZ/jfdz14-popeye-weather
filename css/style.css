@@ -13,7 +13,7 @@ body {
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100vh repeat(4, 100vh) 10vh;
+  grid-template-rows: 100vh repeat(4, auto) 10vh;
   grid-template-areas:
     "hero hero hero hero"
     "features features features features"
@@ -24,13 +24,13 @@ body {
 }
 
 .gradient {
-  min-height: 410vh;
+  height: fit-content;
   background: #29c7fb;
   background: linear-gradient(to bottom, #29c7fb, #00ade7 30%, #08538c);
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .header {
@@ -178,22 +178,13 @@ section {
 
 /* Kasia- features */
 
-
-
-.container {
-  display: flex;
-  justify-content: space-around;
-}
-
 .features {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
-  flex-direction: row;
+  flex-direction: column;
   grid-area: features;
-  flex-wrap: wrap;
-  padding: 2.5rem 0 0 0;
+  padding: 2.5rem 0;
 }
 
 .features__question {
@@ -206,7 +197,7 @@ section {
   color: var(--second-text-color);
   text-shadow: var(--shadow-2);
   opacity: 0.9;
-  padding: 2rem 0 2rem 0;
+  padding: 1rem 0;
   font-weight: normal;
   text-align: center;
   margin: 0 auto;
@@ -216,29 +207,12 @@ section {
 .features__description {
   display: flex;
   flex-direction: row;
-  padding: 10px;
-  width: 100%;
-  justify-content: centre;
+  padding: 0.8rem;
+  width: 100vw;
+  justify-content: center;
   flex-wrap: wrap;
-  align-content: space-between;
+  align-content: center;
   align-items: center;
-}
-
-.h__box {
-  text-align: center;
-}
-
-.features__image {
-  width: 260px;
-  height: 310px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-.img__box {
-  width: 100%;
 }
 
 .features__box {
@@ -246,31 +220,40 @@ section {
   flex-direction: column;
   background-color: var(--bgr-color);
   padding: 1rem;
-  text-align: center;
   margin: 1rem;
-  width: 325px;
-  height: 500px;
+  width: 20rem;
+  height: 55vh;
+  overflow: hidden;
   border-radius: 15px 50px 30px;
   color: var(--main-text-color);
   box-shadow: 10px 10px 10px black;
 }
 
 
+.img__fbox {
+  max-width: 100%;
+  height: 50%;
+  padding: 1rem;
+  align-self: center;
+}
 
 
-.description__box {
-  align-items: center;
+.h__box {
+  text-align: center;
 }
 
 .text__box {
   text-align: center;
-  margin: 1rem;
+  margin: 0.5rem;
+  font-size: 0.9rem;
 }
 
 
 
 /* functionality */
-.description {
+
+
+.funcionality {
   grid-area: description;
   display: flex;
   flex: 0 50%;
@@ -281,11 +264,12 @@ section {
   font-size: 2rem;
   width: 100vw;
 }
+
 .functionality__box {
   width: 30%;
   border: 1px solid black;
   border-radius: 1rem 1rem 1rem 1rem;
-  box-shadow: 0,8rem 0,8rem 0,8rem black;
+  box-shadow: 10px 10px 10px black;
   transition: 0.5s;
   background-size: cover;
   text-align: center;
@@ -296,13 +280,16 @@ section {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
 .functionality__image {
   display: block;
   margin: 0 auto;
 }
+
 .f__box {
   margin: 0 auto;
 }
+
 .functionality__description {
   width: 90%;
   height: 3rem;
@@ -311,13 +298,21 @@ section {
   text-overflow: ellipsis;
   margin-bottom: 2rem;
   cursor: pointer;
-  overflow:hidden;
+  overflow: hidden;
   white-space: nowrap;
 }
-.functionality__description:hover{
+
+.functionality__description:hover {
   height: 100%;
   overflow: visible;
   white-space: normal;
+}
+
+.img__box {
+  width: 98%;
+  height: 98%;
+  padding: 0.5rem;
+  align-self: center;
 }
 
 
@@ -345,11 +340,11 @@ form {
 }
 
 .form__title {
-  font-size: 45px;
+  font-size: 3rem;
   color: var(--second-text-color);
   text-shadow: var(--shadow-2);
   opacity: 0.9;
-  padding: 2rem 0 2rem 0;
+  padding: 1rem 0;
   font-weight: normal;
   text-align: center;
   margin: 0 auto;
@@ -358,7 +353,7 @@ form {
 
 .container__form {
   display: flex;
-  margin: 2rem 0 1rem 0;
+  margin: 2rem;
   padding: 2rem 2rem 2rem 2rem;
   background-color: var(--bgr-color);
   flex-direction: column;
@@ -408,6 +403,18 @@ input[type=submit]:hover {
   padding-top: 2.5rem;
   /* background-color: #afcbe3; */
 }
+
+.team__title {
+  font-size: 3rem;
+  color: var(--second-text-color);
+  text-shadow: var(--shadow-2);
+  opacity: 0.9;
+  padding: 1rem 0;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 auto;
+}
+
 
 .team-cards {
   display: flex;
@@ -531,7 +538,15 @@ input[type=submit]:hover {
     transform: translateX(-100%);
   }
 }
+
 /* Media Queries */
+@media (max-width: 1450px) {
+  .features__description {
+    max-width: 60%;
+    margin: auto;
+  }
+
+}
 
 @media (max-width: 1200px) {
 
@@ -563,19 +578,40 @@ input[type=submit]:hover {
     background: #08538c;
     font-size: 1rem;
   }
+
   .nav__list--item a {
     font-size: 15px;
   }
+
   .nav__list {
     width: 80%;
   }
+
   .logo {
     margin-top: 8px;
-   }
-   .nav__list--item {
+  }
+
+  .nav__list--item {
     margin: auto;
     padding: 10px;
   }
+
+  .features__title {
+    font-size: 2.5rem;
+    margin: 0.2rem;
+  }
+
+  .form__title {
+    font-size: 2.5rem;
+    margin: 0.2rem;
+  }
+
+  .features__description {
+    max-width: 80%;
+    margin: auto;
+  }
+
+
 }
 
 @media (max-width: 768px) {
@@ -608,24 +644,37 @@ input[type=submit]:hover {
     width: 100%;
     padding-top: 10px;
   }
+
   .hero__link {
     display: none;
   }
-  .features__title {
-    font-size: 35px;
-  }
+
+
   .nav__list--item a {
     font-size: 15px;
   }
+
   .nav__list {
     width: 80%;
   }
+
   .logo {
     margin-top: 8px;
-   }
-   .nav__list--item {
+  }
+
+  .nav__list--item {
     margin: auto;
     padding: 10px;
+  }
+
+  .features__title {
+    font-size: 2rem;
+    margin: 0.2rem;
+  }
+
+  .form__title {
+    font-size: 2rem;
+    margin: 0.2rem;
   }
 }
 
@@ -634,31 +683,55 @@ input[type=submit]:hover {
   .hero__description {
     font-size: 5vw;
   }
-  .features__title {
-    font-size: 25px;
-  }
-  .features__box {
-    width: 80%;
-  }
-  .features__image {
-    width: auto;
-    height: auto;
-  }
+
   .features__description {
     flex-direction: column;
   }
+
+  .description {
+    flex: 0 100%;
+  }
+
+  .functionality__box {
+    width: 80%;
+  }
+
   .nav__list--item {
     margin: auto;
     padding: 10px;
   }
+
   .nav__list--item a {
     font-size: 12px;
   }
+
   .navigation {
     display: inline;
   }
+
   .logo {
     height: 1.75rem;
     margin-left: 40%;
   }
+
+  .features__title {
+    font-size: 1.5rem;
+    margin: 0.2rem;
+  }
+
+  .form__title {
+    font-size: 1.5rem;
+    margin: 0.2rem;
+  }
+
+  .features__box {
+    /* width: auto; */
+    height: auto;
+    padding: 1rem;
+  }
+
+  .img__fbox {
+    height: auto;
+  }
+
 }
