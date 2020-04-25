@@ -30,7 +30,7 @@ body {
 }
 
 section {
-  height: 100vh;
+  
 }
 
 .header {
@@ -183,15 +183,15 @@ section {
 .container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .features {
+  grid-area: features;
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
   flex-direction: row;
-  grid-area: features;
   flex-wrap: wrap;
   padding: 2.5rem 0 0 0;
 }
