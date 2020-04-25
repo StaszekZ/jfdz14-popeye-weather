@@ -606,7 +606,10 @@ input[type=submit]:hover {
     margin: 0.2rem;
   }
 
-
+  .features__description {
+    max-width: 80%;
+    margin: auto;
+  }
 
 
 }
