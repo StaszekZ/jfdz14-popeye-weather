@@ -635,6 +635,10 @@ input[type=submit]:hover {
     max-width: 80%;
     margin: auto;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
 }
 
 @media (max-width: 768px) {
