@@ -13,7 +13,7 @@ body {
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100vh repeat(4, 100vh) 10vh;
+  grid-template-rows: 100vh repeat(4, auto) 10vh;
   grid-template-areas:
     "hero hero hero hero"
     "features features features features"
@@ -24,7 +24,7 @@ body {
 }
 
 .gradient {
-  min-height: 410vh;
+  height: auto;
   background: #29c7fb;
   background: linear-gradient(to bottom, #29c7fb, #00ade7 30%, #08538c);
 }
@@ -211,7 +211,7 @@ section {
   width: 100vw;
   justify-content: center;
   flex-wrap: wrap;
-  align-content: center; 
+  align-content: center;
   align-items: center;
 }
 
@@ -676,7 +676,7 @@ input[type=submit]:hover {
   .description {
     flex: 0 100%;
   }
-  
+
   .functionality__box {
     width: 80%;
   }
@@ -713,6 +713,10 @@ input[type=submit]:hover {
     width: auto;
     height: auto;
     padding: 1rem;
+  }
+
+  .img__fbox {
+    height: auto;
   }
 
 }
