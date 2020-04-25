@@ -13,7 +13,7 @@ body {
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100vh repeat(4, 100vh) 10vh;
+  grid-template-rows: 100vh repeat(4, auto) 10vh;
   grid-template-areas:
     "hero hero hero hero"
     "features features features features"
@@ -211,7 +211,7 @@ section {
   width: 100vw;
   justify-content: center;
   flex-wrap: wrap;
-  align-content: center; 
+  align-content: center;
   align-items: center;
 }
 
@@ -403,16 +403,17 @@ input[type=submit]:hover {
   padding-top: 2.5rem;
   /* background-color: #afcbe3; */
 }
+
 .team__title {
   font-size: 3rem;
-    color: var(--second-text-color);
-    text-shadow: var(--shadow-2);
-    opacity: 0.9;
-    padding: 1rem 0;
-    font-weight: normal;
-    text-align: center;
-    margin: 0 auto;
-  }
+  color: var(--second-text-color);
+  text-shadow: var(--shadow-2);
+  opacity: 0.9;
+  padding: 1rem 0;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 auto;
+}
 
 
 .team-cards {
@@ -687,7 +688,7 @@ input[type=submit]:hover {
   .description {
     flex: 0 100%;
   }
-  
+
   .functionality__box {
     width: 80%;
   }
@@ -721,9 +722,13 @@ input[type=submit]:hover {
   }
 
   .features__box {
-    width: auto;
+    /* width: auto; */
     height: auto;
     padding: 1rem;
+  }
+
+  .img__fbox {
+    height: auto;
   }
 
 }
