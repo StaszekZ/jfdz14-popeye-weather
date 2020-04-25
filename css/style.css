@@ -24,11 +24,7 @@ body {
 }
 
 .gradient {
-<<<<<<< HEAD
-  height: auto;
-=======
   height: fit-content;
->>>>>>> develop
   background: #29c7fb;
   background: linear-gradient(to bottom, #29c7fb, #00ade7 30%, #08538c);
 }
@@ -407,16 +403,17 @@ input[type=submit]:hover {
   padding-top: 2.5rem;
   /* background-color: #afcbe3; */
 }
+
 .team__title {
   font-size: 3rem;
-    color: var(--second-text-color);
-    text-shadow: var(--shadow-2);
-    opacity: 0.9;
-    padding: 1rem 0;
-    font-weight: normal;
-    text-align: center;
-    margin: 0 auto;
-  }
+  color: var(--second-text-color);
+  text-shadow: var(--shadow-2);
+  opacity: 0.9;
+  padding: 1rem 0;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 auto;
+}
 
 
 .team-cards {
@@ -725,7 +722,7 @@ input[type=submit]:hover {
   }
 
   .features__box {
-    width: auto;
+    /* width: auto; */
     height: auto;
     padding: 1rem;
   }
