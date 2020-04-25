@@ -277,7 +277,7 @@ section {
   width: 30%;
   border: 1px solid black;
   border-radius: 1rem 1rem 1rem 1rem;
-  box-shadow: 0, 8rem 0, 8rem 0, 8rem black;
+  box-shadow: 10px 10px 10px black;
   transition: 0.5s;
   background-size: cover;
   text-align: center;
@@ -662,6 +662,14 @@ input[type=submit]:hover {
 
   .features__description {
     flex-direction: column;
+  }
+
+  .description {
+    flex: 0 100%;
+  }
+  
+  .functionality__box {
+    width: 80%;
   }
 
   .nav__list--item {
