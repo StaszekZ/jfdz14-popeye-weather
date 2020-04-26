@@ -74,7 +74,7 @@ section {
 .nav__list--item a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #f4f4f4;
+  color: var(--second-text-color);
   cursor: pointer;
 }
 
@@ -86,7 +86,7 @@ section {
   grid-area: hero;
   background-image: url("../img/742112.png");
   background-size: cover;
-  background-color: white;
+  background-color: var(--bgr-color);
 }
 
 .hero__txt {
@@ -143,7 +143,6 @@ section {
 
 .hero__link {
   font-family: var(--content-font);
-  /* opacity: 0.9; */
   font-size: 2.25rem;
   line-height: 1.2em;
   text-decoration: none;
@@ -268,17 +267,14 @@ section {
 .functionality__box {
   width: 30%;
   border: 1px solid black;
-  border-radius: 1rem 1rem 1rem 1rem;
+  border-radius: 1rem;
   box-shadow: 10px 10px 10px black;
   transition: 0.5s;
   background-size: cover;
   text-align: center;
-  background-color: aliceblue;
+  background-color: var(--bgr-color);
   overflow: hidden;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 5%;
 }
 
 .functionality__title {
@@ -373,7 +369,7 @@ form {
 .container__form {
   display: flex;
   margin: 2rem;
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 2rem;
   background-color: var(--bgr-color);
   flex-direction: column;
   border-radius: 15px 50px 30px;
@@ -407,20 +403,12 @@ input[type=submit]:hover {
   font-size: 1rem;
 }
 
-
-
-
-
-
-
-
 /* team */
 .team {
   grid-area: team;
   display: flex;
   align-items: center;
   padding-top: 2.5rem;
-  /* background-color: #afcbe3; */
 }
 
 .team__title {
@@ -499,8 +487,6 @@ input[type=submit]:hover {
 
 .card2 {
   background-image: url(../img/Kasia_info/Kasia_img1.jpg);
-  /* background-repeat: no-repeat;
-  background-position: left; */
 }
 
 .card3 {
@@ -635,10 +621,6 @@ input[type=submit]:hover {
     max-width: 80%;
     margin: auto;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> develop
 }
 
 @media (max-width: 768px) {
