@@ -76,9 +76,9 @@ body {
   color: rgb(27, 47, 112);
 }
 
-section {
-  /* min-height: 100vh; */
-}
+/* section {
+min-height: 100vh;
+} */
 
 .hero {
   width: 100vw;
@@ -266,7 +266,7 @@ section {
   align-items: center;
   font-size: 2rem;
   width: var(--max-width);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .functionality__box {
@@ -344,7 +344,7 @@ section {
   grid-area: form;
   font-size: 3rem;
   width: var(--max-width);
-  height: 80vh;
+  height: 100vh;
 
 }
 
@@ -524,6 +524,19 @@ input[type=submit]:hover {
   text-shadow: var(--shadow-3);
   border-top: 1px solid rgba(0, 0, 0, 0.4);
   line-height: 10vh;
+}
+
+.fish {
+  position: absolute;
+  width: 12rem;
+}
+
+.fish--right {
+  right: 6%;
+}
+
+.fish--left {
+  left: 8%;
 }
 
 @keyframes link {
