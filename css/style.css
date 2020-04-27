@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0 auto;
   font-size: 16px;
   font-family: "Baloo 2";
 }
@@ -9,34 +9,24 @@
 html,
 body {
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   scroll-behavior: smooth;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100vh repeat(4, auto) 10vh;
-  grid-template-areas:
-    "hero hero hero hero"
-    "features features features features"
-    "description description description description"
-    "form form form form"
-    "team team team team"
-    "footer footer footer footer";
+  display: flex;
+  flex-direction: column;
 }
 
 .gradient {
   height: fit-content;
+  width: 100vw;
   background: #29c7fb;
   background: linear-gradient(to bottom, #29c7fb, #00ade7 30%, #08538c);
 }
 
-section {
-  min-height: 100vh;
-}
 
 .header {
   display: flex;
   align-content: space-between;
-  width: 100%;
+  width: 100vw;
 }
 
 .navigation {
@@ -51,11 +41,14 @@ section {
 }
 
 .logo {
-  min-width: 10vw;
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: 12.5rem;
+  height: 12.5rem;
   background-image: url(/img/Popyeye-logo.svg.png);
   background-size: contain;
   background-repeat: no-repeat;
-
 }
 
 .nav__list {
@@ -63,6 +56,7 @@ section {
   list-style: none;
   width: 100%;
   justify-content: center;
+  text-align: center;
   font-family: var(--content-font);
 }
 
@@ -82,12 +76,17 @@ section {
   color: rgb(27, 47, 112);
 }
 
+section {
+  /* min-height: 100vh; */
+}
+
 .hero {
-  grid-area: hero;
+  width: 100vw;
   background-image: url("../img/742112.png");
   background-size: cover;
   background-color: var(--bgr-color);
 }
+
 
 .hero__txt {
   display: flex;
@@ -116,8 +115,8 @@ section {
   color: var(--main-text-color);
   text-shadow: var(--shadow);
   opacity: 0.9;
-  padding-top: 40px;
-  padding-bottom: 60px;
+  padding-top: 2.5rem;
+  padding-bottom: 3.75rem;
   font-family: var(--header-font);
   font-weight: normal;
   text-align: center;
@@ -132,7 +131,7 @@ section {
   text-align: center;
   align-self: center;
   font-family: var(--content-font);
-  padding-top: 20px;
+  padding-top: 1.25rem;
   text-shadow: var(--shadow-2);
 }
 
@@ -175,14 +174,20 @@ section {
   white-space: nowrap;
 }
 
+.sneak {
+  height: 60vh;
+  width: var(--max-width);
+  background-color: blueviolet;
+}
+
 /* Kasia- features */
 
 .features {
   display: flex;
+  min-height: 100vh;
+  width: var(--max-width);
   justify-content: center;
-  width: 100vw;
   flex-direction: column;
-  grid-area: features;
   padding: 2.5rem 0;
 }
 
@@ -207,7 +212,7 @@ section {
   display: flex;
   flex-direction: row;
   padding: 0.8rem;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
   flex-wrap: wrap;
   align-content: center;
@@ -219,9 +224,9 @@ section {
   flex-direction: column;
   background-color: var(--bgr-color);
   padding: 1rem;
-  margin: 1rem;
-  width: 20rem;
-  height: 55vh;
+  margin: 1rem 3rem;
+  width: 30%;
+  height: 35vh;
   overflow: hidden;
   border-radius: 15px 50px 30px;
   color: var(--main-text-color);
@@ -253,7 +258,6 @@ section {
 
 
 .funcionality {
-  grid-area: description;
   display: flex;
   flex: 0 50%;
   justify-content: center;
@@ -261,7 +265,8 @@ section {
   flex-direction: row;
   align-items: center;
   font-size: 2rem;
-  width: 100vw;
+  width: var(--max-width);
+  height: 100vh;
 }
 
 .functionality__box {
@@ -338,7 +343,9 @@ section {
   align-content: center;
   grid-area: form;
   font-size: 3rem;
-  width: 100vw;
+  width: var(--max-width);
+  height: 80vh;
+
 }
 
 .form__box {
@@ -383,7 +390,6 @@ input[type=submit] {
   margin: 1rem 0;
   display: inline-block;
   border: 1px solid #ccc;
-  /* box-sizing: border-box; */
 }
 
 
@@ -405,7 +411,8 @@ input[type=submit]:hover {
 
 /* team */
 .team {
-  grid-area: team;
+  width: var(--max-width);
+  height: 90vh;
   display: flex;
   align-items: center;
   padding-top: 2.5rem;
@@ -421,7 +428,6 @@ input[type=submit]:hover {
   text-align: center;
   margin: 0 auto;
 }
-
 
 .team-cards {
   display: flex;
@@ -453,11 +459,11 @@ input[type=submit]:hover {
 }
 
 .team-card {
-  width: 235px;
-  height: 235px;
+  width: 20%;
+  /* height: 25%; */
   border: 1px solid black;
   border-radius: 50%;
-  margin: 30px;
+  margin: 40px;
   box-shadow: 10px 10px 10px black;
   text-align: center;
   transition: 0.5s;
