@@ -564,15 +564,15 @@ input[type=submit]:hover {
 }
 
 /* Media Queries */
-@media (max-width: 1450px) {
+/* @media (max-width: 1450px) {
   .features__description {
     max-width: 60%;
     margin: auto;
   }
 
-}
+} */
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
 
   body,
   html {
@@ -640,7 +640,7 @@ input[type=submit]:hover {
     max-width: 80%;
     margin: auto;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .hero {
