@@ -9,8 +9,6 @@ for(const teamCard of teamCards){
 
     let drawActive = false;   
 
-
-
     teamCard.addEventListener('mousedown', () => {
         drawActive = true;    
     })
