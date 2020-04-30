@@ -437,7 +437,8 @@ input[type=submit]:hover {
 }
 
 .card-bcg {
-  margin-top: 65%;
+  border-radius: 20px;
+  margin-top: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -459,16 +460,13 @@ input[type=submit]:hover {
 }
 
 .team-card {
-  width: 20%;
-  /* height: 25%; */
-  border: 1px solid black;
-  border-radius: 50%;
-  margin: 40px;
-  box-shadow: 10px 10px 10px black;
-  text-align: center;
+  position: relative;
+  width: 320px;
+  height: 320px;
   transition: 0.5s;
+  cursor: pointer;
   background-size: cover;
-  overflow: hidden;
+  background-image: url(/img/FAVPNG_piracy-cartoon-clip-art_BEPQRTFj.png);
 }
 
 .team-card:hover {
@@ -487,8 +485,14 @@ input[type=submit]:hover {
   color: rgb(112, 201, 236);
 }
 
-.card1 {
-  background-image: url(../img/o_mnie/IMG_2686.jpg);
+.card-photo {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+
+/* .card1 {
+  background-image: url(/img/o_mnie/IMG_2686.jpg);
 }
 
 .card2 {
@@ -505,13 +509,21 @@ input[type=submit]:hover {
 
 .card5 {
   background-image: url(../img/o_mnie/lukasz.jpg);
-}
+} */
 
 .card-name {
   font-weight: bold;
   font-size: 1.2rem;
   color: var(--second-text-color);
   text-transform: uppercase;
+}
+.boat{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-image: url(/img/FAVPNG_steamboat-free-content-clip-art_bJADLBg5.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .footer {
