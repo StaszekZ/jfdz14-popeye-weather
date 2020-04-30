@@ -5,6 +5,7 @@
   --bgr-color: #ebf2f7;
   --header-font: "Lobster", cursive;
   --content-font: 'Baloo 2', cursive;
+  --max-width: 1300px;
   --shadow: 1px 1px 1px black,
     1px 2px 1px white,
     1px 3px 1px white,
