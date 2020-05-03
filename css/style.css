@@ -51,7 +51,87 @@ body {
   background-repeat: no-repeat;
 }
 
-.nav__list {
+/* NAVIGATION UPDATE */
+
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 2px 0px 4px rgba(40, 40, 40, 0.3);
+}
+
+.navigation__burger {
+  font-size: 1em;
+  font-style: normal;
+  padding: 8px;
+}
+
+.navigation__burger__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.navigation__burger__checkbox {
+  position: absolute;
+  margin: -100;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+}
+
+.navigation__burger__checkbox:checked ~ .navigation__menu {
+  display: block;
+  padding-left: 3px;
+}
+
+.navigation__menu {
+  display: none;
+}
+
+.navigation__menu__list {
+  padding: 8px;
+  list-style: none;
+}
+
+.navigation__menu__list__link {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+.navigation__menu__list__link:link {
+  text-decoration: none;
+}
+
+.navigation__menu__list__link:focus {
+  font-weight: bolder;
+}
+
+.navigation__menu__list__link:hover {
+  font-weight: bolder;
+}
+
+.navigation__logo {
+  position: absolute;
+  display: flex;
+  align-self: flex-end;
+  width: 160px;
+  height: auto;
+  padding: 8px;
+}
+
+.navigation__logo__img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* .nav__list {
   display: flex;
   list-style: none;
   width: 100%;
@@ -74,11 +154,11 @@ body {
 
 .nav__list--item a:hover {
   color: rgb(27, 47, 112);
-}
-
-/* section {
-min-height: 100vh;
 } */
+
+section {
+min-height: 100vh;
+}
 
 .hero {
   width: 100vw;
