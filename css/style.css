@@ -135,9 +135,14 @@ min-height: 100vh;
 }
 
 .hero__boat {
-  width: 40vmax;
+  width: 35vmax;
   height: auto;
   align-self: center;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
 }
 
 /* .hero__form {
