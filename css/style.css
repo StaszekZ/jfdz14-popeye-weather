@@ -64,7 +64,7 @@ body {
   opacity: 0;
 }
 
-.navigation__burger__checkbox:checked ~ .navigation__menu {
+.navigation__burger__checkbox:checked~.navigation__menu {
   display: block;
   padding-left: 3px;
   margin: 16px;
@@ -113,8 +113,8 @@ body {
 
 
 .section {
-min-height: 100vh;
-padding-top: 50px;
+  min-height: 100vh;
+  padding-top: 50px;
 }
 
 .hero {
@@ -142,12 +142,7 @@ padding-top: 50px;
 }
 
 /* animation in hero section */
-<<<<<<< HEAD
 /* .animated {
-=======
-
-.animated {
->>>>>>> develop
   animation-duration: 1.5s;
   animation-delay: 0.4s;
 } */
@@ -241,7 +236,6 @@ section {
 .features {
   display: flex;
   min-height: 100vh;
-  width: 100%;
   justify-content: center;
   flex-direction: column;
   padding: 2.5rem;
@@ -286,7 +280,7 @@ section {
   overflow: hidden;
   border-radius: 15px 50px 30px;
   color: var(--main-text-color);
-  box-shadow: 0 10px 10px rgba(0,0,0, 0.2);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 
