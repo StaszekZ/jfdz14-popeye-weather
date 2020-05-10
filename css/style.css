@@ -8,7 +8,7 @@
 
 html,
 body {
-  width: 100vw;
+  width: 100%;
   /* height: 100vh; */
   scroll-behavior: smooth;
   display: flex;
@@ -106,7 +106,7 @@ body {
   background-image: url("../img/742112.png");
   background-color: var(--bgr-color);
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   min-height: 70vh;
 }
 
