@@ -428,7 +428,7 @@ input[type=submit]:hover {
   transition: 0.5s;
   cursor: pointer;
   background-size: cover;
-  background-image: url(/img/FAVPNG_piracy-cartoon-clip-art_BEPQRTFj.png);
+  background-image: url(../img/FAVPNG_piracy-cartoon-clip-art_BEPQRTFj.png);
 }
 
 .team-card:hover {
@@ -484,7 +484,7 @@ input[type=submit]:hover {
   position: relative;
   width: 200px;
   height: 200px;
-  background-image: url(/img/FAVPNG_steamboat-free-content-clip-art_bJADLBg5.png);
+  background-image: url(../img/FAVPNG_steamboat-free-content-clip-art_bJADLBg5.png);
   background-size: cover;
   background-position: center;
 }
