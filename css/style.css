@@ -107,7 +107,7 @@ body {
   background-color: var(--bgr-color);
   background-size: cover;
   width: 100%;
-  min-height: 70vh;
+  min-height: 55vh;
 }
 
 .hero__txt {
@@ -116,16 +116,9 @@ body {
 }
 
 .hero__name {
-  display: flex;
-  width: 42vw;
-  min-height: 60vh;
-  line-height: 1.2rem;
-  flex-direction: column;
-  align-items: center;
-  background-image: url('../img/fishes/board__shadow.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  margin-top: 50px;
+  width: 30%;
+  height: auto;
 }
 
 .hero__boat {
@@ -647,7 +640,7 @@ input[type=submit]:hover {
   .team,
   .footer,
   section {
-    width: 100vw;
+    width: 100%;
   }
 
   .fish {
@@ -676,9 +669,12 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 780px) {
+  .hero__img {
+    height: 30%;
+  }
 
   .hero__name {
-    width: 90vw;
+    width: 60%;
   }
 
   .hero__boat {
