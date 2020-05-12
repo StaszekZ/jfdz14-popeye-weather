@@ -336,7 +336,7 @@ form {
   box-shadow: 10px 10px 10px black;
 }
 
-input[type=text],
+input[type=email],
 input[type=submit] {
   width: 100%;
   padding: 1rem;
@@ -485,7 +485,7 @@ input[type=submit]:hover {
 .footer {
   width: 100%;
   color: var(--second-text-color);
-  background-color: #08538c;
+  background-color: #c2b280;
   font-size: 1.5rem;
   text-align: center;
   text-shadow: var(--shadow-3);
@@ -504,6 +504,11 @@ input[type=submit]:hover {
 
 .fish--left {
   left: 8%;
+}
+
+.fish--sneak {
+  left: 0;
+
 }
 
 /* Media Queries */
@@ -626,11 +631,6 @@ input[type=submit]:hover {
 
 
 @media (max-width: 1300px) {
-  /* .hero__txt {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  } */
 
   .sneak,
   .navigation,
