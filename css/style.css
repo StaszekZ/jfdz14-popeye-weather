@@ -34,13 +34,14 @@ body {
   height: 50px;
   top: 0px;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 2px 0px 4px rgba(40, 40, 40, 0.3);
+  box-shadow: 2px 0px 4px rgba(40, 40, 40, 0.2);
 }
 
 .navigation__burger {
   font-size: 1em;
   font-style: normal;
   margin: 16px;
+  margin-bottom: 0px;
 }
 
 .navigation__burger__icon {
@@ -58,8 +59,11 @@ body {
 
 .navigation__burger__checkbox:checked~.navigation__menu {
   display: block;
+  width: 200px;
   padding-left: 3px;
-  margin: 1rem;
+  margin-top: 0px;
+  margin-left: 0px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .navigation__menu {
@@ -87,6 +91,12 @@ body {
 .navigation__menu__list__link:hover {
   font-weight: bolder;
 }
+
+.navigation__menu__list__link:active {
+  font-weight: bolder;
+  color: rgb(20, 148, 207);
+}
+
 
 .navigation__logo {
   position: absolute;
