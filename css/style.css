@@ -133,7 +133,7 @@ section {
 
 .sneak {
   height: 60vh;
-  background-color: blueviolet;
+  background-color: darkcyan;
 }
 
 /* Kasia- features */
@@ -551,7 +551,6 @@ input[type=submit]:hover {
 }
 
 .fish--nets {
-  /* right: -10%; */
   top: 9%;
 }
 
