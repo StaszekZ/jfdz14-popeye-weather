@@ -92,9 +92,9 @@ body {
   position: absolute;
   display: flex;
   align-self: flex-end;
-  width: 160px;
+  width: 10rem;
   height: auto;
-  padding: 8px;
+  padding: 0.5rem;
 }
 
 .navigation__logo__img {
@@ -112,7 +112,6 @@ body {
 
 .hero__txt {
   display: flex;
-  /* justify-content: space-between; */
 }
 
 .hero__name {
@@ -132,7 +131,7 @@ section {
 }
 
 .sneak {
-  height: 60vh;
+  height: 50vh;
   background-color: darkcyan;
 }
 
@@ -226,9 +225,9 @@ section {
 
 .functionality__box {
   width: 30%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 1rem;
-  box-shadow: 10px 10px 10px black;
+  /* box-shadow: 10px 10px 10px black; */
   transition: 0.5s;
   background-size: cover;
   text-align: center;
