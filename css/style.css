@@ -531,11 +531,12 @@ input[type=submit]:hover {
 
 .boat {
   position: relative;
-  width: 200px;
+  width: 300px;
   height: 200px;
-  background-image: url(../img/FAVPNG_steamboat-free-content-clip-art_bJADLBg5.png);
-  background-size: cover;
+  background-image: url(../img/FAVPNG_underwater-diving-scuba-diving-deep-diving-clip-art_g2ztRJYt.png);
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .footer {
@@ -608,6 +609,17 @@ input[type=submit]:hover {
 
 .fish--nets {
   top: 9%;
+}
+
+.underwater {
+  background-image: url(../img/FAVPNG_underwater_19mmkDgZ.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 32%;
+  position: absolute;
+  top: 67%;
+  z-index: -2;
 }
 
 /* Media Queries */
