@@ -376,7 +376,7 @@ input[type=submit]:hover {
 
 .team {
   width: var(--max-width);
-  height: 100vh;
+  height: 1500px;
   display: flex;
   align-items: center;
   padding-top: 2.5rem;
@@ -407,9 +407,8 @@ input[type=submit]:hover {
 }
 
 .team-img {
-  width: 100vw;
-  top: 50px;
   text-align: center;
+  height: 100%;
 }
 
 .team-img>h2 {
@@ -424,10 +423,10 @@ input[type=submit]:hover {
 }
 
 .team-card {
-  transform-style: preserve-3d;
+  /* transform-style: preserve-3d; */
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: 420px;
+  height: 420px;
   transition: 0.5s;
   cursor: pointer;
   background-size: cover;
@@ -461,29 +460,67 @@ input[type=submit]:hover {
   content: '';
   background-size: cover;
   background-image: url(../img/o_mnie/IMG_2686.jpg);
-  height: 115px;
-  width: 115px;
-  transform: translateZ(-1px);
-  top: calc(50% - 50px);
-  left: calc(50% - 50px);
+  height: 155px;
+  width: 155px;
+  /* transform: translateZ(-1px); */
+  top: calc(50% - 70px);
+  left: calc(50% - 70px);
+  z-index: -1;
   
 }
-/* 
-.card2 {
+
+.card2::before {
   background-image: url(../img/Kasia_info/Kasia_img1.jpg);
+  position: absolute;
+  content: '';
+  background-size: cover;
+  height: 155px;
+  width: 155px;
+  /* transform: translateZ(-1px); */
+  top: calc(50% - 70px);
+  left: calc(50% - 70px);
+  z-index: -1;
 }
 
-.card3 {
+ 
+.card3::before {
   background-image: url(../img/o_mnie/Mateusz.jpeg);
+  position: absolute;
+  content: '';
+  background-size: cover;
+  height: 155px;
+  width: 155px;
+  /* transform: translateZ(-1px); */
+  top: calc(50% - 70px);
+  left: calc(50% - 70px);
+  z-index: -1;
 }
 
-.card4 {
+.card4::before {
   background-image: url(../img/o_mnie/Staszek.jpeg);
+  position: absolute;
+  content: '';
+  background-size: cover;
+  height: 155px;
+  width: 155px;
+  /* transform: translateZ(-1px); */
+  top: calc(50% - 70px);
+  left: calc(50% - 70px);
+  z-index: -1;
 }
 
-.card5 {
+.card5::before {
   background-image: url(../img/o_mnie/lukasz.jpg);
-} */
+  position: absolute;
+  content: '';
+  background-size: cover;
+  height: 155px;
+  width: 155px;
+  /* transform: translateZ(-1px); */
+  top: calc(50% - 70px);
+  left: calc(50% - 70px);
+  z-index: -1;
+} 
 
 .card-name {
   font-weight: bold;
