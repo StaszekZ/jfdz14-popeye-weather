@@ -9,7 +9,6 @@
 html,
 body {
   width: 100%;
-  /* height: 100vh; */
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
@@ -20,6 +19,7 @@ body {
   width: 100%;
   background: #29c7fb;
   background: linear-gradient(to bottom, #29c7fb, #00ade7 30%, #08538c);
+  transform-style: preserve-3d;
 }
 
 
@@ -34,13 +34,14 @@ body {
   height: 50px;
   top: 0px;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 2px 0px 4px rgba(40, 40, 40, 0.3);
+  box-shadow: 2px 0px 4px rgba(40, 40, 40, 0.2);
 }
 
 .navigation__burger {
   font-size: 1em;
   font-style: normal;
   margin: 16px;
+  margin-bottom: 0px;
 }
 
 .navigation__burger__icon {
@@ -58,8 +59,11 @@ body {
 
 .navigation__burger__checkbox:checked~.navigation__menu {
   display: block;
+  width: 200px;
   padding-left: 3px;
-  margin: 1rem;
+  margin-top: 0px;
+  margin-left: 0px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .navigation__menu {
@@ -88,13 +92,19 @@ body {
   font-weight: bolder;
 }
 
+.navigation__menu__list__link:active {
+  font-weight: bolder;
+  color: rgb(20, 148, 207);
+}
+
+
 .navigation__logo {
   position: absolute;
   display: flex;
   align-self: flex-end;
-  width: 160px;
+  width: 10rem;
   height: auto;
-  padding: 8px;
+  padding: 0.5rem;
 }
 
 .navigation__logo__img {
@@ -107,25 +117,17 @@ body {
   background-color: var(--bgr-color);
   background-size: cover;
   width: 100%;
-  min-height: 70vh;
+  min-height: 55vh;
 }
 
 .hero__txt {
   display: flex;
-  /* justify-content: space-between; */
 }
 
 .hero__name {
-  display: flex;
-  width: 42vw;
-  min-height: 60vh;
-  line-height: 1.2rem;
-  flex-direction: column;
-  align-items: center;
-  background-image: url('../img/fishes/board__shadow.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  margin-top: 50px;
+  width: 30%;
+  height: auto;
 }
 
 .hero__boat {
@@ -139,8 +141,8 @@ section {
 }
 
 .sneak {
-  height: 60vh;
-  background-color: blueviolet;
+  height: 50vh;
+  background-color: darkcyan;
 }
 
 /* Kasia- features */
@@ -233,9 +235,9 @@ section {
 
 .functionality__box {
   width: 30%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 1rem;
-  box-shadow: 10px 10px 10px black;
+  /* box-shadow: 10px 10px 10px black; */
   transition: 0.5s;
   background-size: cover;
   text-align: center;
@@ -343,7 +345,7 @@ form {
   box-shadow: 10px 10px 10px black;
 }
 
-input[type=text],
+input[type=email],
 input[type=submit] {
   width: 100%;
   padding: 1rem;
@@ -374,7 +376,7 @@ input[type=submit]:hover {
 
 .team {
   width: var(--max-width);
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   padding-top: 2.5rem;
@@ -429,7 +431,7 @@ input[type=submit]:hover {
   transition: 0.5s;
   cursor: pointer;
   background-size: cover;
-  background-image: url(/img/FAVPNG_piracy-cartoon-clip-art_BEPQRTFj.png);
+  background-image: url(../img/FAVPNG_piracy-cartoon-clip-art_BEPQRTFj.png);
 }
 
 .team-card:hover {
@@ -494,7 +496,7 @@ input[type=submit]:hover {
   position: relative;
   width: 200px;
   height: 200px;
-  background-image: url(/img/FAVPNG_steamboat-free-content-clip-art_bJADLBg5.png);
+  background-image: url(../img/FAVPNG_steamboat-free-content-clip-art_bJADLBg5.png);
   background-size: cover;
   background-position: center;
 }
@@ -502,25 +504,73 @@ input[type=submit]:hover {
 .footer {
   width: 100%;
   color: var(--second-text-color);
-  background-color: #08538c;
+  background-color: #c2b280;
   font-size: 1.5rem;
   text-align: center;
   text-shadow: var(--shadow-3);
   border-top: 1px solid rgba(0, 0, 0, 0.4);
   line-height: 10vh;
+  /* transform-style: preserve-3d; */
 }
 
+/*ustawienie obrazków ryb w gradiencie*/
 .fish {
   position: absolute;
   width: 12rem;
+  z-index: -1;
 }
 
 .fish--right {
-  right: 6%;
+  right: 5%;
 }
 
 .fish--left {
   left: 8%;
+}
+
+.fish--form {
+  top: 70%;
+}
+
+.fish--diver {
+  top: 30%;
+}
+
+.fish--sneak {
+  left: 0;
+  top: 14%;
+}
+
+.fish--footer {
+  top: 94.7%;
+  left: 0;
+}
+
+.fish--crab {
+  top: 94.7%;
+  right: 0;
+}
+
+.fish--team {
+  top: 80%;
+}
+
+.fish--functionality {
+  top: 27%;
+}
+
+.fish--cartoon {
+  top: 46%;
+}
+
+.fish--anchor {
+  left: 10%;
+  top: 94.3%;
+  transform: rotate(30deg);
+}
+
+.fish--nets {
+  top: 9%;
 }
 
 /* Media Queries */
@@ -643,11 +693,6 @@ input[type=submit]:hover {
 
 
 @media (max-width: 1300px) {
-  /* .hero__txt {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  } */
 
   .sneak,
   .navigation,
@@ -657,7 +702,7 @@ input[type=submit]:hover {
   .team,
   .footer,
   section {
-    width: 100vw;
+    width: 100%;
   }
 
   .fish {
@@ -686,9 +731,12 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 780px) {
+  .hero__img {
+    height: 30%;
+  }
 
   .hero__name {
-    width: 90vw;
+    width: 60%;
   }
 
   .hero__boat {
@@ -738,13 +786,13 @@ input[type=submit]:hover {
     margin: 0.2rem;
   }
 
-  .fish--right {
+  /* .fish--right {
     display: none;
   }
 
   .fish--left {
     left: -18%;
-  }
+  } */
 }
 
 @media screen and (max-width: 767px) and (orientation: landscape) {
