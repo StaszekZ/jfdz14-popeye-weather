@@ -34,13 +34,14 @@ body {
   height: 50px;
   top: 0px;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 2px 0px 4px rgba(40, 40, 40, 0.3);
+  box-shadow: 2px 0px 4px rgba(40, 40, 40, 0.2);
 }
 
 .navigation__burger {
   font-size: 1em;
   font-style: normal;
   margin: 16px;
+  margin-bottom: 0px;
 }
 
 .navigation__burger__icon {
@@ -58,8 +59,11 @@ body {
 
 .navigation__burger__checkbox:checked~.navigation__menu {
   display: block;
+  width: 200px;
   padding-left: 3px;
-  margin: 1rem;
+  margin-top: 0px;
+  margin-left: 0px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .navigation__menu {
@@ -87,6 +91,12 @@ body {
 .navigation__menu__list__link:hover {
   font-weight: bolder;
 }
+
+.navigation__menu__list__link:active {
+  font-weight: bolder;
+  color: rgb(20, 148, 207);
+}
+
 
 .navigation__logo {
   position: absolute;
@@ -366,7 +376,7 @@ input[type=submit]:hover {
 
 .team {
   width: var(--max-width);
-  height: 100vh;
+  height: 1500px;
   display: flex;
   align-items: center;
   padding-top: 2.5rem;
@@ -392,14 +402,13 @@ input[type=submit]:hover {
 
 .card-bcg {
   border-radius: 20px;
-  margin-top: 100%;
+  margin-top: 90%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .team-img {
-  width: 100vw;
-  top: 50px;
   text-align: center;
+  height: 100%;
 }
 
 .team-img>h2 {
@@ -414,13 +423,14 @@ input[type=submit]:hover {
 }
 
 .team-card {
-  position: relative;
-  width: 320px;
-  height: 320px;
+  /* transform-style: preserve-3d; */
+  /* position: relative; */
+  width: 500px;
+  height: 500px;
   transition: 0.5s;
   cursor: pointer;
   background-size: cover;
-  background-image: url(../img/FAVPNG_piracy-cartoon-clip-art_BEPQRTFj.png);
+  /* background-image: url(../img/FAVPNG_piracy-cartoon-clip-art_BEPQRTFj.png); */
 }
 
 .team-card:hover {
@@ -445,25 +455,72 @@ input[type=submit]:hover {
   background-size: cover;
 }
 
-/* .card1 {
-  background-image: url(/img/o_mnie/IMG_2686.jpg);
+.card1 {
+  /* position: absolute;
+  content: '';
+  background-size: cover;
+  background-image: url(../img/o_mnie/IMG_2686.jpg);
+  height: 155px;
+  width: 155px;
+  transform: translateZ(-1px);
+  top: calc(50% - 70px);
+  left: calc(50% - 70px);
+  z-index: -1; */
+  background-image: url(../img/teamphoto/agnieszka.png); 
 }
 
 .card2 {
-  background-image: url(../img/Kasia_info/Kasia_img1.jpg);
+  background-image: url(../img/teamphoto/kasia.png);
+  /* position: absolute;
+  content: '';
+  background-size: cover;
+  height: 155px;
+  width: 155px;
+  transform: translateZ(-1px);
+  top: calc(50% - 70px);
+  left: calc(50% - 70px);
+  z-index: -1; */
 }
 
+ 
 .card3 {
-  background-image: url(../img/o_mnie/Mateusz.jpeg);
+  background-image: url(../img/teamphoto/mateusz.png);
+  /* position: absolute;
+  content: '';
+  background-size: cover;
+  height: 155px;
+  width: 155px;
+  transform: translateZ(-1px);
+  top: calc(50% - 70px);
+  left: calc(50% - 70px);
+  z-index: -1; */
 }
 
 .card4 {
-  background-image: url(../img/o_mnie/Staszek.jpeg);
+  background-image: url(../img/teamphoto/staszek.png);
+  /* position: absolute;
+  content: '';
+  background-size: cover;
+  height: 155px;
+  width: 155px;
+  transform: translateZ(-1px);
+  top: calc(50% - 70px);
+  left: calc(50% - 70px);
+  z-index: -1; */
 }
 
 .card5 {
-  background-image: url(../img/o_mnie/lukasz.jpg);
-} */
+  background-image: url(../img/teamphoto/lukasz.png);
+  /* position: absolute;
+  content: '';
+  background-size: cover;
+  height: 155px;
+  width: 155px;
+  transform: translateZ(-1px);
+  top: calc(50% - 70px);
+  left: calc(50% - 70px);
+  z-index: -1; */
+} 
 
 .card-name {
   font-weight: bold;
@@ -474,11 +531,12 @@ input[type=submit]:hover {
 
 .boat {
   position: relative;
-  width: 200px;
+  width: 300px;
   height: 200px;
-  background-image: url(../img/FAVPNG_steamboat-free-content-clip-art_bJADLBg5.png);
-  background-size: cover;
+  background-image: url(../img/FAVPNG_underwater-diving-scuba-diving-deep-diving-clip-art_g2ztRJYt.png);
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .footer {
@@ -513,7 +571,7 @@ input[type=submit]:hover {
 }
 
 .fish--diver {
-  top: 30%;
+  top: 35%;
 }
 
 .fish--sneak {
@@ -551,6 +609,29 @@ input[type=submit]:hover {
 
 .fish--nets {
   top: 9%;
+}
+
+.underwater {
+  background-image: url(../img/FAVPNG_underwater_19mmkDgZ.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 32%;
+  position: absolute;
+  top: 67%;
+  z-index: -3;
+}
+
+.seafish {
+  background-image: url(../img/FAVPNG_sea-fish-euclidean-vector_aH0TcY0K.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 28%;
+  z-index: -2;
+
 }
 
 /* Media Queries */

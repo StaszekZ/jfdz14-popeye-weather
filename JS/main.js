@@ -13,9 +13,9 @@ for (const teamCard of teamCards) {
         drawActive = true;
     })
 
-    teamCard.addEventListener('mousemove', () => {
+    teamCard.addEventListener('mousemove', (e) => {
         console.log('mousemove');
-        if (drawActive === true) {
+        if (drawActive) {
             for (let i = 1; i <= 5; i++) {
                 card = document.querySelector('.card' + [i]);
                 if (teamCard === document.querySelector('.card1')) {
@@ -49,7 +49,7 @@ for (const teamCard of teamCards) {
                 }
             }
         }
-
+        
     })
 
     teamCard.addEventListener('mouseup', () => {
