@@ -140,9 +140,41 @@ section {
   width: var(--max-width);
 }
 
+/*slider*/
 .sneak {
   height: 50vh;
-  background-color: darkcyan;
+  overflow: hidden;
+}
+
+.sneak__fig {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 10s slider infinite;
+}
+
+.slide {
+  float: left;
+  width: 20%;
+  height: 50vh;
+}
+
+.One {
+  background-color: navy;
+
+}
+
+.Two {
+  background-color: blue;
+}
+
+.Three {
+  background-color: lightblue;
+}
+
+.Four {
+  background-color: seagreen;
 }
 
 /* Kasia- features */
@@ -466,7 +498,7 @@ input[type=submit]:hover {
   top: calc(50% - 70px);
   left: calc(50% - 70px);
   z-index: -1; */
-  background-image: url(../img/teamphoto/agnieszka.png); 
+  background-image: url(../img/teamphoto/agnieszka.png);
 }
 
 .card2 {
@@ -482,7 +514,7 @@ input[type=submit]:hover {
   z-index: -1; */
 }
 
- 
+
 .card3 {
   background-image: url(../img/teamphoto/mateusz.png);
   /* position: absolute;
@@ -520,7 +552,7 @@ input[type=submit]:hover {
   top: calc(50% - 70px);
   left: calc(50% - 70px);
   z-index: -1; */
-} 
+}
 
 .card-name {
   font-weight: bold;
@@ -632,6 +664,46 @@ input[type=submit]:hover {
   top: 28%;
   z-index: -2;
 
+}
+
+
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+
+  20% {
+    left: 0;
+  }
+
+  25% {
+    left: -100%;
+  }
+
+  45% {
+    left: -100%;
+  }
+
+  50% {
+    left: -200%;
+  }
+
+  70% {
+    left: -200%;
+  }
+
+  75% {
+    left: -300%;
+  }
+
+  95% {
+    left: -300%;
+  }
+
+  100% {
+    left: -400%;
+  }
 }
 
 /* Media Queries */
