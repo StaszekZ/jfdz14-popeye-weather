@@ -402,7 +402,7 @@ input[type=submit]:hover {
 
 .card-bcg {
   border-radius: 20px;
-  margin-top: 100%;
+  margin-top: 90%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -424,13 +424,13 @@ input[type=submit]:hover {
 
 .team-card {
   /* transform-style: preserve-3d; */
-  position: relative;
-  width: 420px;
-  height: 420px;
+  /* position: relative; */
+  width: 500px;
+  height: 500px;
   transition: 0.5s;
   cursor: pointer;
   background-size: cover;
-  background-image: url(../img/FAVPNG_piracy-cartoon-clip-art_BEPQRTFj.png);
+  /* background-image: url(../img/FAVPNG_piracy-cartoon-clip-art_BEPQRTFj.png); */
 }
 
 .team-card:hover {
@@ -455,71 +455,71 @@ input[type=submit]:hover {
   background-size: cover;
 }
 
-.card1::before {
-  position: absolute;
+.card1 {
+  /* position: absolute;
   content: '';
   background-size: cover;
   background-image: url(../img/o_mnie/IMG_2686.jpg);
   height: 155px;
   width: 155px;
-  /* transform: translateZ(-1px); */
+  transform: translateZ(-1px);
   top: calc(50% - 70px);
   left: calc(50% - 70px);
-  z-index: -1;
-  
+  z-index: -1; */
+  background-image: url(../img/teamphoto/agnieszka.png); 
 }
 
-.card2::before {
-  background-image: url(../img/Kasia_info/Kasia_img1.jpg);
-  position: absolute;
+.card2 {
+  background-image: url(../img/teamphoto/kasia.png);
+  /* position: absolute;
   content: '';
   background-size: cover;
   height: 155px;
   width: 155px;
-  /* transform: translateZ(-1px); */
+  transform: translateZ(-1px);
   top: calc(50% - 70px);
   left: calc(50% - 70px);
-  z-index: -1;
+  z-index: -1; */
 }
 
  
-.card3::before {
-  background-image: url(../img/o_mnie/Mateusz.jpeg);
-  position: absolute;
+.card3 {
+  background-image: url(../img/teamphoto/mateusz.png);
+  /* position: absolute;
   content: '';
   background-size: cover;
   height: 155px;
   width: 155px;
-  /* transform: translateZ(-1px); */
+  transform: translateZ(-1px);
   top: calc(50% - 70px);
   left: calc(50% - 70px);
-  z-index: -1;
+  z-index: -1; */
 }
 
-.card4::before {
-  background-image: url(../img/o_mnie/Staszek.jpeg);
-  position: absolute;
+.card4 {
+  background-image: url(../img/teamphoto/staszek.png);
+  /* position: absolute;
   content: '';
   background-size: cover;
   height: 155px;
   width: 155px;
-  /* transform: translateZ(-1px); */
+  transform: translateZ(-1px);
   top: calc(50% - 70px);
   left: calc(50% - 70px);
-  z-index: -1;
+  z-index: -1; */
 }
 
-.card5::before {
-  background-image: url(../img/o_mnie/lukasz.jpg);
-  position: absolute;
+.card5 {
+  background-image: url(../img/teamphoto/lukasz.png);
+  /* position: absolute;
   content: '';
   background-size: cover;
   height: 155px;
   width: 155px;
-  /* transform: translateZ(-1px); */
+  transform: translateZ(-1px);
   top: calc(50% - 70px);
   left: calc(50% - 70px);
-  z-index: -1;
+  z-index: -1; */
 } 
 
 .card-name {
