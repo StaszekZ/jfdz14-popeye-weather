@@ -505,13 +505,11 @@ input[type=submit]:hover {
 .card4 {
   position: absolute;
   background-image: url(../img/teamphoto/staszek.png);
-  margin: 20px;
 }
 
 .card5 {
   position: absolute;
   background-image: url(../img/teamphoto/lukasz.png);
-  margin: 20px;
 } 
 
 .card-name {

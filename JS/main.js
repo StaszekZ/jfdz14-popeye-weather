@@ -19,10 +19,12 @@ const changePosition = () => {
         leftPosition +=10;
         position1 += 10;
         card1.style.marginLeft = `${position1}px`;
+        card1.style.marginTop = `${-50}px`; 
         position2 += 12;
         card2.style.marginLeft = `${position2}px`;
         position3 += 15;
         card3.style.marginLeft = `${position3}px`;
+        card3.style.marginTop = `${-50}px`
         position4 += 10;
         card4.style.marginLeft = `${position4}px`;
         card4.style.marginTop = `${topPosition}px`;
