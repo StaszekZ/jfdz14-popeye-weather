@@ -345,12 +345,6 @@ section {
   white-space: nowrap;
 }
 
-.functionality__description:hover {
-  height: 100%;
-  overflow: visible;
-  white-space: normal;
-}
-
 .img__box {
   width: 98%;
   height: 98%;
