@@ -144,20 +144,49 @@ section {
 .sneak {
   height: 50vh;
   overflow: hidden;
+  width: 100%;
+  /* position: relative; */
 }
 
 .sneak__fig {
+  display: flex;
   position: relative;
-  width: 500%;
+  width: 100%;
   margin: 0;
   left: 0;
-  animation: 10s slider infinite;
+  /* animation: 10s slider infinite; */
 }
 
-.slide {
+.slides {
   float: left;
-  width: 20%;
+  width: 100%;
   height: 50vh;
+}
+
+.button__prev,
+.button__next {
+  position: absolute;
+  display: flex;
+  top: calc(50% - 20px);
+  height: 40px;
+  width: 40px;
+  background-color: khaki;
+}
+
+.button__prev {
+  left: 0%;
+}
+
+.button__next {
+  right: 0%;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: flex;
 }
 
 .One {
@@ -316,6 +345,11 @@ section {
   white-space: nowrap;
 }
 
+.functionality__description:hover {
+  height: 100%;
+  overflow: visible;
+  white-space: normal;
+}
 
 .img__box {
   width: 98%;
