@@ -64,3 +64,28 @@ for (const teamCard of teamCards) {
 
 
 
+
+
+// info o cookies
+
+const cookieAlert =  (function() {
+    var container = document.createElement('div'),
+    link = document.createElement('a');
+
+
+    container.setAttribute('id', 'cookieinfo');
+    container.setAttribute('class', 'cookie-alert');
+    container.innerHTML = "<h6>This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish.</h6>";
+
+    document.body.appendChild(container);
+
+    link.setAttribute('href', '#');
+    link.setAttribute('title', 'Zamknij');
+    link.innerHTML = 'Accept';
+
+    container.appendChild(link);
+
+
+    link.addEventListener("click",  )
+    return true;
+})();
