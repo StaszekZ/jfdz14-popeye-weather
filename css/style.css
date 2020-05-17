@@ -667,7 +667,7 @@ input[type=submit]:hover {
 }
 
 
-
+/*animacja slider*/
 @keyframes slider {
   0% {
     left: 0;
