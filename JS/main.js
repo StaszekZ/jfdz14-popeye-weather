@@ -81,7 +81,13 @@ slides[currentState].classList.add('active');
 
 const slideLeft = () => {
     slides[currentState].classList.remove('active');
+    // currentState = (currentState + slidersLength - 1) % currentState;
     currentState -= 1;
+    if (currentState < 0) {
+        currentState = 4;
+        slides[currentState].classList.add('active');
+
+    };
     slides[currentState].classList.add('active');
 }
 
@@ -94,6 +100,10 @@ const slideRight = () => {
 
 buttonPrev.addEventListener('click', slideLeft);
 buttonNext.addEventListener('click', slideRight);
+
+
+
+
 
 // let currentState = 0;
 
