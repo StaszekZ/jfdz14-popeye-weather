@@ -459,8 +459,6 @@ input[type=submit]:hover {
   transition: 0.5s;
   cursor: pointer;
   background-size: cover;
-  animation-name: card1;
-  animation-duration: 2s;
 }
 
 .team-card:hover {
@@ -488,33 +486,32 @@ input[type=submit]:hover {
 }
 
 .card1 {
-  background-image: url(../img/teamphoto/agnieszka.png); 
-  
+  position: absolute;
+  background-image: url(../img/teamphoto/agnieszka.png);
+
 }
 
 .card2 {
+  position: absolute;
   background-image: url(../img/teamphoto/kasia.png);
-  animation-name: card2;
-  animation-duration: 4s;
 }
 
 
 .card3 {
+  position: absolute;
   background-image: url(../img/teamphoto/mateusz.png);
-  animation-name: card3;
-  animation-duration: 4s;
 }
 
 .card4 {
+  position: absolute;
   background-image: url(../img/teamphoto/staszek.png);
-  animation-name: card4;
-  animation-duration: 4s;
+  margin: 20px;
 }
 
 .card5 {
+  position: absolute;
   background-image: url(../img/teamphoto/lukasz.png);
-  animation-name: card5;
-  animation-duration: 4s;
+  margin: 20px;
 } 
 
 .card-name {
@@ -953,120 +950,4 @@ input[type=submit]:hover {
   .fish {
     display: none;
   }
-}
-
-@keyframes card1{
-  0% {margin-left: -500px; margin-top: 100px;}
-  5% {margin-left: -477px; margin-bottom: -100px;}
-  10% {margin-left: -454px;margin-top: 100px;}
-  15% {margin-left: -431px; margin-bottom: -100px;}
-  20% {margin-left: -408px; margin-top: 100px;}
-  25% {margin-left: -385px; margin-bottom: -100px;}
-  30% {margin-left: -362px; margin-top: 100px;}
-  35% {margin-left: -339px; margin-bottom: -100px;}
-  40% {margin-left: -316px; margin-top: 100px;}
-  45% {margin-left: -293px; margin-bottom: -100px;}
-  50% {margin-left: -270px;}
-  55% {margin-left: -247px; margin-bottom: -100px;}
-  60% {margin-left: -224px;margin-top: 100px;}
-  65% {margin-left: -201px; margin-bottom: -100px;}
-  70% {margin-left: -178px; margin-top: 100px;}
-  75% {margin-left: -155px; margin-bottom: -100px;}
-  80% {margin-left: -132px; margin-bottom: 100px;}
-  85% {margin-left: -109px; margin-bottom: -100px;}
-  90% {margin-left: -86px; margin-bottom: 100px;}
-  95% {margin-left: -63px; margin-bottom: -100px;}
-  100% {margin-left: 0px;}
-}
-@keyframes card2 {
-  0% {margin-left: -700px; margin-top: 100px;}
-  5% {margin-left: -477px; margin-bottom: -100px;}
-  10% {margin-left: -454px;margin-top: 100px;}
-  15% {margin-left: -431px; margin-bottom: -100px;}
-  20% {margin-left: -408px; margin-top: 100px;}
-  25% {margin-left: -385px; margin-bottom: -100px;}
-  30% {margin-left: -362px; margin-top: 100px;}
-  35% {margin-left: -339px; margin-bottom: -100px;}
-  40% {margin-left: -316px; margin-top: 100px;}
-  45% {margin-left: -293px; margin-bottom: -100px;}
-  50% {margin-left: -270px;}
-  55% {margin-left: -247px; margin-bottom: -100px;}
-  60% {margin-left: -224px;margin-top: 100px;}
-  65% {margin-left: -201px; margin-bottom: -100px;}
-  70% {margin-left: -178px; margin-top: 100px;}
-  75% {margin-left: -155px; margin-bottom: -100px;}
-  80% {margin-left: -132px; margin-bottom: 100px;}
-  85% {margin-left: -109px; margin-bottom: -100px;}
-  90% {margin-left: -86px; margin-bottom: 100px;}
-  95% {margin-left: -63px; margin-bottom: -100px;}
-  100% {margin-left: 0px;}
-}
-@keyframes card3 {
-  0% {margin-left: -900px; margin-top: 100px;}
-  5% {margin-left: -477px; margin-bottom: -100px;}
-  10% {margin-left: -454px;margin-top: 100px;}
-  15% {margin-left: -431px; margin-bottom: -100px;}
-  20% {margin-left: -408px; margin-top: 100px;}
-  25% {margin-left: -385px; margin-bottom: -100px;}
-  30% {margin-left: -362px; margin-top: 100px;}
-  35% {margin-left: -339px; margin-bottom: -100px;}
-  40% {margin-left: -316px; margin-top: 100px;}
-  45% {margin-left: -293px; margin-bottom: -100px;}
-  50% {margin-left: -270px;}
-  55% {margin-left: -247px; margin-bottom: -100px;}
-  60% {margin-left: -224px;margin-top: 100px;}
-  65% {margin-left: -201px; margin-bottom: -100px;}
-  70% {margin-left: -178px; margin-top: 100px;}
-  75% {margin-left: -155px; margin-bottom: -100px;}
-  80% {margin-left: -132px; margin-bottom: 100px;}
-  85% {margin-left: -109px; margin-bottom: -100px;}
-  90% {margin-left: -86px; margin-bottom: 100px;}
-  95% {margin-left: -63px; margin-bottom: -100px;}
-  100% {margin-left: 0px;}
-}
-@keyframes card4 {
-  0% {margin-left: -600px; margin-top: 100px;}
-  5% {margin-left: -477px; margin-bottom: -100px;}
-  10% {margin-left: -454px;margin-top: 100px;}
-  15% {margin-left: -431px; margin-bottom: -100px;}
-  20% {margin-left: -408px; margin-top: 100px;}
-  25% {margin-left: -385px; margin-bottom: -100px;}
-  30% {margin-left: -362px; margin-top: 100px;}
-  35% {margin-left: -339px; margin-bottom: -100px;}
-  40% {margin-left: -316px; margin-top: 100px;}
-  45% {margin-left: -293px; margin-bottom: -100px;}
-  50% {margin-left: -270px;}
-  55% {margin-left: -247px; margin-bottom: -100px;}
-  60% {margin-left: -224px;margin-top: 100px;}
-  65% {margin-left: -201px; margin-bottom: -100px;}
-  70% {margin-left: -178px; margin-top: 100px;}
-  75% {margin-left: -155px; margin-bottom: -100px;}
-  80% {margin-left: -132px; margin-bottom: 100px;}
-  85% {margin-left: -109px; margin-bottom: -100px;}
-  90% {margin-left: -86px; margin-bottom: 100px;}
-  95% {margin-left: -63px; margin-bottom: -100px;}
-  100% {margin-left: 0px;}
-}
-@keyframes card5 {
-  0% {margin-left: -800px; margin-bottom: 100px;}
-  5% {margin-left: -477px; margin-bottom: -100px;}
-  10% {margin-left: -454px;margin-bottom: 100px;}
-  15% {margin-left: -431px; margin-bottom: -100px;}
-  20% {margin-left: -408px; margin-bottom: 100px;}
-  25% {margin-left: -385px; margin-bottom: -100px;}
-  30% {margin-left: -362px; margin-bottom: 100px;}
-  35% {margin-left: -339px; margin-bottom: -100px;}
-  40% {margin-left: -316px; margin-bottom: 100px;}
-  45% {margin-left: -293px; margin-bottom: -100px;}
-  50% {margin-left: -270px;}
-  55% {margin-left: -247px; margin-bottom: -100px;}
-  60% {margin-left: -224px;margin-bottom: 100px;}
-  65% {margin-left: -201px; margin-bottom: -100px;}
-  70% {margin-left: -178px; margin-bottom: 100px;}
-  75% {margin-left: -155px; margin-bottom: -100px;}
-  80% {margin-left: -132px; margin-bottom: 100px;}
-  85% {margin-left: -109px; margin-bottom: -100px;}
-  90% {margin-left: -86px; margin-bottom: 100px;}
-  95% {margin-left: -63px; margin-bottom: -100px;}
-  100% {margin-left: 0px;}
 }
