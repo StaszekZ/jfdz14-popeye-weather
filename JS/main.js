@@ -58,28 +58,28 @@ const waveUpFunc = () => {
         wave++;
         if(wave % 2 === 0){            
                 card1.style.marginTop = `${upWave - 55}px`;
-                card1.style.transform =  'scale(1.01)';
+                card1.style.transform =  'scale(1.001)';
                 card2.style.marginTop = `${upWave}px`;
                 card2.style.transform =  'scale(0.99)';
                 card3.style.marginTop = `${upWave  - 55}px`;
-                card3.style.transform =  'scale(1.01)';
+                card3.style.transform =  'scale(1.001)';
                 card4.style.marginTop = `${upWave + 375}px`;
                 card4.style.transform =  'scale(0.99)';
                 card5.style.marginTop = `${upWave + 375}px`;
                 card5.style.transform =  'scale(0.99)';
-                upWave += 10;            
+                upWave += 12;            
         } else {
                 card1.style.marginTop = `${upWave  - 55}px`;
                 card1.style.transform =  'scale(0.99)'; 
                 card2.style.marginTop = `${upWave}px`;
-                card2.style.transform =  'scale(1.01)'; 
+                card2.style.transform =  'scale(1.001)'; 
                 card3.style.marginTop = `${upWave  - 55}px`;
                 card3.style.transform =  'scale(0.99)'; 
                 card4.style.marginTop = `${upWave + 375}px`;
-                card4.style.transform =  'scale(1.01)'; 
+                card4.style.transform =  'scale(1.001)'; 
                 card5.style.marginTop = `${upWave + 375}px`;
-                card5.style.transform =  'scale(1.01)'; 
-                upWave -= 10;
+                card5.style.transform =  'scale(1.001)'; 
+                upWave -= 12;
         }
     }
     
@@ -88,3 +88,27 @@ const waveUpFunc = () => {
 setInterval(waveUpFunc, 750)
 observer.observe(teamCard);
 
+const bubbleWater = document.querySelectorAll('.team_bubble-water');
+
+let bubbleOpacity = 1;
+let bubbleTop = 0;
+
+const bubbleWaterTime = () => {
+    if(leftPosition === 0){
+        for( let i = 0; i < bubbleWater.length; i++){
+            bubbleTop -=30;
+            bubbleWater[i].style.marginTop = `${bubbleTop}px`;
+            bubbleWater[i].style.opacity = bubbleOpacity;
+            bubbleOpacity = bubbleOpacity - 0.1; 
+            console.log(bubbleWater[i]);
+            if(bubbleOpacity <= 0){
+                bubbleOpacity = 1;
+                bubbleTop = 0; 
+            }
+        }
+             
+        
+    }
+}
+
+setInterval(bubbleWaterTime, 2000)

@@ -454,6 +454,7 @@ input[type=submit]:hover {
   transition: 0.5s;
   cursor: pointer;
   background-size: cover;
+  transform-style: preserve-3d;
 }
 
 .team-card:hover {
@@ -513,6 +514,16 @@ input[type=submit]:hover {
   font-size: 1.45rem;
   color: var(--second-text-color);
   text-transform: uppercase;
+}
+.team_bubble-water {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  height: 35%;
+  width: 35%;
+  background-image: url(../img/FAVPNG_drop-bubble-water-clip-art_hM2P80xR.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .boat {
