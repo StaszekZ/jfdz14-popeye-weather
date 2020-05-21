@@ -90,20 +90,51 @@ observer.observe(teamCard);
 
 const bubbleWater = document.querySelectorAll('.team_bubble-water');
 
-let bubbleOpacity = 1;
-let bubbleTop = 0;
+let bubbleOpacity1 = 1;
+let bubbleTop1 = 0;
+let bubbleOpacity2 = 1;
+let bubbleTop2 = 0;
+let bubbleOpacity3 = 1;
+let bubbleTop3 = 0;
+let bubbleOpacity4 = 1;
+let bubbleTop4 = 0;
+let bubbleOpacity5 = 1;
+let bubbleTop5 = 0;
 
 const bubbleWaterTime = () => {
     if(leftPosition === 0){
         for( let i = 0; i < bubbleWater.length; i++){
-            bubbleTop -=30;
-            bubbleWater[i].style.marginTop = `${bubbleTop}px`;
-            bubbleWater[i].style.opacity = bubbleOpacity;
-            bubbleOpacity = bubbleOpacity - 0.1; 
-            console.log(bubbleWater[i]);
-            if(bubbleOpacity <= 0){
-                bubbleOpacity = 1;
-                bubbleTop = 0; 
+            bubbleTop1 -=5;
+            bubbleWater[0].style.marginTop = `${bubbleTop1}px`;
+            bubbleWater[0].style.opacity = bubbleOpacity1;
+            bubbleOpacity1 = bubbleOpacity1 - 0.1;
+            bubbleTop2 -=5;
+            bubbleWater[1].style.marginTop = `${bubbleTop2}px`;
+            bubbleWater[1].style.opacity = bubbleOpacity2;
+            bubbleOpacity2 = bubbleOpacity2 - 0.1;
+            bubbleTop3 -=5;
+            bubbleWater[2].style.marginTop = `${bubbleTop3}px`;
+            bubbleWater[2].style.opacity = bubbleOpacity3;
+            bubbleOpacity3 = bubbleOpacity3 - 0.1;
+            bubbleTop4 -=5;
+            bubbleWater[3].style.marginTop = `${bubbleTop4}px`;
+            bubbleWater[3].style.opacity = bubbleOpacity4;
+            bubbleOpacity4 = bubbleOpacity4 - 0.1;
+            bubbleTop5 -=5;
+            bubbleWater[4].style.marginTop = `${bubbleTop5}px`;
+            bubbleWater[4].style.opacity = bubbleOpacity5;
+            bubbleOpacity5 = bubbleOpacity5 - 0.1; 
+            if(bubbleOpacity1 <= 0 ){
+                bubbleOpacity1 = 1;
+                bubbleTop1 = 0;
+                bubbleOpacity2 = 1;
+                bubbleTop2 = 0;
+                bubbleOpacity3 = 1;
+                bubbleTop3 = 0;
+                bubbleOpacity4 = 1;
+                bubbleTop4 = 0;
+                bubbleOpacity5 = 1;
+                bubbleTop5 = 0;; 
             }
         }
              

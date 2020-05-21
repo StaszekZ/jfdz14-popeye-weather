@@ -421,13 +421,6 @@ input[type=submit]:hover {
   margin: 0 auto;
 }
 
-.team-cards {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 .card-bcg {
   margin-top: 38%;
 }
@@ -454,7 +447,6 @@ input[type=submit]:hover {
   transition: 0.5s;
   cursor: pointer;
   background-size: cover;
-  transform-style: preserve-3d;
 }
 
 .team-card:hover {
@@ -516,7 +508,7 @@ input[type=submit]:hover {
   text-transform: uppercase;
 }
 .team_bubble-water {
-  top: 50%;
+  top: 20%;
   left: 50%;
   position: absolute;
   height: 35%;
@@ -524,6 +516,7 @@ input[type=submit]:hover {
   background-image: url(../img/FAVPNG_drop-bubble-water-clip-art_hM2P80xR.png);
   background-size: cover;
   background-position: center;
+  z-index: -100;
 }
 
 .boat {
