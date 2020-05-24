@@ -22,7 +22,8 @@ observer = new IntersectionObserver((entries) => {
     if(entries[0].intersectionRatio > 0){
         const changePosition = () => {
             if(leftPosition !== 0){
-                leftPosition +=10;
+                if(window.outerWidth > 790){
+                    leftPosition +=10;
                 position1 += 10;
                 card1.style.marginLeft = `${position1}px`;
                 card1.style.marginTop = `${-55}px`;                
@@ -38,8 +39,8 @@ observer = new IntersectionObserver((entries) => {
                 position5 += 12;
                 card5.style.marginLeft = `${position5}px`;
                 card5.style.marginTop = `${topPosition}px`; 
+                }  
             } 
-            
             if(leftPosition === 0){
                 clearInterval(interval);  
             }  
