@@ -508,6 +508,7 @@ input[type=submit]:hover {
   text-transform: uppercase;
 }
 .team_bubble-water {
+  display: none;
   top: 20%;
   left: 50%;
   position: absolute;

@@ -103,27 +103,32 @@ let bubbleTop5 = 0;
 
 const bubbleWaterTime = () => {
     if(leftPosition === 0){
-        for( let i = 0; i < bubbleWater.length; i++){
-            bubbleTop1 -=5;
+        for( let i = 0; i < 1; i++){
+            bubbleTop1 -=4;
+            bubbleWater[0].style.display = 'inline'
             bubbleWater[0].style.marginTop = `${bubbleTop1}px`;
             bubbleWater[0].style.opacity = bubbleOpacity1;
-            bubbleOpacity1 = bubbleOpacity1 - 0.1;
-            bubbleTop2 -=5;
+            bubbleOpacity1 = bubbleOpacity1 - 0.085;
+            bubbleTop2 -=4;
+            bubbleWater[1].style.display = 'inline'
             bubbleWater[1].style.marginTop = `${bubbleTop2}px`;
             bubbleWater[1].style.opacity = bubbleOpacity2;
-            bubbleOpacity2 = bubbleOpacity2 - 0.1;
-            bubbleTop3 -=5;
+            bubbleOpacity2 = bubbleOpacity2 - 0.085;
+            bubbleTop3 -=4;
+            bubbleWater[2].style.display = 'inline'
             bubbleWater[2].style.marginTop = `${bubbleTop3}px`;
             bubbleWater[2].style.opacity = bubbleOpacity3;
-            bubbleOpacity3 = bubbleOpacity3 - 0.1;
-            bubbleTop4 -=5;
+            bubbleOpacity3 = bubbleOpacity3 - 0.085;
+            bubbleTop4 -=4;
+            bubbleWater[3].style.display = 'inline'
             bubbleWater[3].style.marginTop = `${bubbleTop4}px`;
             bubbleWater[3].style.opacity = bubbleOpacity4;
-            bubbleOpacity4 = bubbleOpacity4 - 0.1;
-            bubbleTop5 -=5;
+            bubbleOpacity4 = bubbleOpacity4 - 0.085;
+            bubbleTop5 -=4;
+            bubbleWater[4].style.display = 'inline'
             bubbleWater[4].style.marginTop = `${bubbleTop5}px`;
             bubbleWater[4].style.opacity = bubbleOpacity5;
-            bubbleOpacity5 = bubbleOpacity5 - 0.1; 
+            bubbleOpacity5 = bubbleOpacity5 - 0.085; 
             if(bubbleOpacity1 <= 0 ){
                 bubbleOpacity1 = 1;
                 bubbleTop1 = 0;
@@ -134,7 +139,7 @@ const bubbleWaterTime = () => {
                 bubbleOpacity4 = 1;
                 bubbleTop4 = 0;
                 bubbleOpacity5 = 1;
-                bubbleTop5 = 0;; 
+                bubbleTop5 = 0;
             }
         }
              
@@ -142,4 +147,4 @@ const bubbleWaterTime = () => {
     }
 }
 
-setInterval(bubbleWaterTime, 2000)
+setInterval(bubbleWaterTime, 150)
