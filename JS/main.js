@@ -97,35 +97,6 @@ const slideRight = () => {
     slides[currentState].classList.add('active');
 }
 
-
 buttonPrev.addEventListener('click', slideLeft);
 buttonNext.addEventListener('click', slideRight);
 
-
-
-
-
-// let currentState = 0;
-
-// const slides = document.querySelectorAll('.img');
-// const slidesLength = slides.length;
-
-// slides[currentState].classList.add('active');
-
-// /* document.querySelector('.left').addEventListener('click', () => {
-//   slides[currentState].classList.remove('active');
-
-//   currentState = (currentState + slidersLength - 1) % slidersLength;
-
-//   currentState -= 1;
-
-//   slides[currentState].classList.add('active');
-// } */);
-
-// document.querySelector('.right').addEventListener('click', () => {
-//     slides[currentState].classList.remove('active');
-
-//     currentState = (currentState + 1) % slidesLength;
-
-//     slides[currentState].classList.add('active');
-// });
