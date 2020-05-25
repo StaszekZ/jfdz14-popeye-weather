@@ -64,6 +64,8 @@ for (const teamCard of teamCards) {
 
 
 
+
+
 // ============= slider ======================== //
 
 const buttonPrev = document.querySelector(".button__prev");
@@ -79,9 +81,9 @@ let currentState = 0;
 
 slides[currentState].classList.add('active');
 
+
 const slideLeft = () => {
     slides[currentState].classList.remove('active');
-    // currentState = (currentState + slidersLength - 1) % currentState;
     currentState -= 1;
     if (currentState < 0) {
         currentState = 4;
@@ -95,8 +97,11 @@ const slideRight = () => {
     slides[currentState].classList.remove('active');
     currentState = (currentState + 1) % slidesLength;
     slides[currentState].classList.add('active');
+    // clearInterval(intervalRight);
+    // setInterval(slideRight, 2000)
 }
 
+const intervalRight = setInterval(slideRight, 6000);
 buttonPrev.addEventListener('click', slideLeft);
 buttonNext.addEventListener('click', slideRight);
 

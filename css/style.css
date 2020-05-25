@@ -163,22 +163,44 @@ section {
   height: 50vh;
 }
 
-.button__prev,
-.button__next {
+.button {
   position: absolute;
   display: flex;
   top: calc(50% - 20px);
-  height: 40px;
-  width: 40px;
-  background-color: khaki;
+  height: 70px;
+  width: 70px;
+  background-color: rgba(232, 232, 232, 0.2);
+  border-radius: 50%;
+  border: none;
+  transition: 0.3s;
+
+
+}
+
+.fa {
+  color: lightgray;
+  transition: 0.3s;
+  font-size: x-large;
+}
+
+.button:hover .fa {
+  color: darkslategray;
+  transition: 0.3s;
+
+}
+
+.button:hover {
+  background-color: rgba(232, 232, 232, 0.7);
+  transform: scale(1.2);
+  transition: 0.3s;
 }
 
 .button__prev {
-  left: 0%;
+  left: 2%;
 }
 
 .button__next {
-  right: 0%;
+  right: 2%;
 }
 
 .hidden {
