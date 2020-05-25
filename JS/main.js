@@ -101,7 +101,7 @@ const slideRight = () => {
     // setInterval(slideRight, 2000)
 }
 
-const intervalRight = setInterval(slideRight, 6000);
+// const intervalRight = setInterval(slideRight, 6000);
 buttonPrev.addEventListener('click', slideLeft);
 buttonNext.addEventListener('click', slideRight);
 
