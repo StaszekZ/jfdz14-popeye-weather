@@ -252,6 +252,12 @@ section {
   font-size: 3rem;
 }
 
+.inSlider--image {
+  position: absolute;
+  width: 15%;
+  height: auto;
+}
+
 /* Kasia- features */
 
 .features {
