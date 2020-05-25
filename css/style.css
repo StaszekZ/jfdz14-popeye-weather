@@ -413,7 +413,7 @@ section {
   grid-area: form;
   font-size: 3rem;
   width: var(--max-width);
-  height: 100vh;
+  height: 70vh;
 
 }
 
@@ -482,10 +482,10 @@ input[type=submit]:hover {
 /* team */
 
 .team {
-  width: var(--max-width);
-  height: 1500px;
+  /* width: var(--max-width); */
+  width: 80vw;
+  height: 110vh;
   display: flex;
-  align-items: center;
   padding-top: 2.5rem;
 }
 
@@ -500,23 +500,14 @@ input[type=submit]:hover {
   margin: 0 auto;
 }
 
-.team-cards {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 .card-bcg {
-  border-radius: 20px;
-  margin-top: 90%;
-  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 38%;
 }
 
-.team-img {
+/* .team-img {
   text-align: center;
-  height: 100%;
-}
+  height: 100vh;
+} */
 
 .team-img>h2 {
   font-size: 40px;
@@ -530,26 +521,26 @@ input[type=submit]:hover {
 }
 
 .team-card {
-  /* transform-style: preserve-3d; */
-  /* position: relative; */
   width: 500px;
   height: 500px;
   transition: 0.5s;
   cursor: pointer;
   background-size: cover;
-  /* background-image: url(../img/FAVPNG_piracy-cartoon-clip-art_BEPQRTFj.png); */
 }
 
 .team-card:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 .card-info>a>i {
   list-style: none;
   color: var(--second-text-color);
-  font-size: 2rem;
+  font-size: 2.75rem;
   padding: 10px;
   transition: color 0.5s;
+  padding-left: 10%;
+  margin-top: 25%;
+  margin-left: 20%;
 }
 
 .card-info>a>i:hover {
@@ -563,77 +554,50 @@ input[type=submit]:hover {
 }
 
 .card1 {
-  /* position: absolute;
-  content: '';
-  background-size: cover;
-  background-image: url(../img/o_mnie/IMG_2686.jpg);
-  height: 155px;
-  width: 155px;
-  transform: translateZ(-1px);
-  top: calc(50% - 70px);
-  left: calc(50% - 70px);
-  z-index: -1; */
+  position: absolute;
   background-image: url(../img/teamphoto/agnieszka.png);
+
 }
 
 .card2 {
+  position: absolute;
   background-image: url(../img/teamphoto/kasia.png);
-  /* position: absolute;
-  content: '';
-  background-size: cover;
-  height: 155px;
-  width: 155px;
-  transform: translateZ(-1px);
-  top: calc(50% - 70px);
-  left: calc(50% - 70px);
-  z-index: -1; */
 }
 
 
 .card3 {
+  position: absolute;
   background-image: url(../img/teamphoto/mateusz.png);
-  /* position: absolute;
-  content: '';
-  background-size: cover;
-  height: 155px;
-  width: 155px;
-  transform: translateZ(-1px);
-  top: calc(50% - 70px);
-  left: calc(50% - 70px);
-  z-index: -1; */
 }
 
 .card4 {
+  position: absolute;
   background-image: url(../img/teamphoto/staszek.png);
-  /* position: absolute;
-  content: '';
-  background-size: cover;
-  height: 155px;
-  width: 155px;
-  transform: translateZ(-1px);
-  top: calc(50% - 70px);
-  left: calc(50% - 70px);
-  z-index: -1; */
 }
 
 .card5 {
+  position: absolute;
   background-image: url(../img/teamphoto/lukasz.png);
-  /* position: absolute;
-  content: '';
-  background-size: cover;
-  height: 155px;
-  width: 155px;
-  transform: translateZ(-1px);
-  top: calc(50% - 70px);
-  left: calc(50% - 70px);
-  z-index: -1; */
-}
+} 
 
 .card-name {
+  margin-left: 45%;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.45rem;
   color: var(--second-text-color);
   text-transform: uppercase;
+}
+.team_bubble-water {
+  display: none;
+  top: 20%;
+  left: 50%;
+  position: absolute;
+  height: 35%;
+  width: 35%;
+  background-image: url(../img/FAVPNG_drop-bubble-water-clip-art_hM2P80xR.png);
+  background-size: cover;
+  background-position: center;
+  z-index: -100;
 }
 
 .boat {
@@ -782,6 +746,41 @@ input[type=submit]:hover {
 }
 
 /* Media Queries */
+
+
+@media (max-width: 996px) {
+  .team {
+    height: 180vh;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .team-card {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    transition: 0.5s;
+    cursor: pointer;
+    background-size: cover;
+  }
+  .card-name {
+    font-size: 1rem;
+    padding-top: 37%;
+    padding-left: 25%;
+  }
+  .card-info>a>i {
+    font-size: 1.2rem;
+    margin-top: 18%;
+    margin-left: 17%;
+  }
+
+  .boat {
+    width: 50%;
+    height: 10%;
+
+  }
+}
+
+
 /* @media (max-width: 1450px) {
   .features__description {
     max-width: 60%;
@@ -863,7 +862,7 @@ input[type=submit]:hover {
 
 /* AGA MEDIA MIN-WIDTH 768px FOR NEW UPDATED NAVIGATION */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .navigation {
     width: 100%;
     height: 50px;
@@ -994,6 +993,39 @@ input[type=submit]:hover {
     margin: 0.2rem;
   }
 
+  .team {
+    height: 180vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .team-card {
+    position: relative;
+    width: 210px;
+    height: 210px;
+    transition: 0.5s;
+    cursor: pointer;
+    background-size: cover;
+  }
+  .card-name {
+    font-size: 1rem;
+    padding-top: 37%;
+    padding-left: 28%;
+  }
+  .card-info>a>i {
+    font-size: 1.2rem;
+    margin-top: 18%;
+    margin-left: 25%;
+  }
+  .card-bcg {
+    margin: auto;
+  }
+  .boat {
+    width: 50%;
+    height: 30%;
+    margin: auto;
+  } */
+
   /* .fish--right {
     display: none;
   }
@@ -1001,8 +1033,8 @@ input[type=submit]:hover {
   .fish--left {
     left: -18%;
   } */
-}
 
+/* 
 @media screen and (max-width: 767px) and (orientation: landscape) {
   .img__fbox {
     display: none;
@@ -1011,9 +1043,10 @@ input[type=submit]:hover {
   .features__box {
     width: 100%;
   }
-}
 
-@media (max-width: 420px) {
+} */
+
+/* @media (max-width: 420px) {
   .hero__description {
     font-size: 5vw;
   }
@@ -1064,4 +1097,6 @@ input[type=submit]:hover {
   .fish {
     display: none;
   }
-}
+
+
+} */
