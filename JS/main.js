@@ -28,7 +28,7 @@ observer = new IntersectionObserver((entries) => {
     if (entries[0].intersectionRatio > 0) {
         const changePosition = () => {
             if (leftPosition !== 0) {
-                if (window.outerWidth > 1600) {
+                if (window.outerWidth > 1400) {
                     card1.style.position = 'absolute';
                     card2.style.position = 'absolute';
                     card3.style.position = 'absolute';
