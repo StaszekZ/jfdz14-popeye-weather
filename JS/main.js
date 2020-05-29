@@ -171,7 +171,7 @@ const slideLeft = () => {
     slides[currentState].classList.remove('active');
     currentState -= 1;
     if (currentState < 0) {
-        currentState = 4;
+        currentState = slides.length - 1;
         slides[currentState].classList.add('active');
 
     };
@@ -186,7 +186,6 @@ const slideRight = () => {
     // setInterval(slideRight, 2000)
 }
 
-const intervalRight = setInterval(slideRight, 10000);
+const intervalRight = setInterval(slideRight, 8000);
 buttonPrev.addEventListener('click', slideLeft);
 buttonNext.addEventListener('click', slideRight);
-
