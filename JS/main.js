@@ -13,6 +13,12 @@ let position2 = -1850;
 let position3 = -1680;
 let position4 = -1900;
 let position5 = -1500;
+// let leftPosition = -200;
+// let position1 = 100;
+// let position2 = -200;
+// let position3 = -200;
+// let position4 = -200;
+// let position5 = -200;
 let topPosition = 0;
 let wave = 0;
 
@@ -22,7 +28,12 @@ observer = new IntersectionObserver((entries) => {
     if (entries[0].intersectionRatio > 0) {
         const changePosition = () => {
             if (leftPosition !== 0) {
-                if (window.outerWidth > 790) {
+                if (window.outerWidth > 1600) {
+                    card1.style.position = 'absolute';
+                    card2.style.position = 'absolute';
+                    card3.style.position = 'absolute';
+                    card4.style.position = 'absolute';
+                    card5.style.position = 'absolute';
                     leftPosition += 10;
                     position1 += 10;
                     card1.style.marginLeft = `${position1}px`;
@@ -40,6 +51,8 @@ observer = new IntersectionObserver((entries) => {
                     card5.style.marginLeft = `${position5}px`;
                     card5.style.marginTop = `${topPosition}px`;
                 }
+            } else {
+
             }
             if (leftPosition === 0) {
                 clearInterval(interval);

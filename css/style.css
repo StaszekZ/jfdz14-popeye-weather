@@ -477,11 +477,12 @@ input[type=submit]:hover {
   text-align: center;
   margin: 0 auto;
 }
- 
+
 
 .card-bcg {
   margin-top: 38%;
 }
+
 /*
 
 
@@ -524,6 +525,7 @@ input[type=submit]:hover {
 .card-info>a>i:hover {
   color: rgb(112, 201, 236);
 }
+
 /*
 .card-photo {
   height: 200px;
@@ -580,15 +582,7 @@ input[type=submit]:hover {
   z-index: -100;
 }
 
-.boat {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  background-image: url(../img/FAVPNG_underwater-diving-scuba-diving-deep-diving-clip-art_g2ztRJYt.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+
 
 .footer {
   width: 100%;
@@ -673,13 +667,24 @@ input[type=submit]:hover {
   z-index: -3;
 }
 
+.boat {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  background-image: url(../img/FAVPNG_underwater-diving-scuba-diving-deep-diving-clip-art_g2ztRJYt.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
 .seafish {
   background-image: url(../img/FAVPNG_sea-fish-euclidean-vector_aH0TcY0K.png);
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 50%;
-  position: absolute;
+  /* position: absolute; */
   top: 28%;
   z-index: -2;
 
@@ -777,20 +782,6 @@ input[type=submit]:hover {
   .text__box {
     font-size: 1rem;
   }
-
-  .team-card {
-    width: 20rem;
-    height: 20rem;
-  }
-
-  .card-name {
-    font-size: 1rem;
-  }
-
-  .card-info>a>i {
-    font-size: 1rem;
-    margin-left: 20%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -829,8 +820,6 @@ input[type=submit]:hover {
     margin-left: 0px;
     background: rgba(255, 255, 255, 0.9);
   }
-
-
 
   .navigation__logo__img {
     display: none;
@@ -895,40 +884,6 @@ input[type=submit]:hover {
     margin: 0.2rem;
   }
 
-  .team {
-    height: 70vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
-  .team-card {
-    width: 12rem;
-    height: 12rem;
-    transition: 0.5s;
-    cursor: pointer;
-    background-size: cover;
-  }
- 
-  .card-name {
-    font-size: 1rem;
-    padding-top: 38%;
-  }
-  
-  .card-info>a>i {
-    font-size: 1.2rem;
-    margin-top: 18%;
-    margin-left: 18%;
-  }
-  
-
-  .boat {
-    width: 25%;
-    height: 15%;
-    margin: auto;
-  }
-
-
   .fish--right {
     display: none;
   }
@@ -947,6 +902,28 @@ input[type=submit]:hover {
     }
   }
 
+  .slides {
+    padding: 1% 3%;
+  }
+
+  .button {
+    height: 30px;
+    width: 30px;
+  }
+
+  .fa {
+    font-size: small;
+  }
+
+  .inSlide {
+    font-size: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .inSlide--header {
+    font-size: 1.4rem;
+  }
 
 }
 
@@ -1001,103 +978,74 @@ input[type=submit]:hover {
   .fish {
     display: none;
   }
+
+
+}
+
+@media (min-width: 0px) {
   .team {
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
-  
+
   .team-card {
-    width:10rem;
-    height: 10rem;
-    transition: 0.5s;
-    cursor: pointer;
-    background-size: cover;
+    width: 8rem;
+    height: 8rem;
+
   }
- 
+
   .card-name {
     font-size: 0.8rem;
+    margin-left: 35%;
     padding-top: 35%;
-    margin-left: 38%;
   }
-  
+
   .card-info>a>i {
-    font-size: 1rem;
-    margin-top: 18%;
+    font-size: 0.8rem;
     margin-left: 17%;
+    margin-top: 15%;
   }
-  
+
   .card-bcg {
     margin: auto;
   }
 
-  .boat {
-    display: none
-  }
   .team__title {
     font-size: 2rem;
   }
 }
 
-@media (max-width: 359px) {
+@media (min-width: 389px) {
   .team {
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    height: 80vh;
   }
-  
+
   .team-card {
-    width:8rem;
-    height: 8rem;
-    transition: 0.5s;
-    cursor: pointer;
-    background-size: cover;
+    width: 12rem;
+    height: 12rem;
+
   }
- 
+
   .card-name {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding-top: 35%;
     margin-left: 38%;
   }
-  
+
   .card-info>a>i {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     margin-top: 18%;
     margin-left: 17%;
   }
-  
+
   .card-bcg {
     margin: auto;
   }
 
-  .boat {
-    display: none
-  }
+
   .team__title {
     font-size: 2rem;
-  }
-  .slides {
-    padding: 1% 3%;
-  }
-
-  .button {
-    height: 30px;
-    width: 30px;
-  }
-
-  .fa {
-    font-size: small;
-  }
-
-  .inSlide {
-    font-size: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .inSlide--header {
-    font-size: 1.4rem;
   }
 }
