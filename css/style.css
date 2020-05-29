@@ -211,15 +211,6 @@ section {
   background-color: #2a6bcc;
 }
 
-/* .Four {
-  background-color: seagreen;
-}
-
-.Five {
-  background-color: green;
-
-} */
-
 .inSlide {
   color: white;
   font-size: 1.5rem;
@@ -228,6 +219,7 @@ section {
 
 .inSlide--header {
   font-size: 3rem;
+
 }
 
 .inSlider--image {
@@ -485,11 +477,12 @@ input[type=submit]:hover {
   text-align: center;
   margin: 0 auto;
 }
- 
+
 
 .card-bcg {
   margin-top: 38%;
 }
+
 /*
 
 
@@ -532,6 +525,7 @@ input[type=submit]:hover {
 .card-info>a>i:hover {
   color: rgb(112, 201, 236);
 }
+
 /*
 .card-photo {
   height: 200px;
@@ -698,6 +692,60 @@ input[type=submit]:hover {
 
 
 /* Media Queries */
+
+
+@media (max-width: 996px) {
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .team-card {
+    width: 16rem;
+    height: 16rem;
+    transition: 0.5s;
+    cursor: pointer;
+    background-size: cover;
+  }
+
+  .card-name {
+    font-size: 1rem;
+  }
+
+  .card-info>a>i {
+    font-size: 1.2rem;
+    margin-left: 20%;
+  }
+
+  .boat {
+    width: 50%;
+    height: 10%;
+
+  }
+
+
+
+  .button {
+    height: 50px;
+    width: 50px;
+  }
+
+  .fa {
+    font-size: medium;
+  }
+
+  .inSlide {
+    font-size: 1.2rem;
+
+  }
+
+  .inSlide--header {
+    font-size: 2rem;
+  }
+
+}
+
+
 @media (max-width: 1300px) {
 
   .sneak,
@@ -735,6 +783,7 @@ input[type=submit]:hover {
     font-size: 1rem;
   }
 }
+
 @media (max-width: 768px) {
   .navigation {
     flex-direction: column;
@@ -771,6 +820,7 @@ input[type=submit]:hover {
     margin-left: 0px;
     background: rgba(255, 255, 255, 0.9);
   }
+
   .navigation__logo__img {
     display: none;
   }
@@ -851,6 +901,30 @@ input[type=submit]:hover {
       width: 100%;
     }
   }
+
+  .slides {
+    padding: 1% 3%;
+  }
+
+  .button {
+    height: 30px;
+    width: 30px;
+  }
+
+  .fa {
+    font-size: small;
+  }
+
+  .inSlide {
+    font-size: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .inSlide--header {
+    font-size: 1.4rem;
+  }
+
 }
 
 @media (max-width: 420px) {
@@ -904,67 +978,68 @@ input[type=submit]:hover {
   .fish {
     display: none;
   }
+
+
 }
 
-@media (min-width: 0px){
+@media (min-width: 0px) {
   .team {
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
-  
+
   .team-card {
-    width:8rem;
+    width: 8rem;
     height: 8rem;
 
   }
- 
+
   .card-name {
     font-size: 0.8rem;
     margin-left: 35%;
     padding-top: 35%;
   }
-  
+
   .card-info>a>i {
     font-size: 0.8rem;
     margin-left: 17%;
     margin-top: 15%;
   }
-  
+
   .card-bcg {
     margin: auto;
   }
-
 
   .team__title {
     font-size: 2rem;
   }
 }
 
-@media (min-width: 389px){
+@media (min-width: 389px) {
   .team {
     height: 80vh;
   }
-  
+
   .team-card {
-    width:12rem;
+    width: 12rem;
     height: 12rem;
 
   }
- 
+
   .card-name {
     font-size: 1rem;
     padding-top: 35%;
     margin-left: 38%;
   }
-  
+
   .card-info>a>i {
     font-size: 1.2rem;
     margin-top: 18%;
     margin-left: 17%;
   }
-  
+
   .card-bcg {
     margin: auto;
   }
@@ -973,99 +1048,4 @@ input[type=submit]:hover {
   .team__title {
     font-size: 2rem;
   }
-
-}
-@media (min-width: 576px){
-  .team {
-    height: 100vh;
-  }
-  
-  .team-card {
-    width:15rem;
-    height: 15rem;
-  }
-
-  .team__title {
-    font-size: 2.5rem;
-  }
-  .card-name {
-    font-size: 1.2rem;
-    padding-top: 37%;
-    margin-left: 40%;
-  }
-  .card-info>a>i {
-    font-size: 1.3rem;
-    margin-top: 18%;
-    margin-left: 20%;
-  }
-
-}
-@media (min-width: 768px){  
-  .team-card {
-    width:18rem;
-    height: 18rem;
-  }
-
-  .team__title {
-    font-size: 2.8rem;
-  }
-  .card-name {
-    font-size: 1.2rem;
-    padding-top: 37%;
-    margin-left: 40%;
-  }
-  .card-info>a>i {
-    font-size: 1.5rem;
-    margin-top: 23%;
-    margin-left: 20%;
-  }
-  
-}
-@media (min-width: 992px){
-  .team {
-    height: 100vh;
-  }
-  .team-card {
-    width:18rem;
-    height: 18rem;
-  }
-  .team__title {
-    font-size: 2.8rem;
-  }
-  .card-name {
-    font-size: 1.2rem;
-    padding-top: 37%;
-    margin-left: 40%;
-  }
-  .card-info>a>i {
-    font-size: 1.5rem;
-    margin-top: 23%;
-    margin-left: 20%;
-  }
-  
-}
-@media (min-width: 1200px){
-  .team-img {
-    display: flex;
-    justify-content: center;
-  }
-  .team-card {
-    width:21rem;
-    height: 21rem;
-    margin: 15px;
-  }
-  .team__title {
-    font-size: 3rem;
-  }
-  .card-name {
-    font-size: 1.4rem;
-    padding-top: 37%;
-    margin-left: 40%;
-  }
-  .card-info>a>i {
-    font-size: 1.7rem;
-    margin-top: 25%;
-    margin-left: 20%;
-  }
-  
 }
