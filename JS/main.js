@@ -12,6 +12,13 @@ let position1 = -2150;
 let position2 = -1850;
 let position3 = -1680;
 let position4 = -1900;
+let position5 = -1500;
+// let leftPosition = -200;
+// let position1 = 100;
+// let position2 = -200;
+// let position3 = -200;
+// let position4 = -200;
+// let position5 = -200;
 let topPosition = 0;
 let wave = 0;
 
@@ -51,6 +58,7 @@ observer = new IntersectionObserver((entries) => {
                 clearInterval(interval);
             }
         }
+
 
         const interval = setInterval(changePosition, 100);
 
