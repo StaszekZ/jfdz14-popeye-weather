@@ -186,9 +186,9 @@ const slideLeft = () => {
     if (currentState < 0) {
         currentState = slides.length - 1;
         slides[currentState].classList.add('active');
-
     };
     slides[currentState].classList.add('active');
+    resetSliderTimer();
 }
 
 const slideRight = () => {
