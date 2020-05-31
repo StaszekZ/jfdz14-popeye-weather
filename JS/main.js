@@ -195,10 +195,15 @@ const slideRight = () => {
     slides[currentState].classList.remove('active');
     currentState = (currentState + 1) % slidesLength;
     slides[currentState].classList.add('active');
+    resetSliderTimer();
+}
+
+buttonPrev.addEventListener('click', slideLeft);
+buttonNext.addEventListener('click', slideRight);
+
+let intervalRight = setInterval(slideRight, 8000);
+
+const resetSliderTimer = () => {
     clearInterval(intervalRight);
     intervalRight = setInterval(slideRight, 8000)
 }
-
-let intervalRight = setInterval(slideRight, 8000);
-buttonPrev.addEventListener('click', slideLeft);
-buttonNext.addEventListener('click', slideRight);
