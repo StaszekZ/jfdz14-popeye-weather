@@ -156,7 +156,7 @@ section {
   top: calc(50% - 20px);
   height: 70px;
   width: 70px;
-  background-color: rgba(232, 232, 232, 0.2);
+  background-color: var(--dots-color);
   border-radius: 50%;
   border: none;
   transition: 0.3s;
@@ -177,7 +177,7 @@ section {
 }
 
 .button:hover {
-  background-color: rgba(232, 232, 232, 0.7);
+  background-color: var(--dots-color-hover);
   transform: scale(1.2);
   transition: 0.3s;
 }
@@ -229,6 +229,29 @@ section {
   top: 4%;
   width: 15%;
   height: auto;
+}
+
+.sliderDots {
+  position: absolute;
+  top: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 calc(50% - 50px);
+}
+
+.dots {
+  background-color: var(--dots-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--second-text-color);
+}
+
+.dots--active {
+  background-color: var(--dots-color-hover);
 }
 
 /* Kasia- features */

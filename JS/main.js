@@ -169,6 +169,7 @@ setInterval(bubbleWaterTime, 150)
 const buttonPrev = document.querySelector(".button__prev");
 const buttonNext = document.querySelector(".button__next");
 const slides = document.querySelectorAll('.slides');
+const dots = document.querySelectorAll('.dots');
 
 const slidesLength = slides.length;
 
@@ -178,23 +179,32 @@ const slidesLength = slides.length;
 let currentState = 0;
 
 slides[currentState].classList.add('active');
+dots[currentState].classList.add('dots--active');
 
 
 const slideLeft = () => {
     slides[currentState].classList.remove('active');
+    dots[currentState].classList.remove('dots--active');
+
     currentState -= 1;
     if (currentState < 0) {
         currentState = slides.length - 1;
         slides[currentState].classList.add('active');
+        dots[currentState].classList.add('dots--active');
     };
     slides[currentState].classList.add('active');
+    dots[currentState].classList.add('dots--active');
+
     resetSliderTimer();
 }
 
 const slideRight = () => {
     slides[currentState].classList.remove('active');
+    dots[currentState].classList.remove('dots--active');
     currentState = (currentState + 1) % slidesLength;
     slides[currentState].classList.add('active');
+    dots[currentState].classList.add('dots--active');
+
     resetSliderTimer();
 }
 
