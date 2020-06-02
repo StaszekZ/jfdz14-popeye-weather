@@ -583,6 +583,23 @@ input[type=submit]:hover {
   background-position: center;
   z-index: -100;
 }
+.game-static {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 45%;
+}
+.game-start {
+  /* display: none; */
+  font-size: 2rem;
+  background-color: #333;
+  color: #fff;
+}
+.game-time, .game-score, .game-info {
+  font-size: 2rem;
+  margin: 10px;
+  font-weight: bold;
+}
 
 
 

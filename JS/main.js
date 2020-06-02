@@ -175,30 +175,72 @@ const slidesLength = slides.length;
 
 // console.log(slides)
 
-let currentState = 0;
+// let currentState = 0;
 
-slides[currentState].classList.add('active');
+// slides[currentState].classList.add('active');
 
 
-const slideLeft = () => {
-    slides[currentState].classList.remove('active');
-    currentState -= 1;
-    if (currentState < 0) {
-        currentState = slides.length - 1;
-        slides[currentState].classList.add('active');
+// const slideLeft = () => {
+//     slides[currentState].classList.remove('active');
+//     currentState -= 1;
+//     if (currentState < 0) {
+//         currentState = slides.length - 1;
+//         slides[currentState].classList.add('active');
 
-    };
-    slides[currentState].classList.add('active');
+//     };
+//     slides[currentState].classList.add('active');
+// }
+
+// const slideRight = () => {
+//     slides[currentState].classList.remove('active');
+//     currentState = (currentState + 1) % slidesLength;
+//     slides[currentState].classList.add('active');
+//     clearInterval(intervalRight);
+//     intervalRight = setInterval(slideRight, 8000)
+// }
+
+// let intervalRight = setInterval(slideRight, 8000);
+// buttonPrev.addEventListener('click', slideLeft);
+// buttonNext.addEventListener('click', slideRight);
+
+
+//gra
+
+class Game {
+    constructor(){
+        this.player = new Player();
+        // this.submarine = new Submarine();
+    }
+
+    runGame(){
+        const startBtn = document.querySelector('.game-start');
+
+        startBtn.addEventListener('click', () => this.player.timer());
+    }
 }
 
-const slideRight = () => {
-    slides[currentState].classList.remove('active');
-    currentState = (currentState + 1) % slidesLength;
-    slides[currentState].classList.add('active');
-    clearInterval(intervalRight);
-    intervalRight = setInterval(slideRight, 8000)
+class Player {
+    time = 60;
+    score = 0;
+
+    constructor(){
+        this.timeElement = document.querySelector('.game-time');
+        this.scoreElement = document.querySelector('.game-score');
+
+    }
+
+    timer(){
+        const timeCounter = () => {
+            this.time--;
+            this.timeElement.textContent = this.time;
+            if(this.time === 0){
+                clearInterval(timerCount);
+            }
+        }
+        const timerCount = setInterval(timeCounter, 1000);
+         
+    }
 }
 
-let intervalRight = setInterval(slideRight, 8000);
-buttonPrev.addEventListener('click', slideLeft);
-buttonNext.addEventListener('click', slideRight);
+const game = new Game();
+game.runGame();
