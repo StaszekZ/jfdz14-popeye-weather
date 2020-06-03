@@ -99,7 +99,7 @@ const waveUpFunc = () => {
 
 }
 
-setInterval(waveUpFunc, 750)
+const waveUpFuncInterval = setInterval(waveUpFunc, 750)
 observer.observe(teamCard);
 
 const bubbleWater = document.querySelectorAll('.team_bubble-water');
@@ -162,7 +162,7 @@ const bubbleWaterTime = () => {
 }
 
 
-setInterval(bubbleWaterTime, 150)
+const bubbleWaterTimeInterval = setInterval(bubbleWaterTime, 150);
 
 // ============= slider ======================== //
 
@@ -209,23 +209,47 @@ const slidesLength = slides.length;
 class Game {
     constructor(){
         this.player = new Player();
-        // this.submarine = new Submarine();
+        this.submarine = new Submarine();
     }
 
     runGame(){
         const startBtn = document.querySelector('.game-start');
 
-        startBtn.addEventListener('click', () => this.player.timer());
+        startBtn.addEventListener('click', () => {
+            this.player.timer();
+            clearInterval(waveUpFuncInterval);
+            clearInterval(bubbleWaterTimeInterval);
+        });
+
+        const submarineCard = document.querySelectorAll('.team-card');
+
+        for(let i = 0; i < submarineCard.length; i++){
+            submarineCard[i].addEventListener('click', () => {
+                this.submarine.gotHit();
+                console.log('klikam w attack');
+            })
+        }
     }
+}
+
+class Submarine {
+    score = 0;
+    constructor() {
+        this.scoreElement = document.querySelector('.game-score');
+    }
+    gotHit(){
+        this.score += 1;
+        this.scoreElement.textContent = this.score;
+    }
+
 }
 
 class Player {
     time = 60;
-    score = 0;
 
     constructor(){
         this.timeElement = document.querySelector('.game-time');
-        this.scoreElement = document.querySelector('.game-score');
+        
 
     }
 
@@ -234,12 +258,16 @@ class Player {
             this.time--;
             this.timeElement.textContent = this.time;
             if(this.time === 0){
+                this.timeElement.textContent = 'KONIEC !';
                 clearInterval(timerCount);
+                
             }
         }
-        const timerCount = setInterval(timeCounter, 1000);
-         
+        const timerCount = setInterval(timeCounter, 1000);   
     }
+    
+
+    
 }
 
 const game = new Game();
