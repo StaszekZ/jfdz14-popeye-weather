@@ -189,6 +189,8 @@ section {
   border-radius: 50%;
   border: none;
   transition: 0.3s;
+  justify-content: center;
+  align-items: center;
 }
 
 .fa {
@@ -713,7 +715,7 @@ input[type=submit]:hover {
   background-position: center;
   width: 100%;
   height: 50%;
-  /* position: absolute; */
+  position: absolute;
   top: 28%;
   z-index: -2;
 
@@ -1011,32 +1013,32 @@ input[type=submit]:hover {
 
 }
 
-@media (min-width: 0px){
+@media (min-width: 0px) {
   .team {
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
-  
+
   .team-card {
-    width:8rem;
+    width: 8rem;
     height: 8rem;
 
   }
- 
+
   .card-name {
     font-size: 0.8rem;
     margin-left: 35%;
     padding-top: 35%;
   }
-  
+
   .card-info>a>i {
     font-size: 0.8rem;
     margin-left: 17%;
     margin-top: 15%;
   }
-  
+
   .card-bcg {
     margin: auto;
   }
@@ -1047,29 +1049,29 @@ input[type=submit]:hover {
   }
 }
 
-@media (min-width: 389px){
+@media (min-width: 389px) {
   .team {
     height: 80vh;
   }
-  
+
   .team-card {
-    width:12rem;
+    width: 12rem;
     height: 12rem;
 
   }
- 
+
   .card-name {
     font-size: 1rem;
     padding-top: 35%;
     margin-left: 38%;
   }
-  
+
   .card-info>a>i {
     font-size: 1.2rem;
     margin-top: 18%;
     margin-left: 17%;
   }
-  
+
   .card-bcg {
     margin: auto;
   }
@@ -1080,24 +1082,27 @@ input[type=submit]:hover {
   }
 
 }
-@media (min-width: 576px){
+
+@media (min-width: 576px) {
   .team {
     height: 100vh;
   }
-  
+
   .team-card {
-    width:15rem;
+    width: 15rem;
     height: 15rem;
   }
 
   .team__title {
     font-size: 2.5rem;
   }
+
   .card-name {
     font-size: 1.2rem;
     padding-top: 37%;
     margin-left: 40%;
   }
+
   .card-info>a>i {
     font-size: 1.3rem;
     margin-top: 18%;
@@ -1105,72 +1110,85 @@ input[type=submit]:hover {
   }
 
 }
-@media (min-width: 768px){  
+
+@media (min-width: 768px) {
   .team-card {
-    width:18rem;
+    width: 18rem;
     height: 18rem;
   }
 
   .team__title {
     font-size: 2.8rem;
   }
+
   .card-name {
     font-size: 1.2rem;
     padding-top: 37%;
     margin-left: 40%;
   }
+
   .card-info>a>i {
     font-size: 1.5rem;
     margin-top: 23%;
     margin-left: 20%;
   }
-  
+
 }
-@media (min-width: 992px){
+
+@media (min-width: 992px) {
   .team {
     height: 100vh;
   }
+
   .team-card {
-    width:18rem;
+    width: 18rem;
     height: 18rem;
   }
+
   .team__title {
     font-size: 2.8rem;
   }
+
   .card-name {
     font-size: 1.2rem;
     padding-top: 37%;
     margin-left: 40%;
   }
+
   .card-info>a>i {
     font-size: 1.5rem;
     margin-top: 23%;
     margin-left: 20%;
   }
-  
+
 }
-@media (min-width: 1200px){
+
+@media (min-width: 1200px) {
   .team-img {
     display: flex;
     justify-content: center;
   }
+
   .team-card {
-    width:21rem;
+    width: 21rem;
     height: 21rem;
     margin: 15px;
   }
+
   .team__title {
     font-size: 3rem;
   }
+
   .card-name {
     font-size: 1.4rem;
     padding-top: 37%;
     margin-left: 40%;
   }
+
   .card-info>a>i {
     font-size: 1.7rem;
     margin-top: 25%;
     margin-left: 20%;
   }
-  
+
 }
