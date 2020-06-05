@@ -1192,3 +1192,10 @@ input[type=submit]:hover {
   }
 
 }
+
+.lang-picker {
+  border: 0;
+  background: transparent;
+  color: var(--main-text-color);
+  margin-left: 50px;
+}

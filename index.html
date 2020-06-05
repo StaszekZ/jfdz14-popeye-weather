@@ -26,10 +26,10 @@
         <a href="#home" class="navigation__menu__list__link" data-i18n="nav.home"></a>
       </li>
       <li class="navigation__menu__list">
-        <a href="#features" class="navigation__menu__list__link">Features</a>
+        <a href="#features" class="navigation__menu__list__link" data-i18n="nav.features"></a>
       </li>
       <li class="navigation__menu__list">
-        <a href="#functionality" class="navigation__menu__list__link">Functionalities</a>
+        <a href="#functionality" class="navigation__menu__list__link" data-i18n="nav.functionalities"></a>
       </li>
       <li class="navigation__menu__list">
         <a href="#form" class="navigation__menu__list__link">Form</a>
@@ -38,15 +38,10 @@
         <a href="#team" class="navigation__menu__list__link">Team</a>
       </li>
       <li class="navigation__menu__list">
-        <div class="dropdown">
-          <button class="dropbtn">Lang 
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">PL</a>
-            <a href="#">ENG</a>
-          </div>
-        </div> 
+        <select class="lang-picker">
+          <option value="pl">Polski</option>
+          <option value="en">English</option>
+        </select>
       </li>
     </ul>
   </nav>
@@ -83,7 +78,7 @@
         </button>
         <div class="slides hidden One">
           <header>
-            <h1 class="inSlide inSlide--header">Our Popeye Weather App</h1>
+            <h1 class="inSlide inSlide--header" data-i18n="marketing.header"></h1>
           </header>
           <hr class="inSlide--hr"> <br>
           <p class="inSlide inSlide--para">Offers a scarily accurate minute-by-minute predictions for precipitation, and
@@ -382,6 +377,7 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/19.3.0/i18next.min.js" integrity="sha256-lEbSGOmfGDM3LEIuPbcEtLZjVvKs60w2BvxBweIHZ30=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.1/jquery-i18next.js" integrity="sha256-UTYjCQKkQr74kn1nZYjEQQEe7Z748X3EajGTfcvIixE=" crossorigin="anonymous"></script>
+  <script src="./JS/translation.js"></script>
 </body>
 
 </html>
