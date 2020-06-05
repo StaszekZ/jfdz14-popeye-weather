@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 16px;
+}
+
+html,
+body {
+    width: 100%;
+    flex-direction: column;
+}
+
+
+.game {
+
+}
+
+.game--submarine {
+    --position: 0px;
+    background: url(../img/teamphoto/kasia.png);
+    width: 100px;
+    background-size: contain;
+    height: 80px;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: translateY(calc(var(--position) - 40px))
+}
+
+.game--screen {
+    margin: 40px;
+    padding: 40px 20px;
+    height: 600px;
+    background-color: var(--bgr-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.game--element {
+    --position-left: 0px;
+    --position-top: 0px;
+    position: absolute;
+    --speed: 10s;
+    transition-property: transform;
+    transition-timing-function: linear;
+    transition-duration: var(--speed);
+    transform: translate(calc(var(--position-left) - 20px), calc(var(--position-top) - 20px));
+}
+
+.game--missile {
+    width: 40px;
+    height: 40px;
+    background: url(../img/bomb.svg) no-repeat;
+    background-size: contain;
+}
+
+.game--food {
+    width: 40px;
+    height: 40px;
+    background: url(../img/apple.svg) no-repeat;
+    background-size: contain;
+}
