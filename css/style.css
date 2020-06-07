@@ -84,7 +84,7 @@ body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -188,6 +188,7 @@ section {
   background-color: var(--dots-color);
   border-radius: 50%;
   border: none;
+  outline: none;
   transition: 0.3s;
   justify-content: center;
   align-items: center;
@@ -210,6 +211,8 @@ section {
   transform: scale(1.2);
   transition: 0.3s;
 }
+
+
 
 .button__prev {
   left: 2%;
@@ -893,6 +896,19 @@ input[type=submit]:hover {
 
   .hero__boat {
     display: none;
+  }
+
+  .button:hover {
+    background-color: var(--dots-color);
+    transition: none;
+    transform: none;
+  }
+
+  .button:hover .fa {
+    color: lightgray;
+    transition: none;
+    transform: none;
+
   }
 
   .features__box {
