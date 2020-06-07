@@ -781,8 +781,6 @@ input[type=submit]:hover {
 
   }
 
-
-
   .button {
     height: 50px;
     width: 50px;
@@ -1099,8 +1097,8 @@ input[type=submit]:hover {
   }
 
   .team-card {
-    width: 12rem;
-    height: 12rem;
+    /* width: 12rem;
+    height: 12rem; */
 
   }
 
@@ -1133,8 +1131,8 @@ input[type=submit]:hover {
   }
 
   .team-card {
-    width: 15rem;
-    height: 15rem;
+    /* width: 15rem;
+    height: 15rem; */
   }
 
   .team__title {
@@ -1152,7 +1150,6 @@ input[type=submit]:hover {
     margin-top: 18%;
     margin-left: 20%;
   }
-
 }
 
 @media (min-width: 768px) {
