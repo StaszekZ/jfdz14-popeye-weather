@@ -244,6 +244,23 @@ return true;
 })();
 
 
+// cookies save to local storage
+
+function addCookiesToStorage(cookieKey) {
+    localStorage.setItem(cookieKey, "yes");
+}
+
+setTimeout(() => {
+    const cookieAccepted = localStorage.hasOwnProperty("cookieAccepted");
+    if (cookieAccepted === false) {
+        container.classList.remove("cookie-alert");
+    }
+}, 1500);
+link.addEventListener("click", () => {
+    addCookiesToStorage("cookieAccepted")
+    container.classList.add("cookie-alert");
+})
+
 
 
 
