@@ -211,9 +211,9 @@ const slideRight = () => {
 buttonPrev.addEventListener('click', slideLeft);
 buttonNext.addEventListener('click', slideRight);
 
-let intervalRight = setInterval(slideRight, 8000);
+let intervalRight = setInterval(slideRight, 12000);
 
 const resetSliderTimer = () => {
     clearInterval(intervalRight);
-    intervalRight = setInterval(slideRight, 8000)
+    intervalRight = setInterval(slideRight, 12000)
 }

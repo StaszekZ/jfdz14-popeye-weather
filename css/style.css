@@ -1051,6 +1051,9 @@ input[type=submit]:hover {
     display: none;
   }
 
+  .dots {
+    display: none;
+  }
 
 }
 
