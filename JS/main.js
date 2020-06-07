@@ -205,25 +205,54 @@ const slideRight = () => {
 
 const cookieAlert =  (function() {
     var container = document.createElement('div'),
-    link = document.createElement('a');
+        link = document.createElement('a');
 
 
     container.setAttribute('id', 'cookieinfo');
     container.setAttribute('class', 'cookie-alert');
     container.innerHTML = "<h6>This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish.</h6>";
 
-    document.body.appendChild(container);
+    
 
     link.setAttribute('href', '#');
-    link.setAttribute('title', 'Zamknij');
+    link.setAttribute('title', 'accept');
     link.innerHTML = 'Accept';
 
-    container.appendChild(link);
+    
 
 
-    link.addEventListener("click",  )
-    return true;
+
+
+function clickHandler(e) {
+    if (e.preventDefault) {
+        e.preventDefault();
+    } else {
+        e.returnValue = false;
+    }
+
+    document.body.removeChild(container);
+}
+
+if (link.addEventListener) {
+    link.addEventListener("click", clickHandler);
+} else {
+    link.attachEvent("onclick", clickHandler);
+}
+
+container.appendChild(link);
+document.body.appendChild(container);
+
+return true;
+
 })();
+
+
+
+
+
+
+
+
 let intervalRight = setInterval(slideRight, 8000);
 buttonPrev.addEventListener('click', slideLeft);
 buttonNext.addEventListener('click', slideRight);
