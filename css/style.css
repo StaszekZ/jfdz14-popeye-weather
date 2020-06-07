@@ -458,17 +458,15 @@ input[type=submit]:hover {
   display: flex;
   flex-direction: column;
   /* width: var(--max-width); */
-  width: 80vw;
-  height: 100vh;
+  /* width: 80vw;
+  height: 100vh; */
+  width: 90vw;
   display: flex;
   padding-top: 2.5rem;
+  background-image: url(../img/FAVPNG_underwater_19mmkDgZ.png);
+  background-size: cover;
+  background-position: center;
 }
-
-.team-img {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .team__title {
   font-size: 3rem;
   color: var(--second-text-color);
@@ -561,6 +559,9 @@ input[type=submit]:hover {
   /* position: absolute; */
   background-image: url(../img/teamphoto/lukasz.png);
 }
+.none {
+  display: none;
+}
 
 
 .card-name {
@@ -587,20 +588,20 @@ input[type=submit]:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 45%;
+  margin-top: 40%;
 }
 .game-start {
   /* display: none; */
   font-size: 2rem;
   background-color: #333;
   color: #fff;
+  margin: auto 10px;
 }
 .game-time, .game-score, .game-info {
   font-size: 2rem;
   margin: 10px;
   font-weight: bold;
 }
-
 
 
 .footer {
@@ -706,7 +707,6 @@ input[type=submit]:hover {
   position: absolute;
   top: 28%;
   z-index: -2;
-
 }
 
 
