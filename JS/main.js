@@ -199,7 +199,6 @@ const slideRight = () => {
     intervalRight = setInterval(slideRight, 8000)
 }
 
-<<<<<<< HEAD
 
 
 // info o cookies
@@ -225,8 +224,6 @@ const cookieAlert =  (function() {
     link.addEventListener("click",  )
     return true;
 })();
-=======
 let intervalRight = setInterval(slideRight, 8000);
 buttonPrev.addEventListener('click', slideLeft);
 buttonNext.addEventListener('click', slideRight);
->>>>>>> develop
