@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
-  <title>Popeye Weather - best weather app ever</title>
+  <title data-i18n="head.title"></title>
 </head>
 
 <body>
@@ -19,23 +19,29 @@
     <label class="navigation__burger" for="burger__checkbox"><img src="./img/bars-solid-navy-blue.png"
         class="navigation__burger__icon" alt="burger menu"></label>
     <input class="navigation__burger__checkbox" type="checkbox" id="burger__checkbox" />
-    <a href="#home" class="navigation__logo"><img class="navigation__logo__img" src="img/logo.png"
+    <a href="#home" class="navigation__logo"><img class="navigation__logo__img" src="./img/logo.png"
         alt="logo-popeye"></a>
     <ul class="navigation__menu">
       <li class="navigation__menu__list">
-        <a href="#home" class="navigation__menu__list__link">Home</a>
+        <a href="#home" class="navigation__menu__list__link" data-i18n="nav.home"></a>
       </li>
       <li class="navigation__menu__list">
-        <a href="#features" class="navigation__menu__list__link">Features</a>
+        <a href="#features" class="navigation__menu__list__link" data-i18n="nav.features"></a>
       </li>
       <li class="navigation__menu__list">
-        <a href="#functionality" class="navigation__menu__list__link">Functionalities</a>
+        <a href="#functionality" class="navigation__menu__list__link" data-i18n="nav.functionalities"></a>
       </li>
       <li class="navigation__menu__list">
-        <a href="#form" class="navigation__menu__list__link">Form</a>
+        <a href="#form" class="navigation__menu__list__link" data-i18n="nav.form"></a>
       </li>
       <li class="navigation__menu__list">
-        <a href="#team" class="navigation__menu__list__link">Team</a>
+        <a href="#team" class="navigation__menu__list__link" data-i18n="nav.team"></a>
+      </li>
+      <li class="navigation__menu__list">
+        <select class="lang-picker">
+          <option value="pl">PL</option>
+          <option value="en">EN</option>
+        </select>
       </li>
     </ul>
   </nav>
@@ -64,50 +70,71 @@
 
     <section class="sneak">
       <figure class="sneak__fig">
-        <div class="slide One"></div>
-        <div class="slide Two"></div>
-        <div class="slide Three"></div>
-        <div class="slide Four"></div>
-        <div class="slide One"></div>
+        <button class="button button__prev">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+        <button class="button button__next">
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+        <div class="slides hidden One">
+          <header>
+            <h1 class="inSlide inSlide--header" data-i18n="marketing.header1"></h1>
+          </header>
+          <hr class="inSlide--hr"> <br>
+          <p class="inSlide inSlide--para" data-i18n="marketing.body1"></p>
+        </div>
+        <div class="slides hidden Two">
+          <header>
+            <h1 class="inSlide inSlide--header" data-i18n="marketing.header2"></h1>
+          </header>
+          <hr class="inSlide--hr"> <br>
+          <p class="inSlide inSlide--para" data-i18n="marketing.body2"></p>
+          <!-- <img class="inSlider--image" src="./img/steamboat.png" alt="steamboat on waves"> -->
+        </div>
+        <div class="slides hidden Three">
+          <header>
+            <h1 class="inSlide inSlide--header" data-i18n="marketing.header3"></h1>
+          </header>
+          <hr class="inSlide--hr"> <br>
+          <p class="inSlide inSlide--para" data-i18n="marketing.body3"></p>
+          <img class="inSlider--image" src="./img/steamboat.png" alt="steamboat on waves">
+        </div>
+
       </figure>
     </section>
     <section class="features" id="features">
       <div class="features__question">
-        <h2 class="features__title">Why Popeye Weather App?</h2>
+        <h2 class="features__title" data-i18n="features.title"></h2>
       </div>
       <div class="features__description">
         <div class="features__box">
           <img class="img__fbox" src="./img/hiclipart.com.png" alt="popeye strong">
           <hr>
-          <h3 class="h__box">Up-to-date weather prognosis</h3>
+          <h3 class="h__box" data-i18n="features.box1"></h3>
           <hr>
-          <p class="text__box">In our application you will find the most up-to-date weather details. All you need to
-            decide if this is a time for sailing!
-          </p>
+          <p class="text__box" data-i18n="features.descr1"></p>
         </div>
         <div class="features__box">
           <img class="img__fbox" src="./img/clipart3562180.png" alt="popeye's girlfriend">
           <hr>
-          <h3 class="h__box">Free and accesible through majority of mobile devices</h3>
+          <h3 class="h__box" data-i18n="features.box2"></h3>
           <hr>
-          <p class="text__box">You can download our application into any devices that works on Android or iOS.</p>
+          <p class="text__box" data-i18n="features.descr2"></p>
         </div>
         <div class="features__box">
           <img class="img__fbox" src="./img/IMGBIN_popeye-rush-for-spinach-bluto-olive-oyl-png_uhaB68JC.png"
             alt="popeye's spinach">
           <hr>
-          <h3 class="h__box">Safety alerts for weather conditions</h3>
+          <h3 class="h__box" data-i18n="features.box3"></h3>
           <hr>
-          <p class="text__box">Our application will give you warning whenever you will be reaching areas in
-            dangerous weather conditions.</p>
+          <p class="text__box" data-i18n="features.descr3"></p>
         </div>
         <div class="features__box">
           <img class="img__fbox" src="./img/pop4.png" alt="popeye smoke">
           <hr>
-          <h3 class="h__box">Hints for sailor equipments</h3>
+          <h3 class="h__box" data-i18n="features.box4"></h3>
           <hr>
-          <p class="text__box">Our application will give you some hints what kind of equipment you
-            need to prepare for different weather condition that you're planning to sail.</p>
+          <p class="text__box" data-i18n="features.descr4"></p>
         </div>
       </div>
     </section>
@@ -120,28 +147,14 @@
         <div class="functionality__image"><img class="img__box" src="./img/airtemperature.png"
             alt="Air temperature baner">
         </div>
-        <h2 class="f__box">Air temperature</h2>
-        <div class="functionality__description">We want you to be well informed and be able to plan your activities in
-          longer intervals,
-          that is why we prepare for you the most reliable forecast in the whole internet !!! Air temperature is one of
-          the basic meteorological elements determining the thermal state of the atmosphere.
-          Data on air temperature are collected by meteorological stations. The measurement is made at a height of 2 m
-          above the ground using a thermometer,
-          sheltered from direct solar radiation in a meteorological cage. Maximum and minimum temperature are measured
-          using separate thermometers
-          - maximum and minimum thermometers, respectively.</div>
+        <h2 class="f__box" data-i18n="func.box1"></h2>
+        <div class="functionality__description" data-i18n="func.fun1"></div>
       </div>
       <div class="functionality__box">
         <div class="functionality__image"><img class="img__box" src="./img/atmosfericpressure.png"
             alt="Atmospheric pressure baner"></div>
-        <h2 class="f__box">Atmospheric pressure</h2>
-        <div class="functionality__description">Not only does it have a great impact on our well-being, but it is also a
-          basis for predicting other weather ingredients.
-          Atmospheric pressure, also known as barometric pressure (after the barometer), is the pressure within the
-          atmosphere of Earth. The standard atmosphere (symbol: atm)
-          is a unit of pressure defined as 101,325 Pa (1,013.25 hPa; 1,013.25 mbar), which is equivalent to 760 mm Hg,
-          29.9212 inches Hg, or 14.696 psi.[1] The atm unit is roughly equivalent to the mean sea-level atmospheric
-          pressure on Earth, that is, the Earth's atmospheric pressure at sea level is approximately 1 atm.
+        <h2 class="f__box" data-i18n="func.box2"></h2>
+        <div class="functionality__description" data-i18n="func.fun2">
         </div>
       </div>
       <div class="functionality__box">
@@ -274,54 +287,68 @@
 
     <!---team -->
     <section class="team" id="team">
+      <h2 class="team__title">Team Members are:</h2>
+      <div class="boat"></div>
 
       <div class="team-img">
-        <h2 class="team__title">Team Members are:</h2>
-        <div class="boat"></div>
-        <div class="team-cards">
-          <div class="team-card card1">
-            <div class="card-bcg">
-              <p class="card-name">Agnieszka</p>
-              <div class="card-info"><a href="https://github.com/agnieszka-lewicka"><i class="fab fa-github"></i></a><a
-                  href="http://linkedin.com/in/agnieszka-lewicka-33257159"><i class="fab fa-linkedin"></i></a></div>
-            </div>
+
+        <div class="team-card card1">
+          <div class="team_bubble-water"></div>
+          <div class="card-bcg">
+            <p class="card-name">Agnieszka</p>
+            <div class="card-info"><a href="https://github.com/agnieszka-lewicka" target="_blank"><i
+                  class="fab fa-github"></i></a><a href="http://linkedin.com/in/agnieszka-lewicka-33257159"
+                target="_blank"><i class="fab fa-linkedin"></i></a></div>
           </div>
-          <div class="team-card card2">
-            <div class="card-bcg">
-              <p class="card-name">Kasia</p>
-              <div class="card-info"><a href="https://github.com/Kdmitrus"><i class="fab fa-github"></i></a><a
-                  href="https://www.linkedin.com/mwlite/in/katarzyna-dmitrus-krakowiak-33645b58"><i
-                    class="fab fa-linkedin"></i></a></div>
-            </div>
+        </div>
+        <div class="team-card card2">
+          <div class="team_bubble-water"></div>
+          <div class="card-bcg">
+            <p class="card-name">Kasia</p>
+            <div class="card-info"><a href="https://github.com/Kdmitrus" target="_blank"><i
+                  class="fab fa-github"></i></a><a
+                href="https://www.linkedin.com/mwlite/in/katarzyna-dmitrus-krakowiak-33645b58" target="_blank"><i
+                  class="fab fa-linkedin"></i></a></div>
           </div>
-          <div class="team-card card3">
-            <div class="card-bcg">
-              <p class="card-name">Mateusz</p>
-              <div class="card-info"><a href="https://github.com/mslomaa"><i class="fab fa-github"></i></a><a
-                  href="https://www.linkedin.com/in/mateuszslomkowski/"><i class="fab fa-linkedin"></i></a></div>
-            </div>
+        </div>
+        <div class="team-card card3">
+          <div class="team_bubble-water"></div>
+          <div class="card-bcg">
+            <p class="card-name">Mateusz</p>
+            <div class="card-info"><a href="https://github.com/mslomaa" target="_blank"><i
+                  class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/mateuszslomkowski/"
+                target="_blank"><i class="fab fa-linkedin"></i></a></div>
           </div>
-          <div class="team-card card4">
-            <div class="card-bcg">
-              <p class="card-name">Staszek</p>
-              <div class="card-info"><a href="https://github.com/StaszekZ"><i class="fab fa-github"></i></a><a
-                  href="https://www.linkedin.com/in/s-zajaczkowski/"><i class="fab fa-linkedin"></i></a></div>
-            </div>
+        </div>
+        <div class="team-card card4">
+          <div class="team_bubble-water"></div>
+          <div class="card-bcg">
+            <p class="card-name">Staszek</p>
+            <div class="card-info"><a href="https://github.com/StaszekZ" target="_blank"><i
+                  class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/s-zajaczkowski/" target="_blank"><i
+                  class="fab fa-linkedin"></i></a></div>
           </div>
-          <!-- <div class="team-card card5">
-            <div class="card-bcg">
-              <p class="card-name">Lukasz</p>
-              <div class="card-info"><a href="https://github.com/lzwolinski82"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/%C5%82ukasz-zwoli%C5%84ski-3bb1131aa/"><i
-                    class="fab fa-linkedin"></i></a></div>
-            </div> -->
+        </div>
+        <div class="team-card card5">
+          <div class="team_bubble-water"></div>
+          <div class="card-bcg">
+            <p class="card-name">Lukasz</p>
+            <div class="card-info"><a href="https://github.com/lzwolinski82" target="_blank"><i
+                  class="fab fa-github"></i></a><a
+                href="https://www.linkedin.com/in/%C5%82ukasz-zwoli%C5%84ski-3bb1131aa/" target="_blank"><i
+                  class="fab fa-linkedin"></i></a></div>
+          </div>
         </div>
       </div>
-
     </section>
     <footer class="footer">&copy; Kasia Agnieszka Staszek Mateusz Łukasz 2020
     </footer>
   </div>
   <script src="./JS/main.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/19.3.0/i18next.min.js" integrity="sha256-lEbSGOmfGDM3LEIuPbcEtLZjVvKs60w2BvxBweIHZ30=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.1/jquery-i18next.js" integrity="sha256-UTYjCQKkQr74kn1nZYjEQQEe7Z748X3EajGTfcvIixE=" crossorigin="anonymous"></script>
+  <script src="./JS/translation.js"></script>
 </body>
 
 </html>
