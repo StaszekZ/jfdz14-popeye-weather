@@ -215,7 +215,7 @@ const cookieAlert =  (function() {
     
 
     link.setAttribute('href', '#');
-    link.setAttribute('title', 'accept');
+    link.setAttribute('title', 'Accept');
     link.innerHTML = 'Accept';
 
     
