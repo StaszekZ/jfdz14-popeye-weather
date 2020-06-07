@@ -220,9 +220,6 @@ const cookieAlert =  (function() {
 
     
 
-
-
-
 function clickHandler(e) {
     if (e.preventDefault) {
         e.preventDefault();
