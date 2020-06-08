@@ -203,7 +203,6 @@ section {
 .button:hover .fa {
   color: darkslategray;
   transition: 0.3s;
-
 }
 
 .button:hover {
@@ -1098,14 +1097,8 @@ input[type=submit]:hover {
   }
 
   .team-card {
-<<<<<<< HEAD
-    /* width: 12rem;
-    height: 12rem; */
-
-=======
     width: 200px;
     height: 200px;
->>>>>>> develop
   }
 
   .card-name {
@@ -1137,13 +1130,8 @@ input[type=submit]:hover {
   }
 
   .team-card {
-<<<<<<< HEAD
-    /* width: 15rem;
-    height: 15rem; */
-=======
     width: 250px;
     height: 250px;
->>>>>>> develop
   }
 
   .team__title {
