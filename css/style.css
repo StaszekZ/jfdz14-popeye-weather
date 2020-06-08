@@ -116,7 +116,7 @@ body {
 }
 
 .hero__img {
-  background-image: url("../img/742112.png");
+  background-image: url("../img/742112.webp");
   background-color: var(--bgr-color);
   background-size: cover;
   width: 100%;
@@ -714,10 +714,6 @@ input[type=submit]:hover {
 
 .fish--functionality {
   top: 27%;
-}
-
-.fish--cartoon {
-  top: 46%;
 }
 
 .fish--anchor {
