@@ -213,7 +213,7 @@ buttonNext.addEventListener('click', slideRight);
 
 let intervalRight = setInterval(slideRight, 12000);
 
-const resetSliderTimer = () => {
+function resetSliderTimer() {
     clearInterval(intervalRight);
-    intervalRight = setInterval(slideRight, 12000)
+    intervalRight = setInterval(slideRight, 12000);
 }

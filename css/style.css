@@ -244,6 +244,10 @@ section {
   background-color: #2a6bcc;
 }
 
+.Four {
+  background-color: seagreen;
+}
+
 .inSlide {
   color: white;
   font-size: 1.5rem;
@@ -267,7 +271,7 @@ section {
   top: 90%;
   display: flex;
   justify-content: space-evenly;
-  width: 100px;
+  width: 110px;
   justify-content: center;
   align-items: center;
   margin: 0 calc(50% - 50px);
