@@ -203,6 +203,7 @@ const slideRight = () => {
     dots[currentState].classList.remove('dots--active');
     currentState = (currentState + 1) % slidesLength;
     slides[currentState].classList.add('active');
+    // slides[currentState].style.transition = "all 2s";
     dots[currentState].classList.add('dots--active');
 
     resetSliderTimer();

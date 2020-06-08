@@ -172,6 +172,8 @@ section {
   flex-direction: column;
   padding: 2% 10%;
   justify-content: center;
+  animation: anim 1s;
+
 }
 
 .inSlide--hr {
@@ -192,6 +194,7 @@ section {
   transition: 0.3s;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
 .fa {
@@ -223,12 +226,24 @@ section {
 
 .hidden {
   display: none;
-  /* transition: 3000ms ease-in all */
+  /* opacity: 0;
+  transition: opacity 3s transform 3s; */
 }
 
 .active {
   display: flex;
-  /* transition: 3000ms ease-in all */
+  /* opacity: 1;
+  transition: opacity 3s transform 3s; */
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .One {
