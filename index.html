@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
   <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -19,7 +18,7 @@
     <label class="navigation__burger" for="burger__checkbox"><img src="./img/bars-solid-navy-blue.png"
         class="navigation__burger__icon" alt="burger menu"></label>
     <input class="navigation__burger__checkbox" type="checkbox" id="burger__checkbox" />
-    <a href="#home" class="navigation__logo"><img class="navigation__logo__img" src="./img/popeye-logo.jpeg"
+    <a href="#home" class="navigation__logo"><img class="navigation__logo__img" src="./img/logo.png"
         alt="logo-popeye"></a>
     <ul class="navigation__menu">
       <li class="navigation__menu__list">
@@ -47,7 +46,6 @@
   </nav>
   <div class="gradient">
     <img class="fish fish--right fish--functionality" src='./img/fishes/compresspng/bass-fish-min.png' alt="">
-    <img class="fish fish--left fish--sneak" src='./img/fishes/compresspng/kisspng-cartoon-fish.png' alt="">
     <img class="fish fish--left fish--diver" src='./img/fishes/compresspng/nurek-min.png' alt="">
     <img class="fish fish--right fish--form" src='./img/fishes/compresspng/octopus-min.png' alt="">
     <img class="fish fish--left fish--team" src='./img/fishes/compresspng/starfish-fish-min.png' alt="">
@@ -55,7 +53,7 @@
     <img class="fish fish--left fish--footer" src='./img/fishes/compresspng/coral-reef-2-min.png' alt="">
     <img class="fish fish--right fish--cartoon" src='./img/fishes/compresspng/cartoon-fish.png' alt="">
     <img class="fish fish--right fish--anchor" src='./img/fishes/compresspng/kotwica.png' alt="">
-    <img class="fish fish--right fish--nets" src='img/fishes/compresspng/nets.png' alt="">
+
     <div class="underwater"></div>
     <div class="seafish"></div>
 
@@ -67,7 +65,7 @@
         <img class="hero__boat" src="./img/fishes/boat-for-hero.png" alt="boat on sea waves">
       </section>
     </header>
-
+    <!--slider-->
     <section class="sneak">
       <figure class="sneak__fig">
         <button class="button button__prev">
@@ -76,6 +74,13 @@
         <button class="button button__next">
           <i class="fa fa-arrow-right" aria-hidden="true"></i>
         </button>
+        <div class="sliderDots">
+          <button class="dots dotOne"></button>
+          <button class="dots dotTWo"></button>
+          <button class="dots dotThree"></button>
+          <button class="dots dotFour"></button>
+
+        </div>
         <div class="slides hidden One">
           <header>
             <h1 class="inSlide inSlide--header" data-i18n="marketing.header1"></h1>
@@ -89,7 +94,6 @@
           </header>
           <hr class="inSlide--hr"> <br>
           <p class="inSlide inSlide--para" data-i18n="marketing.body2"></p>
-          <!-- <img class="inSlider--image" src="./img/steamboat.png" alt="steamboat on waves"> -->
         </div>
         <div class="slides hidden Three">
           <header>
@@ -99,7 +103,13 @@
           <p class="inSlide inSlide--para" data-i18n="marketing.body3"></p>
           <img class="inSlider--image" src="./img/steamboat.png" alt="steamboat on waves">
         </div>
-
+        <div class="slides hidden Four">
+          <header>
+            <h1 class="inSlide inSlide--header" data-i18n=""> MIEJSCE NA CENNIK</h1>
+          </header>
+          <hr class="inSlide--hr"> <br>
+          <p class="inSlide inSlide--para" data-i18n=""></p>
+        </div>
       </figure>
     </section>
     <section class="features" id="features">
@@ -349,8 +359,10 @@
   <script src="./JS/main.js"></script>
   <script src="./JS/button.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/19.3.0/i18next.min.js" integrity="sha256-lEbSGOmfGDM3LEIuPbcEtLZjVvKs60w2BvxBweIHZ30=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.1/jquery-i18next.js" integrity="sha256-UTYjCQKkQr74kn1nZYjEQQEe7Z748X3EajGTfcvIixE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/19.3.0/i18next.min.js"
+    integrity="sha256-lEbSGOmfGDM3LEIuPbcEtLZjVvKs60w2BvxBweIHZ30=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.1/jquery-i18next.js"
+    integrity="sha256-UTYjCQKkQr74kn1nZYjEQQEe7Z748X3EajGTfcvIixE=" crossorigin="anonymous"></script>
   <script src="./JS/translation.js"></script>
 
 </body>
