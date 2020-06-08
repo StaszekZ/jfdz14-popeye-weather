@@ -499,6 +499,7 @@ form {
 
 
 .container__form {
+  width: 80%;
   display: flex;
   margin: 2rem;
   padding: 2rem;
@@ -780,7 +781,7 @@ input[type=submit]:hover {
 
 
 @media (max-width: 996px) {
-  .team {
+  /* .team {
     display: flex;
     flex-wrap: wrap;
   }
@@ -806,7 +807,7 @@ input[type=submit]:hover {
     width: 50%;
     height: 10%;
 
-  }
+  } */
 
 
 
@@ -1161,13 +1162,12 @@ input[type=submit]:hover {
 
 @media (min-width: 389px) {
   .team {
-    height: 80vh;
+    height: 100vh;
   }
 
   .team-card {
-    width: 12rem;
-    height: 12rem;
-
+    width: 200px;
+    height: 200px;
   }
 
   .card-name {
@@ -1199,8 +1199,8 @@ input[type=submit]:hover {
   }
 
   .team-card {
-    width: 15rem;
-    height: 15rem;
+    width: 250px;
+    height: 250px;
   }
 
   .team__title {
@@ -1247,12 +1247,12 @@ input[type=submit]:hover {
 
 @media (min-width: 992px) {
   .team {
-    height: 100vh;
+    height: 120vh;
   }
 
   .team-card {
-    width: 18rem;
-    height: 18rem;
+    width: 15rem;
+    height: 15rem;
   }
 
   .team__title {
