@@ -703,8 +703,9 @@ input[type=submit]:hover {
 }
 
 .fish--crab {
-  top: 94.7%;
-  right: 0;
+  top: 93.7%;
+  right: 3%;
+  transform: rotate(275deg);
 }
 
 .fish--team {
@@ -935,7 +936,6 @@ input[type=submit]:hover {
   .features__title {
     font-size: 2rem;
     margin: 0.2rem;
-
   }
 
   .f__title {
