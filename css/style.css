@@ -389,14 +389,15 @@ section {
 
 .functionality__description {
   width: 90%;
-  height: 3rem;
+  /* height: 3rem; */
   margin: 0 auto;
   font-family: var(--content-font);
-  text-overflow: ellipsis;
   margin-bottom: 2rem;
   cursor: pointer;
+  /* text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: nowrap; */
+  display: block;
 }
 
 .img__box {
@@ -406,6 +407,9 @@ section {
   align-self: center;
 }
 
+.button__readmore {
+
+}
 
 /* form *************************************************************/
 
