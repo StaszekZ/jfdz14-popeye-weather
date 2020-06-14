@@ -19,7 +19,7 @@ body {
 
 .game--submarine {
     --position: 0px;
-    background: url(../img/teamphoto/kasia.png);
+    background: url(../img/hiclipart.com\ \(2\).png);
     width: 100px;
     background-size: contain;
     height: 80px;
@@ -55,12 +55,6 @@ body {
     background-size: contain;
 }
 
-.game--food {
-    width: 40px;
-    height: 40px;
-    background: url(../img/apple.svg) no-repeat;
-    background-size: contain;
-}
 
 .game--scores {
     text-align: center;

@@ -69,13 +69,6 @@ class Missile extends GameElement {
 }
 
 
-class Food extends GameElement {
-    static create() {
-        const element = document.createElement('div');
-        element.className = 'game--food game--element';
-        return new Food(element);
-    }
-}
 
 class GameScreen extends Events {
     constructor(element, submarine) {
@@ -126,9 +119,10 @@ class GameScreen extends Events {
 
         this.on('score-updated', () => {
             if (this.score > 100) {
+                this.startNewElements(500);
+            }
+            else if (this.score > 50) {
                 this.startNewElements(1000);
-            } else if (this.score > 50) {
-                this.startNewElements(2000);
             }
         });
     }
