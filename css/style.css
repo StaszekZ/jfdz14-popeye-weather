@@ -440,7 +440,8 @@ section {
   /* transition: translate(-50%, -50%); */
   margin: 1%;
   z-index: 99;
-  opacity: 1;
+  /* opacity: 1; */
+  /* transition: position 1s ease; */
 
 }
 
