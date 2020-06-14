@@ -8,6 +8,8 @@ html,
 body {
     width: 100%;
     flex-direction: column;
+
+    font-family: arial;
 }
 
 
@@ -58,4 +60,13 @@ body {
     height: 40px;
     background: url(../img/apple.svg) no-repeat;
     background-size: contain;
+}
+
+.game--scores {
+    text-align: center;
+}
+
+.game--score {
+    font-weight: bold;
+    font-size: 30px;
 }

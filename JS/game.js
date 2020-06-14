@@ -85,6 +85,9 @@ class GameScreen extends Events {
 
         this.element = element;
         this.submarine = submarine;
+        this.currentNewElementsInterval = undefined;
+
+        this.score = 0;
 
         const rect = element.getClientRects()[0];
         this.rect = new DOMRect(
@@ -93,6 +96,11 @@ class GameScreen extends Events {
             rect.width - 40,
             rect.height - 80
         );
+    }
+
+    setScore(newScore) {
+        this.score = newScore;
+        this.dispatch('score-updated');
     }
 
     start() {
@@ -106,9 +114,7 @@ class GameScreen extends Events {
             }
         });
 
-        this.interval = setInterval(() => {
-            this.onInterval();
-        }, 3000);
+        this.startNewElements(3000);
 
         this.collisionDetectionInterval = setInterval(() => {
             this.missiles.forEach((missile) => {
@@ -117,20 +123,47 @@ class GameScreen extends Events {
                 }
             })
         }, 40);
+
+        this.on('score-updated', () => {
+            if (this.score > 100) {
+                this.startNewElements(1000);
+            } else if (this.score > 50) {
+                this.startNewElements(2000);
+            }
+        });
+    }
+
+    startNewElements(interval) {
+        if (this.currentNewElementsInterval === interval) {
+            return;
+        }
+
+        this.currentNewElementsInterval = interval;
+        if (this.newElementsInterval) {
+            clearInterval(this.newElementsInterval);
+        }
+
+        this.newElementsInterval = setInterval(() => {
+            this.onNewElementsInterval();
+        }, interval);
     }
 
     stop() {
-        alert('Game Over');
-
         this.missiles.forEach(missile => {
             missile.stop();
         });
 
-        clearInterval(this.interval);
+        clearInterval(this.newElementsInterval);
         clearInterval(this.collisionDetectionInterval);
+
+        alert('Game Over');
     }
 
-    onInterval() {
+    onNewElementsInterval() {
+        this.handleMissiles();
+    }
+
+    handleMissiles() {
         const missile = Missile.create();
         missile.start(this.element, Math.random() * this.rect.height, this.rect.width, -40, 6);
         this.missiles.add(missile);
@@ -138,7 +171,19 @@ class GameScreen extends Events {
         missile.on('animationFinished', () => {
             missile.stop();
             this.missiles.delete(missile);
+
+            this.setScore(this.score + 10);
         });
+    }
+}
+
+class GameScores extends Events {
+    setScore(score) {
+        this.element.querySelector('.game--score').innerHTML = score;
+    }
+
+    setSpeed(speed) {
+
     }
 }
 
@@ -151,5 +196,10 @@ function isRectIntersecting(rect1, rect2) {
 
 const submarine = new Submarine(document.querySelector('.game--submarine'));
 const game = new GameScreen(document.querySelector('.game--screen'), submarine);
+const scores = new GameScores(document.querySelector('.game--scores'));
+
+game.on('score-updated', () => {
+    scores.setScore(game.score);
+});
 
 game.start();

@@ -1,0 +1,166 @@
+diff --git a/JS/game.js b/JS/game.js
+index 15befdd..0e4e966 100644
+--- a/JS/game.js
++++ b/JS/game.js
+@@ -85,6 +85,9 @@ class GameScreen extends Events {
+ 
+         this.element = element;
+         this.submarine = submarine;
++        this.currentNewElementsInterval = undefined;
++
++        this.score = 0;
+ 
+         const rect = element.getClientRects()[0];
+         this.rect = new DOMRect(
+@@ -95,6 +98,11 @@ class GameScreen extends Events {
+         );
+     }
+ 
++    setScore(newScore) {
++        this.score = newScore;
++        this.dispatch('score-updated');
++    }
++
+     start() {
+         document.body.addEventListener('mousemove', (event) => {
+             if (event.clientY < this.rect.top) {
+@@ -106,9 +114,7 @@ class GameScreen extends Events {
+             }
+         });
+ 
+-        this.interval = setInterval(() => {
+-            this.onInterval();
+-        }, 3000);
++        this.startNewElements(3000);
+ 
+         this.collisionDetectionInterval = setInterval(() => {
+             this.missiles.forEach((missile) => {
+@@ -117,20 +123,47 @@ class GameScreen extends Events {
+                 }
+             })
+         }, 40);
++
++        this.on('score-updated', () => {
++            if (this.score > 100) {
++                this.startNewElements(1000);
++            } else if (this.score > 50) {
++                this.startNewElements(2000);
++            }
++        });
+     }
+ 
+-    stop() {
+-        alert('Game Over');
++    startNewElements(interval) {
++        if (this.currentNewElementsInterval === interval) {
++            return;
++        }
++
++        this.currentNewElementsInterval = interval;
++        if (this.newElementsInterval) {
++            clearInterval(this.newElementsInterval);
++        }
++
++        this.newElementsInterval = setInterval(() => {
++            this.onNewElementsInterval();
++        }, interval);
++    }
+ 
++    stop() {
+         this.missiles.forEach(missile => {
+             missile.stop();
+         });
+ 
+-        clearInterval(this.interval);
++        clearInterval(this.newElementsInterval);
+         clearInterval(this.collisionDetectionInterval);
++
++        alert('Game Over');
+     }
+ 
+-    onInterval() {
++    onNewElementsInterval() {
++        this.handleMissiles();
++    }
++
++    handleMissiles() {
+         const missile = Missile.create();
+         missile.start(this.element, Math.random() * this.rect.height, this.rect.width, -40, 6);
+         this.missiles.add(missile);
+@@ -138,10 +171,22 @@ class GameScreen extends Events {
+         missile.on('animationFinished', () => {
+             missile.stop();
+             this.missiles.delete(missile);
++
++            this.setScore(this.score + 10);
+         });
+     }
+ }
+ 
++class GameScores extends Events {
++    setScore(score) {
++        this.element.querySelector('.game--score').innerHTML = score;
++    }
++
++    setSpeed(speed) {
++
++    }
++}
++
+ function isRectIntersecting(rect1, rect2) {
+     return rect1.top + rect1.height > rect2.top
+         && rect1.left + rect1.width > rect2.left
+@@ -151,5 +196,10 @@ function isRectIntersecting(rect1, rect2) {
+ 
+ const submarine = new Submarine(document.querySelector('.game--submarine'));
+ const game = new GameScreen(document.querySelector('.game--screen'), submarine);
++const scores = new GameScores(document.querySelector('.game--scores'));
++
++game.on('score-updated', () => {
++    scores.setScore(game.score);
++});
+ 
+ game.start();
+diff --git a/css/game.css b/css/game.css
+index bdf1af0..0ad455e 100644
+--- a/css/game.css
++++ b/css/game.css
+@@ -8,6 +8,8 @@ html,
+ body {
+     width: 100%;
+     flex-direction: column;
++
++    font-family: arial;
+ }
+ 
+ 
+@@ -58,4 +60,13 @@ body {
+     height: 40px;
+     background: url(../img/apple.svg) no-repeat;
+     background-size: contain;
++}
++
++.game--scores {
++    text-align: center;
++}
++
++.game--score {
++    font-weight: bold;
++    font-size: 30px;
+ }
+\ No newline at end of file
+diff --git a/game.html b/game.html
+index 2f29c06..3ee1026 100644
+--- a/game.html
++++ b/game.html
+@@ -15,6 +15,10 @@
+     <div class="game--screen">
+       <div class="game--submarine"></div>
+     </div>
++    <div class="game--scores">
++      <div class="game--score">0</div>
++      <div class="game--speed"></div>
++    </div>
+   </div>
+   <script src="./JS/game.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
