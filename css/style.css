@@ -14,6 +14,7 @@ body {
   flex-direction: column;
 }
 
+
 .gradient {
   height: fit-content;
   width: 100%;
@@ -382,6 +383,7 @@ section {
 
 .functionality__box {
   width: 30%;
+  height: 250px;
   border-radius: 1rem;
   transition: 0.5s;
   background-size: cover;
@@ -423,10 +425,38 @@ section {
   margin: 0 auto;
   font-family: var(--content-font);
   text-overflow: ellipsis;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   cursor: pointer;
   overflow: hidden;
-  white-space: nowrap;
+  /* white-space: nowrap; */
+}
+
+.active3 {
+  height: fit-content;
+  position: fixed;
+  top: 50%;
+  /* left: 50%; */
+  height: fit-content;
+  /* transition: translate(-50%, -50%); */
+  margin: 1%;
+  z-index: 99;
+  opacity: 1;
+
+}
+
+.back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.active__description {
+  height: fit-content;
+  overflow: visible;
 }
 
 .img__box {
@@ -436,6 +466,11 @@ section {
   align-self: center;
 }
 
+.functionality__button {
+  padding: 0 0.5rem;
+  background-color: lightblue;
+  border: 0.5px solid cadetblue;
+}
 
 /* form *************************************************************/
 
