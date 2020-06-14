@@ -4,362 +4,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
   <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
-  <title data-i18n="head.title"></title>
+  <title>Popeye Weather - best weather app ever</title>
 </head>
 
 <body>
-  <nav class="navigation">
-    <label class="navigation__burger" for="burger__checkbox"><img src="./img/bars-solid-navy-blue.png"
-        class="navigation__burger__icon" alt="burger menu"></label>
-    <input class="navigation__burger__checkbox" type="checkbox" id="burger__checkbox" />
-    <a href="#home" class="navigation__logo"><img class="navigation__logo__img" src="./img/logo.png"
-        alt="logo-popeye"></a>
-    <ul class="navigation__menu">
-      <li class="navigation__menu__list">
-        <a href="#home" class="navigation__menu__list__link" data-i18n="nav.home"></a>
-      </li>
-      <li class="navigation__menu__list">
-        <a href="#features" class="navigation__menu__list__link" data-i18n="nav.features"></a>
-      </li>
-      <li class="navigation__menu__list">
-        <a href="#functionality" class="navigation__menu__list__link" data-i18n="nav.functionalities"></a>
-      </li>
-      <li class="navigation__menu__list">
-        <a href="#form" class="navigation__menu__list__link" data-i18n="nav.form"></a>
-      </li>
-      <li class="navigation__menu__list">
-        <a href="#team" class="navigation__menu__list__link" data-i18n="nav.team"></a>
-      </li>
-      <li class="navigation__menu__list">
-        <select class="lang-picker">
-          <option value="pl">PL</option>
-          <option value="en">EN</option>
-        </select>
-      </li>
-    </ul>
-  </nav>
-  <div class="gradient">
-    <img class="fish fish--right fish--functionality" src='./img/fishes/compresspng/bass-fish-min.png' alt="">
-    <img class="fish fish--left fish--diver" src='./img/fishes/compresspng/nurek-min.png' alt="">
-    <img class="fish fish--right fish--form" src='./img/fishes/compresspng/octopus-min.png' alt="">
-    <img class="fish fish--left fish--team" src='./img/fishes/compresspng/starfish-fish-min.png' alt="">
-    <img class="fish fish--right fish--crab" src='./img/fishes/compresspng/sea-creatures-crab-min.png' alt="">
-    <img class="fish fish--left fish--footer" src='./img/fishes/compresspng/coral-reef-2-min.png' alt="">
-    <img class="fish fish--right fish--cartoon" src='./img/fishes/compresspng/cartoon-fish.png' alt="">
-    <img class="fish fish--right fish--anchor" src='./img/fishes/compresspng/kotwica.png' alt="">
+  <section class="team" id="team">
+    <h2 class="team__title"></h2>
+    <div class="boat"></div>
 
-    <div class="underwater"></div>
-    <div class="seafish"></div>
+    <div class="team-img">
 
-
-
-    <header class="hero__img">
-      <section class="hero__txt" id="home">
-        <img class="hero__name animated rubberBand" src="./img/fishes/board__hero.png" alt="boat on sea waves">
-        <img class="hero__boat" src="./img/fishes/boat-for-hero.png" alt="boat on sea waves">
-      </section>
-    </header>
-    <!--slider-->
-    <section class="sneak">
-      <figure class="sneak__fig">
-        <button class="button button__prev">
-          <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        </button>
-        <button class="button button__next">
-          <i class="fa fa-arrow-right" aria-hidden="true"></i>
-        </button>
-        <div class="sliderDots">
-          <button class="dots dotOne"></button>
-          <button class="dots dotTWo"></button>
-          <button class="dots dotThree"></button>
-          <button class="dots dotFour"></button>
-
-        </div>
-        <div class="slides hidden One">
-          <header>
-            <h1 class="inSlide inSlide--header" data-i18n="marketing.header1"></h1>          </header>
-          <hr class="inSlide--hr"> <br>
-          <p class="inSlide inSlide--para" data-i18n="marketing.body1"></p>
-        </div>
-        <div class="slides hidden Two">
-          <header>
-            <h1 class="inSlide inSlide--header" data-i18n="marketing.header2"></h1>
-          </header>
-          <hr class="inSlide--hr"> <br>
-          <p class="inSlide inSlide--para" data-i18n="marketing.body2"></p>
-        </div>
-        <div class="slides hidden Three">
-          <header>
-            <h1 class="inSlide inSlide--header" data-i18n="marketing.header3"></h1>
-          </header>
-          <hr class="inSlide--hr"> <br>
-          <p class="inSlide inSlide--para" data-i18n="marketing.body3"></p>
-          <img class="inSlider--image" src="./img/steamboat.png" alt="steamboat on waves">
-        </div>
-        <div class="slides hidden Four">
-          <header>
-            <h1 class="inSlide inSlide--header" data-i18n=""> MIEJSCE NA CENNIK</h1>
-          </header>
-          <hr class="inSlide--hr"> <br>
-          <p class="inSlide inSlide--para" data-i18n=""></p>
-        </div>
-      </figure>
-    </section>
-    <section class="features" id="features">
-      <div class="features__question">
-        <h2 class="features__title" data-i18n="features.title"></h2>
-      </div>
-      <div class="features__description">
-        <div class="features__box">
-          <img class="img__fbox" src="./img/hiclipart.com.png" alt="popeye strong">
-          <hr>
-          <h3 class="h__box" data-i18n="features.box1"></h3>
-          <hr>
-          <p class="text__box" data-i18n="features.descr1"></p>
-        </div>
-        <div class="features__box">
-          <img class="img__fbox" src="./img/clipart3562180.png" alt="popeye's girlfriend">
-          <hr>
-          <h3 class="h__box" data-i18n="features.box2"></h3>
-          <hr>
-          <p class="text__box" data-i18n="features.descr2"></p>
-        </div>
-        <div class="features__box">
-          <img class="img__fbox" src="./img/IMGBIN_popeye-rush-for-spinach-bluto-olive-oyl-png_uhaB68JC.png"
-            alt="popeye's spinach">
-          <hr>
-          <h3 class="h__box" data-i18n="features.box3"></h3>
-          <hr>
-          <p class="text__box" data-i18n="features.descr3"></p>
-        </div>
-        <div class="features__box">
-          <img class="img__fbox" src="./img/pop4.png" alt="popeye smoke">
-          <hr>
-          <h3 class="h__box" data-i18n="features.box4"></h3>
-          <hr>
-          <p class="text__box" data-i18n="features.descr4"></p>
+      <div class="team-card card1">
+        <div class="team_bubble-water"></div>
+        <div class="card-bcg">
+          <p class="card-name">Agnieszka</p>
+          <div class="card-info"><a href="https://github.com/agnieszka-lewicka" target="_blank"><i
+                class="fab fa-github"></i></a><a href="http://linkedin.com/in/agnieszka-lewicka-33257159"
+              target="_blank"><i class="fab fa-linkedin"></i></a></div>
         </div>
       </div>
-    </section>
-
-    <!---   Dodatkowe opisy związane z zawartością i funkcjonalnością strony -->
-
-    <section class="functionality" id="functionality">
-
-      <div class="functionality__box">
-        <div class="functionality__image"><img class="img__box" src="./img/airtemperature.png"
-            alt="Air temperature baner">
-        </div>
-        <h2 class="f__box" data-i18n="func.box1"></h2>
-        <div class="functionality__description" data-i18n="func.fun1"></div>
-      </div>
-      <div class="functionality__box">
-        <div class="functionality__image"><img class="img__box" src="./img/atmosfericpressure.png"
-            alt="Atmospheric pressure baner"></div>
-        <h2 class="f__box" data-i18n="func.box2"></h2>
-        <div class="functionality__description" data-i18n="func.fun2">
+      <div class="team-card card2">
+        <div class="team_bubble-water"></div>
+        <div class="card-bcg">
+          <p class="card-name">Kasia</p>
+          <div class="card-info"><a href="https://github.com/Kdmitrus" target="_blank"><i
+                class="fab fa-github"></i></a><a
+              href="https://www.linkedin.com/mwlite/in/katarzyna-dmitrus-krakowiak-33645b58" target="_blank"><i
+                class="fab fa-linkedin"></i></a></div>
         </div>
       </div>
-      <div class="functionality__box">
-        <div class="functionality__image"><img class="img__box" src="./img/wind.png" alt="Wind baner"></div>
-        <h2 class="f__box">Wind</h2>
-        <div class="functionality__description">Wind is the flow of gases on a large scale. On the surface of the Earth,
-          wind consists of the bulk movement
-          of air. In outer space, solar wind is the movement of gases or charged particles from the Sun through space,
-          while planetary wind is the
-          outgassing of light chemical elements from a planet's atmosphere into space. Winds are commonly classified by
-          their spatial scale,
-          their speed, the types of forces that cause them, the regions in which they occur, and their effect. The
-          strongest observed winds
-          on a planet in the Solar System occur on Neptune and Saturn. Winds have various aspects: velocity (wind
-          speed);
-          the density of the gas involved; energy content or wind energy. Wind is also an important means of
-          transportation for seeds and small birds; with time things can travel thousands of miles in the wind.</div>
-      </div>
-      <div class="functionality__box">
-        <div class="functionality__image"><img class="img__box" src="./img/waveheight.png" alt="Wave baner"></div>
-        <h2 class="f__box">Wave height</h2>
-        <div class="functionality__description">In physical oceanography, the significant wave height (SWH or Hs) is
-          defined traditionally as
-          the mean wave height (trough to crest) of the highest third of the waves (H1/3). Nowadays it is usually
-          defined as four times
-          the standard deviation of the surface elevation – or equivalently as four times the square root of the
-          zeroth-order moment
-          (area) of the wave spectrum. The symbol Hm0 is usually used for that latter definition. The significant wave
-          height may
-          thus refer to Hm0 or Hs; the difference in magnitude between the two definitions is only a few percent.</div>
-      </div>
-      <div class="functionality__box">
-        <div class="functionality__image"><img class="img__box" src="./img/claudcover.png" alt="cloud baner"></div>
-        <h2 class="f__box">Cloud cover</h2>
-        <div class="functionality__description">Cloud cover (also known as cloudiness, cloudage, or cloud amount)
-          refers to the fraction of the sky obscured by
-          clouds when observed from a particular location. Okta is the usual unit of measurement of the cloud cover.
-          The cloud cover is correlated
-          to the sunshine duration as the least cloudy locales are the sunniest ones while the cloudiest areas are the
-          least sunny places.
-          The global cloud cover averages around 0.68 when analyzing clouds with optical depth larger than 0.1. This
-          value is lower (0.56) when
-          considering clouds with an optical depth larger than 2, and higher when counting subvisible cirrus clouds
+      <div class="team-card card3">
+        <div class="team_bubble-water"></div>
+        <div class="card-bcg">
+          <p class="card-name">Mateusz</p>
+          <div class="card-info"><a href="https://github.com/mslomaa" target="_blank"><i
+                class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/mateuszslomkowski/"
+              target="_blank"><i class="fab fa-linkedin"></i></a></div>
         </div>
       </div>
-      <div class="functionality__box">
-        <div class="functionality__image"><img class="img__box" src="./img/precipitation.png" alt="precipitation baner">
-        </div>
-        <h2 class="f__box">Precipitation</h2>
-        <div class="functionality__description">In meteorology, precipitation is any product of the condensation of
-          atmospheric water vapour
-          that falls under gravity from clouds. The main forms of precipitation include drizzle, rain, sleet, snow, ice
-          pellets, graupel
-          and hail. Precipitation occurs when a portion of the atmosphere becomes saturated with water vapor (reaching
-          100% relative
-          humidity), so that the water condenses and "precipitates". Thus, fog and mist are not precipitation but
-          suspensions,
-          because the water vapor does not condense sufficiently to precipitate. Two processes, possibly acting
-          together, can
-          lead to air becoming saturated: cooling the air or adding water vapor to the air. Precipitation forms as
-          smaller droplets
-          coalesce via collision with other rain drops or ice crystals within a cloud. Short, intense periods of rain in
-          scattered
-          locations are called "showers."</div>
-      </div>
-      <div class="functionality__box">
-        <div class="functionality__image"><img class="img__box" src="./img/seasurface.png" alt="sea surface baner">
-        </div>
-        <h2 class="f__box">Sea surface temperature</h2>
-        <div class="functionality__description">Sea surface temperature (SST) is the water temperature close to the
-          ocean's surface.
-          The exact meaning of surface varies according to the measurement method used, but it is between 1 millimetre
-          (0.04 in) and
-          20 metres (70 ft) below the sea surface. Air masses in the Earth's atmosphere are highly modified by sea
-          surface temperatures
-          within a short distance of the shore. Localized areas of heavy snow can form in bands downwind of warm water
-          bodies within
-          an otherwise cold air mass. Warm sea surface temperatures are known to be a cause of tropical cyclogenesis
-          over the
-          Earth's oceans. Tropical cyclones can also cause a cool wake, due to turbulent mixing of the upper 30 metres
-          (100 ft)
-          of the ocean. SST changes diurnally, like the air above it, but to a lesser degree. There is less SST
-          variation on
-          breezy days than on calm days. In addition, ocean currents such as the Atlantic Multidecadal Oscillation
-          (AMO),
-          can effect SST's on multi-decadal time scales,[4] a major impact results from the global thermohaline
-          circulation, which affects average SST significantly throughout most of the world's oceans.</div>
-      </div>
-      <div class="functionality__box">
-        <div class="functionality__image"><img class="img__box" src="./img/humidity.png" alt="humidity baner"></div>
-        <h2 class="f__box">Humidity</h2>
-        <div class="functionality__description">Humidity is the concentration of water vapour present in the air. Water
-          vapour, the
-          gaseous state of water, is generally invisible to the human eye. Humidity indicates the likelihood for
-          precipitation,
-          dew, or fog to be present. The amount of water vapour needed to achieve saturation increases as the
-          temperature increases.
-          As the temperature of a parcel of air decreases it will eventually reach the saturation point without adding
-          or losing water mass. The amount of water vapour contained within a parcel of air can vary significantly. For
-          example, a
-          parcel of air near saturation may contain 28 grams of water per cubic metre of air at 30 °C, but only 8 grams
-          of water
-          per cubic metre of air at 8 °C.</div>
-      </div>
-
-
-    </section>
-
-
-
-    <!---formularz -->
-
-    <section class="form" id="form">
-      <div class="form__box">
-        <div class="form__question">
-          <h2 class="form__title">Do you want to sign up for premiere?</h2>
-        </div>
-        <div class="form__background">
-          <div class="container__form">
-            <h3>Tell us your email and you can be sure that you will not miss premiere</h3>
-            <br>
-            <p class="form__notification">You will be notified of successful enrollment only once.<br> Please be
-              aware that we protect your data.</p>
-            <input type="email" placeholder="Email address" name="mail" required>
-            <input type="submit" value="Subscribe">
-          </div>
+      <div class="team-card card4">
+        <div class="team_bubble-water"></div>
+        <div class="card-bcg">
+          <p class="card-name">Staszek</p>
+          <div class="card-info"><a href="https://github.com/StaszekZ" target="_blank"><i
+                class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/s-zajaczkowski/" target="_blank"><i
+                class="fab fa-linkedin"></i></a></div>
         </div>
       </div>
-    </section>
-
-    <!---team -->
-    <section class="team" id="team">
-      <h2 class="team__title">Team Members are:</h2>
-      <div class="boat"></div>
-
-      <div class="team-img">
-
-        <div class="team-card card1">
-          <div class="team_bubble-water"></div>
-          <div class="card-bcg">
-            <p class="card-name">Agnieszka</p>
-            <div class="card-info"><a href="https://github.com/agnieszka-lewicka" target="_blank"><i
-                  class="fab fa-github"></i></a><a href="http://linkedin.com/in/agnieszka-lewicka-33257159"
-                target="_blank"><i class="fab fa-linkedin"></i></a></div>
-          </div>
-        </div>
-        <div class="team-card card2">
-          <div class="team_bubble-water"></div>
-          <div class="card-bcg">
-            <p class="card-name">Kasia</p>
-            <div class="card-info"><a href="https://github.com/Kdmitrus" target="_blank"><i
-                  class="fab fa-github"></i></a><a
-                href="https://www.linkedin.com/mwlite/in/katarzyna-dmitrus-krakowiak-33645b58" target="_blank"><i
-                  class="fab fa-linkedin"></i></a></div>
-          </div>
-        </div>
-        <div class="team-card card3">
-          <div class="team_bubble-water"></div>
-          <div class="card-bcg">
-            <p class="card-name">Mateusz</p>
-            <div class="card-info"><a href="https://github.com/mslomaa" target="_blank"><i
-                  class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/mateuszslomkowski/"
-                target="_blank"><i class="fab fa-linkedin"></i></a></div>
-          </div>
-        </div>
-        <div class="team-card card4">
-          <div class="team_bubble-water"></div>
-          <div class="card-bcg">
-            <p class="card-name">Staszek</p>
-            <div class="card-info"><a href="https://github.com/StaszekZ" target="_blank"><i
-                  class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/s-zajaczkowski/" target="_blank"><i
-                  class="fab fa-linkedin"></i></a></div>
-          </div>
-        </div>
-        <div class="team-card card5">
-          <div class="team_bubble-water"></div>
-          <div class="card-bcg">
-            <p class="card-name">Lukasz</p>
-            <div class="card-info"><a href="https://github.com/lzwolinski82" target="_blank"><i
-                  class="fab fa-github"></i></a><a
-                href="https://www.linkedin.com/in/%C5%82ukasz-zwoli%C5%84ski-3bb1131aa/" target="_blank"><i
-                  class="fab fa-linkedin"></i></a></div>
-          </div>
+      <div class="team-card card5">
+        <div class="team_bubble-water"></div>
+        <div class="card-bcg">
+          <p class="card-name">Lukasz</p>
+          <div class="card-info"><a href="https://github.com/lzwolinski82" target="_blank"><i
+                class="fab fa-github"></i></a><a
+              href="https://www.linkedin.com/in/%C5%82ukasz-zwoli%C5%84ski-3bb1131aa/" target="_blank"><i
+                class="fab fa-linkedin"></i></a></div>
         </div>
       </div>
-    </section>
-    <footer class="footer">&copy; Kasia Agnieszka Staszek Mateusz Łukasz 2020
-    </footer>
-  </div>
+    </div>
+    <div class="game-static">
+      <button class="game-start">START GAME</button>
+      <p class="game-info">Pozostaly czas gry: <span class="game-time"></span></p>
+      <p class="game-info">Twoj wynik to: <span class="game-score"></span></p>
+    </div>
+    
+  </section>
+
   <script src="./JS/main.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/19.3.0/i18next.min.js"
-    integrity="sha256-lEbSGOmfGDM3LEIuPbcEtLZjVvKs60w2BvxBweIHZ30=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.1/jquery-i18next.js"
-    integrity="sha256-UTYjCQKkQr74kn1nZYjEQQEe7Z748X3EajGTfcvIixE=" crossorigin="anonymous"></script>
-  <script src="./JS/translation.js"></script>
 </body>
 
 </html>
