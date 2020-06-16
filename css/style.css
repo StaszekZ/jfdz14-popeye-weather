@@ -124,58 +124,6 @@ body {
 
 /* AGA COOKIE INFO */
 
-/* #cookieinfo * {
-  margin: 0px;
-  padding: 0px;
-}
-
-#cookieinfo {
-  position: fixed;
-  font-size: 12px;
-  font-family: Arial, Verdana, sans-serif;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  background-color: rgba(255, 255, 255);
-  padding: 20px;
-  box-shadow: 2px 0px 14px 17px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-#cookieinfo h6 {
-  font-size: 20px;
-  font-weight: normal;
-  color: rgb(0, 0, 0);
-  margin-bottom: 7px;
-  text-align: center;
-}
-
-#cookieinfo a {
-  display: inline-block;
-  position: absolute;
-  padding: 8px 16px; */
-  /* right: 200px; */
-  /* top: 10px;
-  width: 200px;
-  height: 22px; */
-  /* border-radius: 11px; */
-  /* line-height: 22px;
-  font-size: 12px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  background-color: #6EC8E0; */
-  /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75); */
-}
-
-/* #cookieinfo a:hover {
-  background-color: #ff7925;
-} */
-
-
-
-/* cookie styling II */
-
 .cookie.hidden {
   display: none;
 }
@@ -188,6 +136,7 @@ body {
 .cookie {
   position: fixed;
   width: 100vw;
+  height: auto;
   z-index: 5;
 
   font-size: 12px;
@@ -203,9 +152,47 @@ body {
 .cookie__container {
   display: flex;
   width: 100%;
+  padding: 10px;
+  justify-content: center;
 }
 
+.cookie__container__alert {
+  margin: 0px;
+  padding: 0.5em;
+  letter-spacing: 1px;
+  justify-content: center;
+}
 
+.cookie__container__alert--link {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+.cookie__container__alert--link:hover {
+  text-decoration: underline;
+}
+
+.cookie__button {
+  float: right;
+  margin-right: ;
+  width: clamp(120px, 10vw, 150px);
+  height: 1.75em;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(8, 64, 167);
+  border: none;
+  border-radius: 3px;
+}
+
+.cookie__button:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(48, 160, 190);
+  border: 1.5px solid rgb(8, 64, 167);
+  color: rgb(8, 64, 167);
+}
 
 
 .hero__img {
@@ -433,6 +420,7 @@ section {
   font-size: 2rem;
   /* width: var(--max-width); */
   min-height: 100vh;
+  padding-top: 2.5rem;
 }
 
 .functionality__box {
