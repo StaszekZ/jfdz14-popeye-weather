@@ -1,6 +1,8 @@
 :root {
   --main-text-color: navy;
   --second-text-color: white;
+  --dots-color: rgba(232, 232, 232, 0.2);
+  --dots-color-hover: rgba(232, 232, 232, 0.7);
   --popeye-color: #db143c;
   --bgr-color: #ebf2f7;
   --header-font: "Lobster", cursive;
