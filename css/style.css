@@ -37,10 +37,7 @@ body {
   box-shadow: 2px 0px 4px rgba(40, 40, 40, 0.2);
 }
 
-.navigation__burger__icon {
-  display: none;
-}
-
+.navigation__burger__icon,
 .navigation__burger__checkbox {
   display: none;
 }
@@ -65,10 +62,7 @@ body {
   text-decoration: none;
 }
 
-.navigation__menu__list__link:focus {
-  font-weight: bolder;
-}
-
+.navigation__menu__list__link:focus,
 .navigation__menu__list__link:hover {
   font-weight: bolder;
 }
@@ -84,7 +78,7 @@ body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -246,6 +240,8 @@ section {
   flex-direction: column;
   padding: 2% 10%;
   justify-content: center;
+  animation: sliderAnimation 1s;
+
 }
 
 .inSlide--hr {
@@ -259,12 +255,14 @@ section {
   top: calc(50% - 20px);
   height: 70px;
   width: 70px;
-  background-color: rgba(232, 232, 232, 0.2);
+  background-color: var(--dots-color);
   border-radius: 50%;
   border: none;
+  outline: none;
   transition: 0.3s;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
 .fa {
@@ -276,11 +274,10 @@ section {
 .button:hover .fa {
   color: darkslategray;
   transition: 0.3s;
-
 }
 
 .button:hover {
-  background-color: rgba(232, 232, 232, 0.7);
+  background-color: var(--dots-color-hover);
   transform: scale(1.2);
   transition: 0.3s;
 }
@@ -295,13 +292,12 @@ section {
 
 .hidden {
   display: none;
-  /* transition: 3000ms ease-in all */
 }
 
 .active {
   display: flex;
-  /* transition: 3000ms ease-in all */
 }
+
 
 .One {
   background-color: #082e79;
@@ -314,6 +310,10 @@ section {
 
 .Three {
   background-color: #2a6bcc;
+}
+
+.Four {
+  background-color: seagreen;
 }
 
 .inSlide {
@@ -332,6 +332,41 @@ section {
   top: 4%;
   width: 15%;
   height: auto;
+}
+
+.sliderDots {
+  position: absolute;
+  top: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 110px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 calc(50% - 50px);
+}
+
+.dots {
+  background-color: var(--dots-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline: none;
+  z-index: 3;
+  border: 1px solid var(--second-text-color);
+}
+
+.dots--active {
+  background-color: var(--dots-color-hover);
+}
+
+@keyframes sliderAnimation {
+  0% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Kasia- features */
@@ -408,8 +443,6 @@ section {
 }
 
 /* functionality */
-
-
 .functionality {
   display: flex;
   flex: 0 50%;
@@ -418,16 +451,13 @@ section {
   flex-direction: row;
   align-items: center;
   font-size: 2rem;
-  /* width: var(--max-width); */
   min-height: 100vh;
   padding-top: 2.5rem;
 }
 
 .functionality__box {
   width: 30%;
-  /* border: 1px solid black; */
   border-radius: 1rem;
-  /* box-shadow: 10px 10px 10px black; */
   transition: 0.5s;
   background-size: cover;
   text-align: center;
@@ -491,7 +521,6 @@ section {
   font-size: 3rem;
   width: var(--max-width);
   height: 70vh;
-
 }
 
 .form__box {
@@ -499,7 +528,6 @@ section {
   height: auto;
   justify-content: center;
   margin: auto;
-
 }
 
 form {
@@ -591,8 +619,6 @@ input[type=submit]:hover {
 }
 
 /*
-
-
 
 .team-img>h2 {
   font-size: 40px;
@@ -830,8 +856,6 @@ input[type=submit]:hover {
 
   } */
 
-
-
   .button {
     height: 50px;
     width: 50px;
@@ -948,6 +972,20 @@ input[type=submit]:hover {
 
   .hero__boat {
     display: none;
+  }
+
+  .button:hover,
+  .dots:hover {
+    background-color: var(--dots-color);
+    transition: none;
+    transform: none;
+  }
+
+  .button:hover .fa {
+    color: lightgray;
+    transition: none;
+    transform: none;
+
   }
 
   .features__box {
@@ -1088,6 +1126,9 @@ input[type=submit]:hover {
     display: none;
   }
 
+  .dots {
+    display: none;
+  }
 
 }
 
@@ -1185,7 +1226,6 @@ input[type=submit]:hover {
     margin-top: 18%;
     margin-left: 20%;
   }
-
 }
 
 @media (min-width: 768px) {
