@@ -222,6 +222,11 @@ cookieButton.addEventListener('click', () => {
 })
 
 
+// AGA active navigation element
+
+const navigationContainer = document.querySelector(".navigation");
+const navigationElements = document.querySelector(".navigation__menu__list");
+const navigationElementsLinks = document.querySelectorAll(".navigation__menu__list__link");
 
 
 
