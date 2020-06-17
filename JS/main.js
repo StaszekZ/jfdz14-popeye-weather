@@ -210,62 +210,6 @@ const slideRight = () => {
 }
 
 
-
-// info o cookies
-
-const cookieAlert =  (function() {
-    var container = document.createElement('div'),
-        link = document.createElement('a');
-
-
-    container.setAttribute('id', 'cookieinfo');
-    container.setAttribute('class', 'cookie-alert');
-    container.innerHTML = "<h6>This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish.</h6>";
-
-    
-
-    link.setAttribute('href', '#');
-    link.setAttribute('title', 'accept');
-    link.innerHTML = 'Accept';
-
-    
-
-
-
-
-function clickHandler(e) {
-    if (e.preventDefault) {
-        e.preventDefault();
-    } else {
-        e.returnValue = false;
-    }
-
-    document.body.removeChild(container);
-}
-
-if (link.addEventListener) {
-    link.addEventListener("click", clickHandler);
-} else {
-    link.attachEvent("onclick", clickHandler);
-}
-
-container.appendChild(link);
-document.body.appendChild(container);
-
-return true;
-
-})();
-
-
-
-
-
-
-
-
-let intervalRight = setInterval(slideRight, 8000);
-buttonPrev.addEventListener('click', slideLeft);
-buttonNext.addEventListener('click', slideRight);
 buttonPrev.addEventListener('click', slideLeft);
 buttonNext.addEventListener('click', slideRight);
 
@@ -275,3 +219,24 @@ function resetSliderTimer() {
     clearInterval(intervalRight);
     intervalRight = setInterval(slideRight, 12000);
 }
+
+
+// info o cookies 
+
+const cookie = document.querySelector('.cookie');
+const cookieButton = document.querySelector('.cookie__button');
+
+function addCookie(cookieInfo) {
+    localStorage.setItem(cookieInfo, 'yes');
+}
+
+setTimeout(() => {
+    const cookieAccepted = localStorage.hasOwnProperty('cookieAccepted');
+    if (cookieAccepted === false) {
+        cookie.classList.remove('hidden');
+    }
+}, 1500);
+cookieButton.addEventListener('click', () => {
+    addCookie('cookieAccepted')
+    cookie.classList.add('hidden');
+})

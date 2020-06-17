@@ -115,15 +115,24 @@ body {
   height: 100%;
 }
 
+
 /* AGA COOKIE INFO */
 
-#cookieinfo * {
-  margin: 0px;
-  padding: 0px;
+.cookie.hidden {
+  display: none;
 }
 
-#cookieinfo {
+.cookie {
+  margin: 0;
+  padding: 0;
+}
+
+.cookie {
   position: fixed;
+  width: 100vw;
+  height: auto;
+  z-index: 5;
+
   font-size: 12px;
   font-family: Arial, Verdana, sans-serif;
   left: 0px;
@@ -132,45 +141,55 @@ body {
   background-color: rgba(255, 255, 255);
   padding: 20px;
   box-shadow: 2px 0px 14px 17px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
 }
 
-#cookieinfo h6 {
-  font-size: 20px;
-  font-weight: normal;
-  color: rgb(0, 0, 0);
-  margin-bottom: 7px;
-  text-align: center;
+.cookie__container {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
 }
 
-#cookieinfo a {
-  display: inline-block;
-  position: absolute;
-  padding: 8px 16px;
-  /* right: 200px; */
-  top: 10px;
-  width: 200px;
-  height: 22px;
-  /* border-radius: 11px; */
-  line-height: 22px;
-  font-size: 12px;
+.cookie__container__alert {
+  margin: 0px;
+  padding: 0.5em;
+  letter-spacing: 1px;
+  justify-content: center;
+}
+
+.cookie__container__alert--link {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+.cookie__container__alert--link:hover {
+  text-decoration: underline;
+}
+
+.cookie__button {
+  float: right;
+  width: clamp(120px, 10vw, 150px);
+  height: 1.75em;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
-  background-color: #6EC8E0;
-  /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75); */
+  background-color: rgb(8, 64, 167);
+  border: none;
+  border-radius: 3px;
 }
 
-/* #cookieinfo a:hover {
-  background-color: #ff7925;
-} */
-
-
-
+.cookie__button:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(48, 160, 190);
+  border: 1.5px solid rgb(8, 64, 167);
+  color: rgb(8, 64, 167);
+}
 
 
 .hero__img {
-  background-image: url("../img/742112.png");
+  background-image: url("../img/742112.webp");
   background-color: var(--bgr-color);
   background-size: cover;
   width: 100%;
@@ -432,6 +451,7 @@ section {
   align-items: center;
   font-size: 2rem;
   min-height: 100vh;
+  padding-top: 2.5rem;
 }
 
 .functionality__box {
@@ -495,23 +515,12 @@ section {
 
 .form {
   display: flex;
-  align-content: center;
-  grid-area: form;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: 3rem;
   width: var(--max-width);
   height: 70vh;
-}
-
-.form__box {
-  width: auto;
-  height: auto;
-  justify-content: center;
-  margin: auto;
-}
-
-form {
-  border: 4px solid var(--bgr-color);
-
 }
 
 .form__title {
@@ -525,24 +534,43 @@ form {
   margin: 0 auto;
 }
 
-
 .container__form {
-  width: 80%;
+  width: 100%;
   display: flex;
-  margin: 2rem;
+  flex-direction: column;
   padding: 2rem;
   background-color: var(--bgr-color);
-  flex-direction: column;
   border-radius: 15px 50px 30px;
-  box-shadow: 10px 10px 10px black;
+  box-shadow: 5px 5px 5px lightblue;
+  opacity: 0.9;
 }
+
+.form__img__wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.form__input__wrap {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+}
+
+.form__img {
+  height: 19vh;
+  width: auto;
+  align-self: flex-end;
+}
+
+
 
 input[type=email],
 input[type=submit] {
   width: 100%;
   padding: 1rem;
-  margin: 1rem 0;
-  display: inline-block;
+  margin: 0.5rem 0;
   border: 1px solid #ccc;
 }
 
@@ -559,9 +587,17 @@ input[type=submit]:hover {
   opacity: 0.6;
 }
 
+.header__inForm {
+  margin: 0 auto;
+  font-size: larger;
+}
+
 .form__notification {
   font-style: italic;
   font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 /* team */
@@ -705,7 +741,6 @@ input[type=submit]:hover {
   text-shadow: var(--shadow-3);
   border-top: 1px solid rgba(0, 0, 0, 0.4);
   line-height: 10vh;
-  /* transform-style: preserve-3d; */
 }
 
 /*ustawienie obrazków ryb w gradiencie*/
@@ -742,8 +777,9 @@ input[type=submit]:hover {
 }
 
 .fish--crab {
-  top: 94.7%;
-  right: 0;
+  top: 93.7%;
+  right: 3%;
+  transform: rotate(275deg);
 }
 
 .fish--team {
@@ -754,18 +790,10 @@ input[type=submit]:hover {
   top: 27%;
 }
 
-.fish--cartoon {
-  top: 46%;
-}
-
 .fish--anchor {
   left: 10%;
   top: 94.3%;
   transform: rotate(30deg);
-}
-
-.fish--nets {
-  top: 9%;
 }
 
 .underwater {
@@ -854,60 +882,6 @@ input[type=submit]:hover {
   }
 
 }
-
-
-/* cookies styling */
-
-#cookieinfo * {
-  margin: 0px;
-  padding: 0px;
-}
-
-#cookieinfo {
-  position: fixed;
-  font-size: 12px;
-  font-family: Arial, Verdana, sans-serif;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  background-color: rgba(255, 255, 255);
-  padding: 20px;
-  box-shadow: 2px 0px 14px 17px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-#cookieinfo h6 {
-  font-size: 20px;
-  font-weight: normal;
-  color: rgb(0, 0, 0);
-  margin-bottom: 7px;
-  text-align: center;
-}
-
-#cookieinfo a {
-  display: inline-block;
-  position: absolute;
-  margin-top: 8px;
-  padding: 8px 16px;
-  right: 200px;
-  top: 10px;
-  width: 100px;
-  height: auto;
-
-  line-height: 22px;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  background-color: #2691C0;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
-}
-
-#cookieinfo a:hover {
-  background-color: #ff7925;
-}
-
 
 
 
@@ -1021,6 +995,10 @@ input[type=submit]:hover {
 
   }
 
+  .container__form {
+    margin: 1rem;
+  }
+
   .features__box {
     width: 100%;
     max-width: 400px;
@@ -1030,7 +1008,6 @@ input[type=submit]:hover {
   .features__title {
     font-size: 2rem;
     margin: 0.2rem;
-
   }
 
   .f__title {
@@ -1129,6 +1106,15 @@ input[type=submit]:hover {
     margin-left: 40%;
   }
 
+  .form__title {
+    font-size: 1.5rem;
+    margin: 0.2rem;
+  }
+
+  .form__img {
+    display: none;
+  }
+
   .features__title {
     font-size: 1.5rem;
     margin: 0.2rem;
@@ -1139,10 +1125,6 @@ input[type=submit]:hover {
     margin: 0.2rem;
   }
 
-  .form__title {
-    font-size: 1.5rem;
-    margin: 0.2rem;
-  }
 
   .features__box {
     width: auto;
