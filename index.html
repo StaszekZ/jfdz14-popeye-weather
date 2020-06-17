@@ -115,10 +115,20 @@
         </div>
         <div class="slides hidden Four">
           <header>
-            <h1 class="inSlide inSlide--header" data-i18n=""> MIEJSCE NA CENNIK</h1>
+            <h1 class="inSlide inSlide--header" data-i18n=""> CENNIK WERSJI PRO</h1>
           </header>
           <hr class="inSlide--hr"> <br>
-          <p class="inSlide inSlide--para" data-i18n=""></p>
+          <p class="inSlide inSlide--para">
+            <div class="count">
+              <form name="registrationForm">
+              <p class="inSlide inSlide--para">ILOŚĆ LICENCJI: </p><input  class="countInput" type="range" id="countInputId" value="3" min="1" max="5" oninput="countOutputId.value = countInputId.value">
+              <output name="countOutputName" id="countOutputId" class="inSlide inSlide--para"></output>
+              <input class="submitCount" type="submit" value="POTWIERDŹ">
+              <p class="summary">TWOJA CENA TO: 
+                <span class="summaryScore"></span></p>
+            </form>
+            </div>
+          </p>
         </div>
       </figure>
     </section>
