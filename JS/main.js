@@ -209,6 +209,7 @@ const slideRight = () => {
     resetSliderTimer();
 }
 
+
 buttonPrev.addEventListener('click', slideLeft);
 buttonNext.addEventListener('click', slideRight);
 
@@ -218,3 +219,24 @@ function resetSliderTimer() {
     clearInterval(intervalRight);
     intervalRight = setInterval(slideRight, 12000);
 }
+
+
+// info o cookies 
+
+const cookie = document.querySelector('.cookie');
+const cookieButton = document.querySelector('.cookie__button');
+
+function addCookie(cookieInfo) {
+    localStorage.setItem(cookieInfo, 'yes');
+}
+
+setTimeout(() => {
+    const cookieAccepted = localStorage.hasOwnProperty('cookieAccepted');
+    if (cookieAccepted === false) {
+        cookie.classList.remove('hidden');
+    }
+}, 1500);
+cookieButton.addEventListener('click', () => {
+    addCookie('cookieAccepted')
+    cookie.classList.add('hidden');
+})
