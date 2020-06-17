@@ -224,19 +224,35 @@ cookieButton.addEventListener('click', () => {
 
 // AGA active navigation element
 
+function addActiveClass(allElementLinks, activeLink) {
+    for(let i = 0; i < allElementLinks.length; i++) {
+
+        let link = allElementLinks[i];
+
+        if(link.classList.contains("active")) {
+            link.classList.remove("active");
+        }
+    }
+
+    if(!activeLink.classList.contains("active")) {
+        activeLink.classList.add("active");
+    }
+
+
+}
+
+
 const navigationContainer = document.querySelector(".navigation");
 const navigationElements = document.querySelector(".navigation__menu__list");
 const navigationElementsLinks = document.querySelectorAll(".navigation__menu__list__link");
 
 
 
-
-
-
-
-
-
-
+    for(let i = 0; i < navigationElementsLinks.length; i++) {
+        navigationElementsLinks[i].addEventListener("click", function(event) {
+            addActiveClass(navigationElementsLinks, event.target)
+        })
+    }
 
 
 
