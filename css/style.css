@@ -359,6 +359,16 @@ section {
   background-color: var(--dots-color-hover);
 }
 
+.count {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #f9f9f9;
+}
+.summary, .summaryScore {
+  font-size: 30px;
+}
+
 @keyframes sliderAnimation {
   0% {
     opacity: 0.6;
