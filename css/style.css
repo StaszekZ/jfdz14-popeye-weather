@@ -312,7 +312,12 @@ section {
 }
 
 .Four {
-  background-color: seagreen;
+  background: #373B44;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4286f4, #315ec7);
+  background: linear-gradient(to right, #4286f4, #315ec7);
+
+  ;
 }
 
 .inSlide {
@@ -364,9 +369,12 @@ section {
   font-size: 1.5rem;
   color: #f9f9f9;
 }
-.summary, .summaryScore {
+
+.summary,
+.summaryScore {
   font-size: 30px;
 }
+
 .submitCount {
   margin: 25px;
   padding: 10px;
