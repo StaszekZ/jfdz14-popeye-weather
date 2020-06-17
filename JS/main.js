@@ -264,8 +264,5 @@ submitCount.addEventListener('click', () => {
     }
     if(countOutputId.value == 5){
         summary.textContent = `${Math.round((basicPrice * 5)*0.85)}zł W tym 15% zniżki!`   
-    }
-    
+    }  
 });
-
-
