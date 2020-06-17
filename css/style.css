@@ -168,7 +168,6 @@ body {
 
 .cookie__button {
   float: right;
-  margin-right: ;
   width: clamp(120px, 10vw, 150px);
   height: 1.75em;
   color: #ffffff;
