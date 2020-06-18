@@ -72,6 +72,15 @@ body {
   color: rgb(20, 148, 207);
 }
 
+
+/* Aga active navigation element */
+
+.navigation__menu__list__link.active {
+  font-weight: bolder;
+}
+
+
+
 /*KAsia - language */
 .dropdown-content {
   display: none;
@@ -594,19 +603,26 @@ input[type=submit] {
   padding: 1rem;
   margin: 0.5rem 0;
   border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 
 /* Style the submit button */
 
 input[type=submit] {
-  background-color: navy;
+  background-color: rgb(8, 64, 167);
   color: var(--second-text-color);
-  border: none;
+  border: 1px solid rgb(8, 64, 167);
+  border-radius: 3px;
 }
 
 input[type=submit]:hover {
-  opacity: 0.6;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(48, 160, 190);
+  border: 1.5px solid rgb(8, 64, 167);
+  color: rgb(8, 64, 167);
 }
 
 .header__inForm {
@@ -949,7 +965,7 @@ input[type=submit]:hover {
 @media (max-width: 768px) {
   .navigation {
     flex-direction: column;
-    align-items: flex-start
+    align-items: flex-start;
   }
 
   .navigation__burger {
