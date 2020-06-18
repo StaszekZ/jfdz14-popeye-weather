@@ -326,3 +326,59 @@ window.onscroll = function () {
     scrollFunction();
     showToTopButton();
 };
+
+
+
+//podświetlane nav
+const sectionsToObserve = document.querySelectorAll('section')
+
+const toHighlight = function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            if (entry.target.attributes[1].value === 'home') {
+                navigationElementsLinks[0].classList.add('active2');
+                navigationElementsLinks[1].classList.remove('active2');
+                navigationElementsLinks[2].classList.remove('active2');
+                navigationElementsLinks[3].classList.remove('active2');
+                navigationElementsLinks[4].classList.remove('active2');
+            }
+            if (entry.target.attributes[1].value === 'features') {
+                navigationElementsLinks[0].classList.remove('active2');
+                navigationElementsLinks[1].classList.add('active2');
+                navigationElementsLinks[2].classList.remove('active2');
+                navigationElementsLinks[3].classList.remove('active2');
+                navigationElementsLinks[4].classList.remove('active2');
+            }
+            if (entry.target.attributes[1].value === 'functionality') {
+                navigationElementsLinks[0].classList.remove('active2');
+                navigationElementsLinks[1].classList.remove('active2');
+                navigationElementsLinks[2].classList.add('active2');
+                navigationElementsLinks[3].classList.remove('active2');
+                navigationElementsLinks[4].classList.remove('active2');
+            }
+            if (entry.target.attributes[1].value === 'form') {
+                navigationElementsLinks[0].classList.remove('active2');
+                navigationElementsLinks[1].classList.remove('active2');
+                navigationElementsLinks[2].classList.remove('active2');
+                navigationElementsLinks[3].classList.add('active2');
+                navigationElementsLinks[4].classList.remove('active2');
+            }
+            if (entry.target.attributes[1].value === 'team') {
+                navigationElementsLinks[0].classList.remove('active2');
+                navigationElementsLinks[1].classList.remove('active2');
+                navigationElementsLinks[2].classList.remove('active2');
+                navigationElementsLinks[3].classList.remove('active2');
+                navigationElementsLinks[4].classList.add('active2');
+            }
+        }
+    })
+
+}
+
+const observer2 = new IntersectionObserver(toHighlight, {
+    threshold: 0.6
+});
+
+sectionsToObserve.forEach(section => {
+    observer2.observe(section)
+})
