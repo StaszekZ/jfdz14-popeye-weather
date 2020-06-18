@@ -131,6 +131,16 @@ body {
   height: 100%;
 }
 
+.nav__short {
+  height: 35px;
+
+}
+
+.logo__short {
+  padding: 0;
+  width: 160px;
+}
+
 
 /* AGA COOKIE INFO */
 
@@ -497,8 +507,10 @@ section {
   position: fixed;
   top: 50%;
   height: fit-content;
+  width: 60%;
   margin: 1%;
   z-index: 99;
+  transition: width 0.5s;
 }
 
 .back {
@@ -525,7 +537,7 @@ section {
 
 .functionality__button {
   padding: 0 0.5rem;
-  background-color: lightblue;
+  background-color: rgba(173, 216, 230, 0.5);
   border: 0.5px solid cadetblue;
 }
 
@@ -858,6 +870,29 @@ input[type=submit]:hover {
 }
 
 
+.toTop {
+  display: none;
+  position: fixed;
+  left: 91%;
+  bottom: 7%;
+  border: 1px solid darkblue;
+  border-radius: 50%;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: lightblue;
+  color: darkblue;
+  opacity: 0.6;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 2rem;
+}
+
+.toTop:hover {
+  transform: rotate(360deg);
+  transition: transform .8s;
+}
+
 /* Media Queries */
 
 
@@ -957,6 +992,11 @@ input[type=submit]:hover {
   .navigation {
     flex-direction: column;
     align-items: flex-start;
+    height: 50px !important;
+  }
+
+  .toTop {
+    display: none !important;
   }
 
   .navigation__burger {
@@ -1010,6 +1050,25 @@ input[type=submit]:hover {
     display: none;
   }
 
+  .button:hover,
+  .dots:hover {
+    background-color: var(--dots-color);
+    transition: none;
+    transform: none;
+  }
+
+  .button:hover .fa {
+    color: lightgray;
+    transition: none;
+    transform: none;
+
+  }
+
+  .container__form {
+    margin: 1rem auto;
+    width: 90%;
+  }
+
   .features__box {
     width: 100%;
     max-width: 400px;
@@ -1041,6 +1100,7 @@ input[type=submit]:hover {
   .form__title {
     font-size: 2.5rem;
     margin: 0.2rem;
+    margin-top: 1rem;
   }
 
   .features__description {

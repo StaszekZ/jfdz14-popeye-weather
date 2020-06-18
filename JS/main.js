@@ -19,12 +19,12 @@ let position5 = -1500;
 // let position3 = -200;
 // let position4 = -200;
 // let position5 = -200;
-let topPosition = 0;
+let topPosition = -100;
 let wave = 0;
 
 
 
-observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
     if (entries[0].intersectionRatio > 0) {
         const changePosition = () => {
             if (leftPosition !== 0) {
@@ -36,24 +36,23 @@ observer = new IntersectionObserver((entries) => {
                     card5.style.position = 'absolute';
                     leftPosition += 10;
                     position1 += 10;
-                    card1.style.marginLeft = `${position1}px`;
+                    card1.style.marginLeft = `${-650}px`;
                     card1.style.marginTop = `${-55}px`;
                     position2 += 12;
-                    card2.style.marginLeft = `${position2}px`;
+                    card2.style.marginLeft = `${-50}px`;
                     position3 += 15;
-                    card3.style.marginLeft = `${position3}px`;
+                    card3.style.marginLeft = `${570}px`;
                     card3.style.marginTop = `${-55}px`
                     position4 += 10;
-                    card4.style.marginLeft = `${position4}px`;
+                    card4.style.marginLeft = `${-400}px`;
                     card4.style.marginTop = `${topPosition}px`;
                     topPosition -= -2.5;
                     position5 += 12;
-                    card5.style.marginLeft = `${position5}px`;
+                    card5.style.marginLeft = `${300}px`;
                     card5.style.marginTop = `${topPosition}px`;
                 }
-            } else {
-
             }
+
             if (leftPosition === 0) {
                 clearInterval(interval);
             }
@@ -77,9 +76,9 @@ const waveUpFunc = () => {
             card2.style.transform = 'scale(0.99)';
             card3.style.marginTop = `${upWave - 55}px`;
             card3.style.transform = 'scale(1.001)';
-            card4.style.marginTop = `${upWave + 375}px`;
+            card4.style.marginTop = `${upWave + 275}px`;
             card4.style.transform = 'scale(0.99)';
-            card5.style.marginTop = `${upWave + 375}px`;
+            card5.style.marginTop = `${upWave + 275}px`;
             card5.style.transform = 'scale(0.99)';
             upWave += 12;
         } else {
@@ -89,9 +88,9 @@ const waveUpFunc = () => {
             card2.style.transform = 'scale(1.001)';
             card3.style.marginTop = `${upWave - 55}px`;
             card3.style.transform = 'scale(0.99)';
-            card4.style.marginTop = `${upWave + 375}px`;
+            card4.style.marginTop = `${upWave + 275}px`;
             card4.style.transform = 'scale(1.001)';
-            card5.style.marginTop = `${upWave + 375}px`;
+            card5.style.marginTop = `${upWave + 275}px`;
             card5.style.transform = 'scale(1.001)';
             upWave -= 12;
         }
@@ -268,6 +267,11 @@ submitCount.addEventListener('click', () => {
     }
 });
 // AGA active navigation element
+const navigationContainer = document.querySelector(".navigation");
+const navigationElements = document.querySelector(".navigation__menu__list");
+const navigationElementsLinks = document.querySelectorAll(".navigation__menu__list__link");
+const navigationLogo = document.querySelector('.navigation__logo')
+
 
 function addActiveClass(allElementLinks, activeLink) {
     for (let i = 0; i < allElementLinks.length; i++) {
@@ -282,19 +286,43 @@ function addActiveClass(allElementLinks, activeLink) {
     if (!activeLink.classList.contains("active")) {
         activeLink.classList.add("active");
     }
-
-
 }
-
-
-const navigationContainer = document.querySelector(".navigation");
-const navigationElements = document.querySelector(".navigation__menu__list");
-const navigationElementsLinks = document.querySelectorAll(".navigation__menu__list__link");
-
-
 
 for (let i = 0; i < navigationElementsLinks.length; i++) {
     navigationElementsLinks[i].addEventListener("click", function (event) {
         addActiveClass(navigationElementsLinks, event.target)
     })
 }
+
+//zwężanie się manu podczas przewijania strony
+
+function scrollFunction() {
+    if (document.body.scrollTop > 190 ||
+        document.documentElement.scrollTop > 190) {
+        navigationContainer.classList.add("nav__short")
+        navigationLogo.classList.add('logo__short')
+
+    } else {
+        document.getElementById("navlist")
+        navigationContainer.classList.remove("nav__short")
+        navigationLogo.classList.remove('logo__short')
+
+
+    }
+}
+
+//przycisk to top
+const toTopButton = document.querySelector(".toTop");
+
+function showToTopButton() {
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+        toTopButton.style.display = "block";
+    } else {
+        toTopButton.style.display = "none";
+    }
+}
+
+window.onscroll = function () {
+    scrollFunction();
+    showToTopButton();
+};
