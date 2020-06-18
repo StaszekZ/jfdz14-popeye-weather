@@ -14,6 +14,7 @@ body {
   flex-direction: column;
 }
 
+
 .gradient {
   height: fit-content;
   width: 100%;
@@ -183,7 +184,7 @@ body {
 
 .cookie__button {
   float: right;
-  margin-right: ;
+  margin-right: 20px;
   width: clamp(120px, 10vw, 150px);
   height: 1.75em;
   color: #ffffff;
@@ -325,6 +326,13 @@ section {
   background-color: #2a6bcc;
 }
 
+.Four {
+  background: #373B44;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4286f4, #315ec7);
+  background: linear-gradient(to right, #4286f4, #315ec7);
+}
+
 .inSlide {
   color: white;
   font-size: 1.5rem;
@@ -435,6 +443,7 @@ section {
 .functionality__box {
   width: 30%;
   /* border: 1px solid black; */
+  height: 250px;
   border-radius: 1rem;
   /* box-shadow: 10px 10px 10px black; */
   transition: 0.5s;
@@ -477,10 +486,34 @@ section {
   margin: 0 auto;
   font-family: var(--content-font);
   text-overflow: ellipsis;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   cursor: pointer;
   overflow: hidden;
-  white-space: nowrap;
+  /* white-space: nowrap; */
+}
+
+.active3 {
+  height: fit-content;
+  position: fixed;
+  top: 50%;
+  height: fit-content;
+  margin: 1%;
+  z-index: 99;
+}
+
+.back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.active__description {
+  height: fit-content;
+  overflow: visible;
 }
 
 .img__box {
@@ -490,6 +523,11 @@ section {
   align-self: center;
 }
 
+.functionality__button {
+  padding: 0 0.5rem;
+  background-color: lightblue;
+  border: 0.5px solid cadetblue;
+}
 
 /* form *************************************************************/
 
@@ -567,6 +605,11 @@ input[type=submit]:hover {
   color: rgb(48, 160, 190);
   border: 1.5px solid rgb(8, 64, 167);
   color: rgb(8, 64, 167);
+}
+
+.header__inForm {
+  margin: 0 auto;
+  font-size: larger;
 }
 
 .form__notification {
