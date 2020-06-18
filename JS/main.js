@@ -240,8 +240,6 @@ cookieButton.addEventListener('click', () => {
     addCookie('cookieAccepted')
     cookie.classList.add('hidden');
 })
-<<<<<<< HEAD
-=======
 
 //kalkulator cen
 
@@ -269,4 +267,3 @@ submitCount.addEventListener('click', () => {
         summary.textContent = `${Math.round((basicPrice * 5)*0.85)}zł W tym 15% zniżki!`
     }
 });
->>>>>>> 5f633cfd9a0d33f071af50a0908181b52b5b3996
