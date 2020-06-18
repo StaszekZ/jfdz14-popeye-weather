@@ -209,6 +209,7 @@ const slideRight = () => {
     resetSliderTimer();
 }
 
+
 buttonPrev.addEventListener('click', slideLeft);
 buttonNext.addEventListener('click', slideRight);
 
@@ -217,4 +218,96 @@ let intervalRight = setInterval(slideRight, 12000);
 function resetSliderTimer() {
     clearInterval(intervalRight);
     intervalRight = setInterval(slideRight, 12000);
+}
+
+
+// info o cookies 
+
+const cookie = document.querySelector('.cookie');
+const cookieButton = document.querySelector('.cookie__button');
+
+function addCookie(cookieInfo) {
+    localStorage.setItem(cookieInfo, 'yes');
+}
+
+setTimeout(() => {
+    const cookieAccepted = localStorage.hasOwnProperty('cookieAccepted');
+    if (cookieAccepted === false) {
+        cookie.classList.remove('hidden');
+    }
+}, 1500);
+cookieButton.addEventListener('click', () => {
+    addCookie('cookieAccepted')
+    cookie.classList.add('hidden');
+})
+
+//kalkulator cen
+
+const countInput = document.querySelector('.countInput');
+const summary = document.querySelector('.summaryScore');
+const submitCount = document.querySelector('.submitCount')
+
+let basicPrice = 99;
+
+submitCount.addEventListener('click', () => {
+    clearInterval(intervalRight);
+    if (countOutputId.value == 1) {
+        summary.textContent = `${basicPrice}zł`
+    }
+    if (countOutputId.value == 2) {
+        summary.textContent = `${Math.round((basicPrice * 2)*0.9)}zł. W tym 10% zniżki!`
+    }
+    if (countOutputId.value == 3) {
+        summary.textContent = `${Math.round((basicPrice * 3)*0.88)}zł W tym 12% zniżki!`
+    }
+    if (countOutputId.value == 4) {
+        summary.textContent = `${Math.round((basicPrice * 4)*0.87)}zł W tym 13% zniżki!`
+    }
+    if (countOutputId.value == 5) {
+        summary.textContent = `${Math.round((basicPrice * 5)*0.85)}zł W tym 15% zniżki!`
+    }
+});
+// AGA active navigation element
+const navigationContainer = document.querySelector(".navigation");
+const navigationElements = document.querySelector(".navigation__menu__list");
+const navigationElementsLinks = document.querySelectorAll(".navigation__menu__list__link");
+const navigationLogo = document.querySelector('.navigation__logo')
+
+
+function addActiveClass(allElementLinks, activeLink) {
+    for (let i = 0; i < allElementLinks.length; i++) {
+
+        let link = allElementLinks[i];
+
+        if (link.classList.contains("active")) {
+            link.classList.remove("active");
+        }
+    }
+
+    if (!activeLink.classList.contains("active")) {
+        activeLink.classList.add("active");
+    }
+}
+
+for (let i = 0; i < navigationElementsLinks.length; i++) {
+    navigationElementsLinks[i].addEventListener("click", function (event) {
+        addActiveClass(navigationElementsLinks, event.target)
+    })
+}
+
+//zwężanie się manu podczas przewijania strony
+window.onscroll = function () {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 190 ||
+        document.documentElement.scrollTop > 190) {
+        navigationContainer.classList.add("nav__short")
+        navigationLogo.classList.add('logo__short')
+    } else {
+        document.getElementById("navlist")
+        navigationContainer.classList.remove("nav__short")
+        navigationLogo.classList.remove('logo__short')
+    }
 }

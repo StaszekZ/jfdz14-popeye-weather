@@ -14,6 +14,7 @@ body {
   flex-direction: column;
 }
 
+
 .gradient {
   height: fit-content;
   width: 100%;
@@ -72,6 +73,15 @@ body {
   color: rgb(20, 148, 207);
 }
 
+
+/* Aga active navigation element */
+
+.navigation__menu__list__link.active {
+  font-weight: bolder;
+}
+
+
+
 /*KAsia - language */
 .dropdown-content {
   display: none;
@@ -105,7 +115,7 @@ body {
   position: absolute;
   display: flex;
   align-self: flex-end;
-  width: 10rem;
+  width: 180px;
   height: auto;
   padding: 0.5rem;
 }
@@ -115,8 +125,91 @@ body {
   height: 100%;
 }
 
+.nav__short {
+  height: 35px;
+
+}
+
+.logo__short {
+  padding: 0;
+  width: 160px;
+}
+
+
+/* AGA COOKIE INFO */
+
+.cookie.hidden {
+  display: none;
+}
+
+.cookie {
+  margin: 0;
+  padding: 0;
+}
+
+.cookie {
+  position: fixed;
+  width: 100vw;
+  height: auto;
+  z-index: 5;
+
+  font-size: 12px;
+  font-family: Arial, Verdana, sans-serif;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: rgba(255, 255, 255);
+  padding: 20px;
+  box-shadow: 2px 0px 14px 17px rgba(0, 0, 0, 0.2);
+}
+
+.cookie__container {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+}
+
+.cookie__container__alert {
+  margin: 0px;
+  padding: 0.5em;
+  letter-spacing: 1px;
+  justify-content: center;
+}
+
+.cookie__container__alert--link {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+.cookie__container__alert--link:hover {
+  text-decoration: underline;
+}
+
+.cookie__button {
+  float: right;
+  width: clamp(120px, 10vw, 150px);
+  height: 1.75em;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(8, 64, 167);
+  border: none;
+  border-radius: 3px;
+}
+
+.cookie__button:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(48, 160, 190);
+  border: 1.5px solid rgb(8, 64, 167);
+  color: rgb(8, 64, 167);
+}
+
+
 .hero__img {
-  background-image: url("../img/742112.png");
+  background-image: url("../img/742112.webp");
   background-color: var(--bgr-color);
   background-size: cover;
   width: 100%;
@@ -239,7 +332,10 @@ section {
 }
 
 .Four {
-  background-color: seagreen;
+  background: #373B44;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4286f4, #315ec7);
+  background: linear-gradient(to right, #4286f4, #315ec7);
 }
 
 .inSlide {
@@ -283,6 +379,25 @@ section {
 
 .dots--active {
   background-color: var(--dots-color-hover);
+}
+
+.count {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #f9f9f9;
+}
+
+.summary,
+.summaryScore {
+  font-size: 30px;
+}
+
+.submitCount {
+  margin: 25px;
+  padding: 10px;
+  color: #f9f9f9;
+  background-color: #333;
 }
 
 @keyframes sliderAnimation {
@@ -378,10 +493,12 @@ section {
   align-items: center;
   font-size: 2rem;
   min-height: 100vh;
+  padding-top: 2.5rem;
 }
 
 .functionality__box {
   width: 30%;
+  height: 250px;
   border-radius: 1rem;
   transition: 0.5s;
   background-size: cover;
@@ -422,12 +539,47 @@ section {
   /* height: 3rem; */
   margin: 0 auto;
   font-family: var(--content-font);
+<<<<<<< HEAD
   margin-bottom: 2rem;
+=======
+  text-overflow: ellipsis;
+  /* margin-bottom: 2rem; */
+>>>>>>> develop
   cursor: pointer;
   /* text-overflow: ellipsis;
   overflow: hidden;
+<<<<<<< HEAD
   white-space: nowrap; */
   display: none;
+=======
+  /* white-space: nowrap; */
+}
+
+.active3 {
+  height: fit-content;
+  position: fixed;
+  top: 50%;
+  height: fit-content;
+  width: 60%;
+  margin: 1%;
+  z-index: 99;
+  transition: width 0.5s;
+}
+
+.back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.active__description {
+  height: fit-content;
+  overflow: visible;
+>>>>>>> develop
 }
 
 .img__box {
@@ -437,35 +589,31 @@ section {
   align-self: center;
 }
 
+<<<<<<< HEAD
 .button__displaytext {
   height: 50px;
   width: 100px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+=======
+.functionality__button {
+  padding: 0 0.5rem;
+  background-color: lightblue;
+  border: 0.5px solid cadetblue;
+>>>>>>> develop
 }
 
 /* form *************************************************************/
 
 .form {
   display: flex;
-  align-content: center;
-  grid-area: form;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: 3rem;
   width: var(--max-width);
   height: 70vh;
-}
-
-.form__box {
-  width: auto;
-  height: auto;
-  justify-content: center;
-  margin: auto;
-}
-
-form {
-  border: 4px solid var(--bgr-color);
-
 }
 
 .form__title {
@@ -479,43 +627,77 @@ form {
   margin: 0 auto;
 }
 
-
 .container__form {
-  width: 80%;
+  width: 100%;
   display: flex;
-  margin: 2rem;
+  flex-direction: column;
   padding: 2rem;
   background-color: var(--bgr-color);
-  flex-direction: column;
   border-radius: 15px 50px 30px;
-  box-shadow: 10px 10px 10px black;
+  box-shadow: 5px 5px 5px lightblue;
+  opacity: 0.9;
 }
+
+.form__img__wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.form__input__wrap {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+}
+
+.form__img {
+  height: 19vh;
+  width: auto;
+  align-self: flex-end;
+}
+
+
 
 input[type=email],
 input[type=submit] {
   width: 100%;
   padding: 1rem;
-  margin: 1rem 0;
-  display: inline-block;
+  margin: 0.5rem 0;
   border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 
 /* Style the submit button */
 
 input[type=submit] {
-  background-color: navy;
+  background-color: rgb(8, 64, 167);
   color: var(--second-text-color);
-  border: none;
+  border: 1px solid rgb(8, 64, 167);
+  border-radius: 3px;
 }
 
 input[type=submit]:hover {
-  opacity: 0.6;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(48, 160, 190);
+  border: 1.5px solid rgb(8, 64, 167);
+  color: rgb(8, 64, 167);
+}
+
+.header__inForm {
+  margin: 0 auto;
+  font-size: larger;
 }
 
 .form__notification {
   font-style: italic;
   font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 /* team */
@@ -659,7 +841,6 @@ input[type=submit]:hover {
   text-shadow: var(--shadow-3);
   border-top: 1px solid rgba(0, 0, 0, 0.4);
   line-height: 10vh;
-  /* transform-style: preserve-3d; */
 }
 
 /*ustawienie obrazków ryb w gradiencie*/
@@ -696,8 +877,9 @@ input[type=submit]:hover {
 }
 
 .fish--crab {
-  top: 94.7%;
-  right: 0;
+  top: 93.7%;
+  right: 3%;
+  transform: rotate(275deg);
 }
 
 .fish--team {
@@ -708,18 +890,10 @@ input[type=submit]:hover {
   top: 27%;
 }
 
-.fish--cartoon {
-  top: 46%;
-}
-
 .fish--anchor {
   left: 10%;
   top: 94.3%;
   transform: rotate(30deg);
-}
-
-.fish--nets {
-  top: 9%;
 }
 
 .underwater {
@@ -810,6 +984,8 @@ input[type=submit]:hover {
 }
 
 
+
+
 @media (max-width: 1300px) {
 
   .sneak,
@@ -851,7 +1027,8 @@ input[type=submit]:hover {
 @media (max-width: 768px) {
   .navigation {
     flex-direction: column;
-    align-items: flex-start
+    align-items: flex-start;
+    height: 50px !important;
   }
 
   .navigation__burger {
@@ -919,6 +1096,11 @@ input[type=submit]:hover {
 
   }
 
+  .container__form {
+    margin: 1rem auto;
+    width: 90%;
+  }
+
   .features__box {
     width: 100%;
     max-width: 400px;
@@ -928,7 +1110,6 @@ input[type=submit]:hover {
   .features__title {
     font-size: 2rem;
     margin: 0.2rem;
-
   }
 
   .f__title {
@@ -950,6 +1131,7 @@ input[type=submit]:hover {
   .form__title {
     font-size: 2.5rem;
     margin: 0.2rem;
+    margin-top: 1rem;
   }
 
   .features__description {
@@ -1027,6 +1209,15 @@ input[type=submit]:hover {
     margin-left: 40%;
   }
 
+  .form__title {
+    font-size: 1.5rem;
+    margin: 0.2rem;
+  }
+
+  .form__img {
+    display: none;
+  }
+
   .features__title {
     font-size: 1.5rem;
     margin: 0.2rem;
@@ -1037,10 +1228,6 @@ input[type=submit]:hover {
     margin: 0.2rem;
   }
 
-  .form__title {
-    font-size: 1.5rem;
-    margin: 0.2rem;
-  }
 
   .features__box {
     width: auto;
