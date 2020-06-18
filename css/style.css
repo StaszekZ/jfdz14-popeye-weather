@@ -930,6 +930,11 @@ input[type=submit]:hover {
   line-height: 2rem;
 }
 
+.toTop:hover {
+  transform: rotate(360deg);
+  transition: transform .8s;
+}
+
 /* Media Queries */
 
 
