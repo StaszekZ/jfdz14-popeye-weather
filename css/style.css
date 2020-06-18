@@ -581,7 +581,7 @@ section {
 
 .functionality__button {
   padding: 0 0.5rem;
-  background-color: lightblue;
+  background-color: rgba(173, 216, 230, 0.5);
   border: 0.5px solid cadetblue;
 }
 
