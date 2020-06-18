@@ -539,19 +539,11 @@ section {
   /* height: 3rem; */
   margin: 0 auto;
   font-family: var(--content-font);
-<<<<<<< HEAD
-  margin-bottom: 2rem;
-=======
   text-overflow: ellipsis;
   /* margin-bottom: 2rem; */
->>>>>>> develop
   cursor: pointer;
   /* text-overflow: ellipsis;
   overflow: hidden;
-<<<<<<< HEAD
-  white-space: nowrap; */
-  display: none;
-=======
   /* white-space: nowrap; */
 }
 
@@ -579,7 +571,6 @@ section {
 .active__description {
   height: fit-content;
   overflow: visible;
->>>>>>> develop
 }
 
 .img__box {
@@ -589,19 +580,10 @@ section {
   align-self: center;
 }
 
-<<<<<<< HEAD
-.button__displaytext {
-  height: 50px;
-  width: 100px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-=======
 .functionality__button {
   padding: 0 0.5rem;
   background-color: lightblue;
   border: 0.5px solid cadetblue;
->>>>>>> develop
 }
 
 /* form *************************************************************/
