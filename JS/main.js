@@ -295,7 +295,7 @@ for (let i = 0; i < navigationElementsLinks.length; i++) {
     })
 }
 
-
+//zwężanie się manu podczas przewijania strony
 window.onscroll = function () {
     scrollFunction()
 };
