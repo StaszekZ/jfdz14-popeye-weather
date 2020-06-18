@@ -249,20 +249,52 @@ const submitCount = document.querySelector('.submitCount')
 
 let basicPrice = 99;
 
-submitCount.addEventListener('click', () => {  
-    if(countOutputId.value == 1){
-        summary.textContent = `${basicPrice}zł`   
+submitCount.addEventListener('click', () => {
+    clearInterval(intervalRight);
+    if (countOutputId.value == 1) {
+        summary.textContent = `${basicPrice}zł`
     }
-    if(countOutputId.value == 2){
-        summary.textContent = `${Math.round((basicPrice * 2)*0.9)}zł. W tym 10% zniżki!`   
+    if (countOutputId.value == 2) {
+        summary.textContent = `${Math.round((basicPrice * 2)*0.9)}zł. W tym 10% zniżki!`
     }
-    if(countOutputId.value == 3){
-        summary.textContent = `${Math.round((basicPrice * 3)*0.88)}zł W tym 12% zniżki!`   
+    if (countOutputId.value == 3) {
+        summary.textContent = `${Math.round((basicPrice * 3)*0.88)}zł W tym 12% zniżki!`
     }
-    if(countOutputId.value == 4){
-        summary.textContent = `${Math.round((basicPrice * 4)*0.87)}zł W tym 13% zniżki!`   
+    if (countOutputId.value == 4) {
+        summary.textContent = `${Math.round((basicPrice * 4)*0.87)}zł W tym 13% zniżki!`
     }
-    if(countOutputId.value == 5){
-        summary.textContent = `${Math.round((basicPrice * 5)*0.85)}zł W tym 15% zniżki!`   
-    }  
+    if (countOutputId.value == 5) {
+        summary.textContent = `${Math.round((basicPrice * 5)*0.85)}zł W tym 15% zniżki!`
+    }
 });
+// AGA active navigation element
+
+function addActiveClass(allElementLinks, activeLink) {
+    for (let i = 0; i < allElementLinks.length; i++) {
+
+        let link = allElementLinks[i];
+
+        if (link.classList.contains("active")) {
+            link.classList.remove("active");
+        }
+    }
+
+    if (!activeLink.classList.contains("active")) {
+        activeLink.classList.add("active");
+    }
+
+
+}
+
+
+const navigationContainer = document.querySelector(".navigation");
+const navigationElements = document.querySelector(".navigation__menu__list");
+const navigationElementsLinks = document.querySelectorAll(".navigation__menu__list__link");
+
+
+
+for (let i = 0; i < navigationElementsLinks.length; i++) {
+    navigationElementsLinks[i].addEventListener("click", function (event) {
+        addActiveClass(navigationElementsLinks, event.target)
+    })
+}
