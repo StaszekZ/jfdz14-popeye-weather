@@ -316,8 +316,6 @@ section {
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #4286f4, #315ec7);
   background: linear-gradient(to right, #4286f4, #315ec7);
-
-  ;
 }
 
 .inSlide {
