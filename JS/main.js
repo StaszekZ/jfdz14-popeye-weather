@@ -268,6 +268,11 @@ submitCount.addEventListener('click', () => {
     }
 });
 // AGA active navigation element
+const navigationContainer = document.querySelector(".navigation");
+const navigationElements = document.querySelector(".navigation__menu__list");
+const navigationElementsLinks = document.querySelectorAll(".navigation__menu__list__link");
+const navigationLogo = document.querySelector('.navigation__logo')
+
 
 function addActiveClass(allElementLinks, activeLink) {
     for (let i = 0; i < allElementLinks.length; i++) {
@@ -282,19 +287,27 @@ function addActiveClass(allElementLinks, activeLink) {
     if (!activeLink.classList.contains("active")) {
         activeLink.classList.add("active");
     }
-
-
 }
-
-
-const navigationContainer = document.querySelector(".navigation");
-const navigationElements = document.querySelector(".navigation__menu__list");
-const navigationElementsLinks = document.querySelectorAll(".navigation__menu__list__link");
-
-
 
 for (let i = 0; i < navigationElementsLinks.length; i++) {
     navigationElementsLinks[i].addEventListener("click", function (event) {
         addActiveClass(navigationElementsLinks, event.target)
     })
+}
+
+
+window.onscroll = function () {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 190 ||
+        document.documentElement.scrollTop > 190) {
+        navigationContainer.classList.add("nav__short")
+        navigationLogo.classList.add('logo__short')
+    } else {
+        document.getElementById("navlist")
+        navigationContainer.classList.remove("nav__short")
+        navigationLogo.classList.remove('logo__short')
+    }
 }
