@@ -240,3 +240,33 @@ cookieButton.addEventListener('click', () => {
     addCookie('cookieAccepted')
     cookie.classList.add('hidden');
 })
+<<<<<<< HEAD
+=======
+
+//kalkulator cen
+
+const countInput = document.querySelector('.countInput');
+const summary = document.querySelector('.summaryScore');
+const submitCount = document.querySelector('.submitCount')
+
+let basicPrice = 99;
+
+submitCount.addEventListener('click', () => {
+    clearInterval(intervalRight);
+    if (countOutputId.value == 1) {
+        summary.textContent = `${basicPrice}zł`
+    }
+    if (countOutputId.value == 2) {
+        summary.textContent = `${Math.round((basicPrice * 2)*0.9)}zł. W tym 10% zniżki!`
+    }
+    if (countOutputId.value == 3) {
+        summary.textContent = `${Math.round((basicPrice * 3)*0.88)}zł W tym 12% zniżki!`
+    }
+    if (countOutputId.value == 4) {
+        summary.textContent = `${Math.round((basicPrice * 4)*0.87)}zł W tym 13% zniżki!`
+    }
+    if (countOutputId.value == 5) {
+        summary.textContent = `${Math.round((basicPrice * 5)*0.85)}zł W tym 15% zniżki!`
+    }
+});
+>>>>>>> 5f633cfd9a0d33f071af50a0908181b52b5b3996
