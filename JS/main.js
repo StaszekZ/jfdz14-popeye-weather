@@ -294,6 +294,15 @@ for (let i = 0; i < navigationElementsLinks.length; i++) {
     })
 }
 
+
+// AGA burger menu zamykanie po wybraniu sekcji
+
+const nav = document.querySelector('.navigation');
+const navBurger = document.querySelector('.navigation__burger');
+const navMenu = document.querySelector('.navigation__menu');
+const burgerInput = document.querySelector('.navigation__burger__checkbox');
+
+
 //zwężanie się manu podczas przewijania strony
 
 function scrollFunction() {
