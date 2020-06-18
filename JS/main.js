@@ -268,31 +268,31 @@ submitCount.addEventListener('click', () => {
 });
 // AGA active navigation element
 const navigationContainer = document.querySelector(".navigation");
-const navigationElements = document.querySelector(".navigation__menu__list");
+// const navigationElements = document.querySelector(".navigation__menu__list");
 const navigationElementsLinks = document.querySelectorAll(".navigation__menu__list__link");
 const navigationLogo = document.querySelector('.navigation__logo')
 
 
-function addActiveClass(allElementLinks, activeLink) {
-    for (let i = 0; i < allElementLinks.length; i++) {
+// function addActiveClass(allElementLinks, activeLink) {
+//     for (let i = 0; i < allElementLinks.length; i++) {
 
-        let link = allElementLinks[i];
+//         let link = allElementLinks[i];
 
-        if (link.classList.contains("active")) {
-            link.classList.remove("active");
-        }
-    }
+//         if (link.classList.contains("active")) {
+//             link.classList.remove("active");
+//         }
+//     }
 
-    if (!activeLink.classList.contains("active")) {
-        activeLink.classList.add("active");
-    }
-}
+//     if (!activeLink.classList.contains("active")) {
+//         activeLink.classList.add("active");
+//     }
+// }
 
-for (let i = 0; i < navigationElementsLinks.length; i++) {
-    navigationElementsLinks[i].addEventListener("click", function (event) {
-        addActiveClass(navigationElementsLinks, event.target)
-    })
-}
+// for (let i = 0; i < navigationElementsLinks.length; i++) {
+//     navigationElementsLinks[i].addEventListener("click", function (event) {
+//         addActiveClass(navigationElementsLinks, event.target)
+//     })
+// }
 
 //zwężanie się manu podczas przewijania strony
 
@@ -372,7 +372,6 @@ const toHighlight = function (entries) {
             }
         }
     })
-
 }
 
 const observer2 = new IntersectionObserver(toHighlight, {
