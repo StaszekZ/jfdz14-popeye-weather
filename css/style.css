@@ -427,7 +427,7 @@ section {
   /* text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap; */
-  display: block;
+  display: none;
 }
 
 .img__box {
@@ -437,8 +437,12 @@ section {
   align-self: center;
 }
 
-.button__readmore {
-
+.button__displaytext {
+  height: 50px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 /* form *************************************************************/
