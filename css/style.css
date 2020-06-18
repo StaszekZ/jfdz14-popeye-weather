@@ -912,6 +912,24 @@ input[type=submit]:hover {
 }
 
 
+.toTop {
+  display: none;
+  position: fixed;
+  left: 91%;
+  bottom: 7%;
+  border: 1px solid darkblue;
+  border-radius: 50%;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: lightblue;
+  color: darkblue;
+  opacity: 0.6;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 2rem;
+}
+
 /* Media Queries */
 
 
@@ -1010,6 +1028,10 @@ input[type=submit]:hover {
     flex-direction: column;
     align-items: flex-start;
     height: 50px !important;
+  }
+
+  .toTop {
+    display: none !important;
   }
 
   .navigation__burger {

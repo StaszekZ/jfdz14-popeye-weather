@@ -296,18 +296,34 @@ for (let i = 0; i < navigationElementsLinks.length; i++) {
 }
 
 //zwężanie się manu podczas przewijania strony
-window.onscroll = function () {
-    scrollFunction()
-};
 
 function scrollFunction() {
     if (document.body.scrollTop > 190 ||
         document.documentElement.scrollTop > 190) {
         navigationContainer.classList.add("nav__short")
         navigationLogo.classList.add('logo__short')
+
     } else {
         document.getElementById("navlist")
         navigationContainer.classList.remove("nav__short")
         navigationLogo.classList.remove('logo__short')
+
+
     }
 }
+
+//przycisk to top
+const toTopButton = document.querySelector(".toTop");
+
+function showToTopButton() {
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+        toTopButton.style.display = "block";
+    } else {
+        toTopButton.style.display = "none";
+    }
+}
+
+window.onscroll = function () {
+    scrollFunction();
+    showToTopButton();
+};
