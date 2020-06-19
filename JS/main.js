@@ -268,31 +268,31 @@ submitCount.addEventListener('click', () => {
 });
 // AGA active navigation element
 const navigationContainer = document.querySelector(".navigation");
-const navigationElements = document.querySelector(".navigation__menu__list");
+// const navigationElements = document.querySelector(".navigation__menu__list");
 const navigationElementsLinks = document.querySelectorAll(".navigation__menu__list__link");
 const navigationLogo = document.querySelector('.navigation__logo')
 
 
-function addActiveClass(allElementLinks, activeLink) {
-    for (let i = 0; i < allElementLinks.length; i++) {
+// function addActiveClass(allElementLinks, activeLink) {
+//     for (let i = 0; i < allElementLinks.length; i++) {
 
-        let link = allElementLinks[i];
+//         let link = allElementLinks[i];
 
-        if (link.classList.contains("active")) {
-            link.classList.remove("active");
-        }
-    }
+//         if (link.classList.contains("active")) {
+//             link.classList.remove("active");
+//         }
+//     }
 
-    if (!activeLink.classList.contains("active")) {
-        activeLink.classList.add("active");
-    }
-}
+//     if (!activeLink.classList.contains("active")) {
+//         activeLink.classList.add("active");
+//     }
+// }
 
-for (let i = 0; i < navigationElementsLinks.length; i++) {
-    navigationElementsLinks[i].addEventListener("click", function (event) {
-        addActiveClass(navigationElementsLinks, event.target)
-    })
-}
+// for (let i = 0; i < navigationElementsLinks.length; i++) {
+//     navigationElementsLinks[i].addEventListener("click", function (event) {
+//         addActiveClass(navigationElementsLinks, event.target)
+//     })
+// }
 
 
 // AGA burger menu zamykanie po wybraniu sekcji
@@ -335,3 +335,58 @@ window.onscroll = function () {
     scrollFunction();
     showToTopButton();
 };
+
+
+
+//podświetlane nav
+const sectionsToObserve = document.querySelectorAll('section')
+
+const toHighlight = function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            if (entry.target.attributes[1].value === 'home') {
+                navigationElementsLinks[0].classList.add('active2');
+                navigationElementsLinks[1].classList.remove('active2');
+                navigationElementsLinks[2].classList.remove('active2');
+                navigationElementsLinks[3].classList.remove('active2');
+                navigationElementsLinks[4].classList.remove('active2');
+            }
+            if (entry.target.attributes[1].value === 'features') {
+                navigationElementsLinks[0].classList.remove('active2');
+                navigationElementsLinks[1].classList.add('active2');
+                navigationElementsLinks[2].classList.remove('active2');
+                navigationElementsLinks[3].classList.remove('active2');
+                navigationElementsLinks[4].classList.remove('active2');
+            }
+            if (entry.target.attributes[1].value === 'functionality') {
+                navigationElementsLinks[0].classList.remove('active2');
+                navigationElementsLinks[1].classList.remove('active2');
+                navigationElementsLinks[2].classList.add('active2');
+                navigationElementsLinks[3].classList.remove('active2');
+                navigationElementsLinks[4].classList.remove('active2');
+            }
+            if (entry.target.attributes[1].value === 'form') {
+                navigationElementsLinks[0].classList.remove('active2');
+                navigationElementsLinks[1].classList.remove('active2');
+                navigationElementsLinks[2].classList.remove('active2');
+                navigationElementsLinks[3].classList.add('active2');
+                navigationElementsLinks[4].classList.remove('active2');
+            }
+            if (entry.target.attributes[1].value === 'team') {
+                navigationElementsLinks[0].classList.remove('active2');
+                navigationElementsLinks[1].classList.remove('active2');
+                navigationElementsLinks[2].classList.remove('active2');
+                navigationElementsLinks[3].classList.remove('active2');
+                navigationElementsLinks[4].classList.add('active2');
+            }
+        }
+    })
+}
+
+const observer2 = new IntersectionObserver(toHighlight, {
+    threshold: 0.6
+});
+
+sectionsToObserve.forEach(section => {
+    observer2.observe(section)
+})
