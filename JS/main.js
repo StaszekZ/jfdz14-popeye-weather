@@ -302,6 +302,20 @@ const navBurger = document.querySelector('.navigation__burger');
 const navMenu = document.querySelector('.navigation__menu');
 const burgerInput = document.querySelector('.navigation__burger__checkbox');
 
+navBurger.addEventListener("click", () => {
+    burgerInput.checked = true;
+    if (!nav.classList.contains("active")) {
+        nav.classList.add("active");
+    } else {
+        nav.classList.remove("active");
+    }
+})
+
+navMenu.addEventListener("click", () => {
+    nav.classList.remove("active");
+})
+
+
 
 //zwężanie się manu podczas przewijania strony
 
