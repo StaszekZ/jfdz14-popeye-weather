@@ -11,12 +11,13 @@ document.querySelector('body').addEventListener('click', function (e) {
     console.log(scrollY);
 
     if (scrollY < 2000) {
-      window.scrollTo(0, scrollY + 480);
+      window.scrollTo(0, scrollY + 500);
     } else {
       window.scrollTo(0, scrollY);
     }
     parent.classList.toggle('active3');
     parent.children[2].classList.toggle('active__description');
+    parent.children[0].classList.toggle('hide__img');
 
     if (e.target.textContent === 'Show More') {
       e.target.textContent = 'Show Less';
