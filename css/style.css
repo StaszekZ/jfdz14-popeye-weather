@@ -665,6 +665,23 @@ input[type=submit] {
   border-radius: 3px;
 }
 
+.input__submit {
+width: 20rem;
+font-size:12px;
+background-color: rgb(8, 64, 167);
+color: var(--second-text-color);
+padding: 1rem;
+margin: 0.5rem 0;
+border: 1px solid #ccc;
+border-radius: 3px;
+text-align: center;
+}
+
+p.input__submit a{
+  color:#ccc;
+}
+
+
 input[type=submit]:hover {
   background-color: #ffffff;
   cursor: pointer;

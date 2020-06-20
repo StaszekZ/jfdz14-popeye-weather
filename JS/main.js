@@ -381,3 +381,11 @@ const observer2 = new IntersectionObserver(toHighlight, {
 sectionsToObserve.forEach(section => {
     observer2.observe(section)
 })
+
+//running game
+
+const gameSumbit = document.querySelector('#submit');
+
+// const runGame = 
+
+gameSumbit.addEventListener('click', runGame);
