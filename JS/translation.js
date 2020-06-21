@@ -24,6 +24,8 @@ i18next.init({
                         body2: '✔ Wind map, accurate wind compass, wind meter, wind gusts and wind directions. It’s very useful for extreme wind sports.<br> ✔ Wind alert: Set up windalert and be aware of wind, storm and tornado warning via push-notifications',
                         header3: 'Why our App you may ask?',
                         body3: 'You can be fairly sure that the weather will do what Popeye Weather App says and you can use it to plan a cruise with a fair degree of confidence Popeye offers high levels of detail and, the highest resolution and most accurate forecasts on the internet.',
+                        header4: 'PRO Version licenses',
+                        body4: '',
                     },
 
                     features: {
