@@ -79,6 +79,7 @@ class GameScreen extends Events {
         this.element = element;
         this.submarine = submarine;
         this.currentNewElementsInterval = undefined;
+        this.printRecord();
 
         this.score = 0;
 
@@ -89,6 +90,14 @@ class GameScreen extends Events {
             rect.width - 40,
             rect.height - 80
         );
+    }
+
+    printRecord() {
+        const recordContainer = document.querySelector(".game--record");
+        const record = localStorage.getItem('score');
+        if(record !== null) {
+            recordContainer.textContent = "Twój record to: " + record;
+        }
     }
 
     setScore(newScore) {
@@ -149,6 +158,10 @@ class GameScreen extends Events {
 
         clearInterval(this.newElementsInterval);
         clearInterval(this.collisionDetectionInterval);
+        const record = localStorage.getItem('score');
+        if (record < this.score) {
+            localStorage.setItem('score', this.score);
+        }
 
         alert('Game Over');
     }
