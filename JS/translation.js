@@ -10,6 +10,14 @@ i18next.init({
                     head: {
                         title: 'Popeye Weather - best weather app ever',
                     },
+                    cookie: {
+                        info: 'This website uses cookies to improve your experience. We`ll assume you`re ok with this, but you can opt-out if you wish.',
+                        what: 'What For?',
+                        accept: 'Accept',
+            
+                    },
+
+
                     nav: {
                         home: 'Home',
                         features: 'Features',
@@ -17,6 +25,7 @@ i18next.init({
                         form: 'Form',
                         team: 'Team',
                     },
+
                     marketing: {
                         header1: 'Our Popeye Weather App',
                         body1: 'Offers a scarily accurate minute-by-minute predictions for precipitation, and pushes alerts right to the front of your phone. A typical push notification from Popeye Weather App might say “Light Rain starting in 12minutes,”. With Our App, you know exactly when it is going to rain, how hard that rain will be, and how long it will last.',
@@ -24,8 +33,10 @@ i18next.init({
                         body2: '✔ Wind map, accurate wind compass, wind meter, wind gusts and wind directions. It’s very useful for extreme wind sports.<br> ✔ Wind alert: Set up windalert and be aware of wind, storm and tornado warning via push-notifications',
                         header3: 'Why our App you may ask?',
                         body3: 'You can be fairly sure that the weather will do what Popeye Weather App says and you can use it to plan a cruise with a fair degree of confidence Popeye offers high levels of detail and, the highest resolution and most accurate forecasts on the internet.',
-                        header4: 'PRO Version licenses',
-                        body4: '',
+                        header4: 'PRO Version licenses cost',
+                        info: '# of licenses that you need?',
+                        price: 'Your price is: ',
+
                     },
 
                     features: {
@@ -77,6 +88,13 @@ i18next.init({
                         title: 'Popeye Weather - najlepsza aplikacja pogodowa',
                     },
 
+                    cookie: {
+                        info: 'Ta strona korzysta z plików cookie w celu poprawy komfortu użytkowania. Zakładamy, że nie masz nic przeciwko, ale możesz zrezygnować, jeśli chcesz.',
+                        what: 'W jakim celu?',
+                        accept: 'Zgadzam się',
+                    },
+
+
                     nav: {
                         home: "Strona główna",
                         features: 'O produkcie',
@@ -92,6 +110,9 @@ i18next.init({
                         body2: '✔ Mapa wiatru, kierunek wiatru, prędkość wiatru, charakterystyka wiatru. Jest to bardzo przydatne w ekstremalnych sportach morskich ✔ Alarm wiatru: Ustaw windalert i bądź świadomy ostrzeżenia o zmieniających się warunkach pogodowych oraz zbliżających się burz i haraganów',
                         header3: 'Dlaczego nasza aplikacja?',
                         body3: 'Możesz być całkiem pewien, że pogoda zrobi to, co mówi aplikaja Popeye Weather i ze spokojem możesz użyć jej do zaplanowania rejsu z pewnym stopniem pewności. Aplikacja Popeye Weather oferuje wysoki poziom szczegółowości oraz najwyższą rozdzielczość i najdokładniejsze prognozy w Internecie.',
+                        header4: 'Oblicz koszt PRO licencji:',
+                        info: 'Ile licencji potrzebujesz?',
+                        price: 'Twoja cena to: ',
                     },
 
                     features: {
