@@ -35,6 +35,14 @@ body {
     overflow: hidden;
 }
 
+.game--instruction{
+    text-align: center;
+}
+
+.game--record {
+    text-align: center;
+}
+
 .game--element {
     --position-left: 0px;
     --position-top: 0px;
@@ -52,6 +60,7 @@ body {
     background: url(bomb.svg) no-repeat;
     background-size: contain;
 }
+
 
 
 .game--scores {
