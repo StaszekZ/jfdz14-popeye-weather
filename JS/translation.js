@@ -10,6 +10,14 @@ i18next.init({
                     head: {
                         title: 'Popeye Weather - best weather app ever',
                     },
+                    cookie: {
+                        info: 'This website uses cookies to improve your experience. We`ll assume you`re ok with this, but you can opt-out if you wish.',
+                        what: 'What For?',
+                        accept: 'Accept',
+            
+                    },
+
+
                     nav: {
                         home: 'Home',
                         features: 'Features',
@@ -17,13 +25,18 @@ i18next.init({
                         form: 'Form',
                         team: 'Team',
                     },
+
                     marketing: {
                         header1: 'Our Popeye Weather App',
-                        body1: 'Offers a scarily accurate minute-by-minute predictions for precipitation, and pushes alerts right to the front of your phone. A typical push notification from Popeye Weather App might say “Light Rain starting in 12minutes,”. With Our App, you know exactly when it is going to rain, how hard that rain will be, and how long it will last.',
+                        body1: 'Offers a scarily accurate minute-by-minute predictions for precipitation, and pushes alerts right to the front of your phone. A typical push notification from Popeye Weather App might say “Light Rain starting in 12 minutes”. With Our App, you know exactly when it is going to rain, how hard that rain will be, and how long it will last.',
                         header2: 'Popeye Weather App reports, forecast and statistics:',
-                        body2: '✔ Wind map, accurate wind compass, wind meter, wind gusts and wind directions. It’s very useful for extreme wind sports.<br> ✔ Wind alert: Set up windalert and be aware of wind, storm and tornado warning via push-notifications',
+                        body2: 'Wind map, accurate wind compass, wind meter, wind gusts and wind directions. It’s very useful for extreme wind sports. Wind alert: Set up windalert and be aware of wind, storm and tornado warning via push-notifications',
                         header3: 'Why our App you may ask?',
                         body3: 'You can be fairly sure that the weather will do what Popeye Weather App says and you can use it to plan a cruise with a fair degree of confidence Popeye offers high levels of detail and, the highest resolution and most accurate forecasts on the internet.',
+                        header4: 'PRO Version licenses cost',
+                        info: '# of licenses that you need?',
+                        price: 'Your price is: ',
+
                     },
 
                     features: {
@@ -61,7 +74,10 @@ i18next.init({
                     form: {
                         header: 'Do you want to sign up for premiere?',
                         h3: 'Tell us your email and you can be sure that you will not miss premiere',
-                        noti: 'You will be notified of successful enrollment only once. Please be aware that we protect your data.'
+                        noti: 'You will be notified of successful enrollment only once. Please be aware that we protect your data.',
+                        mail: 'E-mail:',
+
+
                     },
                     team: {
                         header: 'Team Members are:'
@@ -75,6 +91,13 @@ i18next.init({
                         title: 'Popeye Weather - najlepsza aplikacja pogodowa',
                     },
 
+                    cookie: {
+                        info: 'Ta strona korzysta z plików cookie w celu poprawy komfortu użytkowania. Zakładamy, że nie masz nic przeciwko, ale możesz zrezygnować, jeśli chcesz.',
+                        what: 'W jakim celu?',
+                        accept: 'Zgadzam się',
+                    },
+
+
                     nav: {
                         home: "Strona główna",
                         features: 'O produkcie',
@@ -87,9 +110,12 @@ i18next.init({
                         header1: `Nasza aplikacja`,
                         body1: `Oferuje wyjątkowo dokładne prognozy minut po minucie dla opadów atmosferycznych i wyświetla notifikacje w telefonie. Typowe powiadomienie push z aplikacji Popeye Weather może powiedzieć „lekki deszcz, który zaczyna się za 12 minut”. Dzięki naszej aplikacji wiesz dokładnie, kiedy będzie padać, jak mocno będzie padać i jak długo będzie trwać`,
                         header2: 'Aplikacja gwarantuje raporty, prognozy i ostrzeżenia:',
-                        body2: '✔ Mapa wiatru, kierunek wiatru, prędkość wiatru, charakterystyka wiatru. Jest to bardzo przydatne w ekstremalnych sportach morskich ✔ Alarm wiatru: Ustaw windalert i bądź świadomy ostrzeżenia o zmieniających się warunkach pogodowych oraz zbliżających się burz i haraganów',
+                        body2: 'Mapa wiatru, kierunek wiatru, prędkość wiatru, charakterystyka wiatru. Jest to bardzo przydatne w ekstremalnych sportach morskich. Alarm wiatru: Ustaw windalert i bądź świadomy ostrzeżenia o zmieniających się warunkach pogodowych oraz zbliżających się burz i haraganów',
                         header3: 'Dlaczego nasza aplikacja?',
                         body3: 'Możesz być całkiem pewien, że pogoda zrobi to, co mówi aplikaja Popeye Weather i ze spokojem możesz użyć jej do zaplanowania rejsu z pewnym stopniem pewności. Aplikacja Popeye Weather oferuje wysoki poziom szczegółowości oraz najwyższą rozdzielczość i najdokładniejsze prognozy w Internecie.',
+                        header4: 'Oblicz koszt PRO licencji:',
+                        info: 'Ile licencji potrzebujesz?',
+                        price: 'Twoja cena to: ',
                     },
 
                     features: {
@@ -126,7 +152,8 @@ i18next.init({
                     form: {
                         header: 'Czy chcesz zapisać się na premierę',
                         h3: 'Podaj swój adres e-mail, aby mieć pewność, że nie umknie Ci premiera',
-                        noti: 'O udanej rejestracji zostaniesz powiadomiony tylko raz. Pamiętaj, że chronimy Twoje dane.'
+                        noti: 'O udanej rejestracji zostaniesz powiadomiony tylko raz. Pamiętaj, że chronimy Twoje dane.',
+                        mail: 'Adres mailowy:',
                     },
 
                     team: {
