@@ -6,9 +6,11 @@
 
 html,
 body {
-  width: 100%;
   flex-direction: column;
   font-family: arial;
+  background: url("./underwater_octopus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* .game  */
@@ -31,16 +33,21 @@ body {
   background-color: var(--bgr-color);
   position: relative;
   overflow: hidden;
-  /* background: url("../img/FAVPNG_underwater_19mmkDgZ.png");
-  background-size: cover; */
+  background: url("./inGameBack.png");
+  /* background-position: bottom;*/
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid black;
 }
 
-.game--instruction {
+.game--instruction,
+.game--record,
+.game--scores {
+  font-size: xx-large;
+  font-weight: bold;
   text-align: center;
-}
-
-.game--record {
-  text-align: center;
+  color: yellow;
 }
 
 .game--element {
@@ -64,9 +71,9 @@ body {
   background-size: contain;
 }
 
-.game--scores {
+/* .game--scores {
   text-align: center;
-}
+} */
 
 .game--score {
   font-weight: bold;
