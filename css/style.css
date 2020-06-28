@@ -548,11 +548,11 @@ section {
   /* white-space: nowrap; */
 }
 
+.showFunctionalityDescription,
 .active3 {
   height: fit-content;
   position: fixed;
   top: 50%;
-  height: fit-content;
   width: 60%;
   margin: 1%;
   z-index: 99;
@@ -666,19 +666,19 @@ input[type=submit] {
 }
 
 .input__submit {
-width: 20rem;
-font-size:12px;
-background-color: rgb(8, 64, 167);
-color: var(--second-text-color);
-padding: 1rem;
-margin: 0.5rem 0;
-border: 1px solid #ccc;
-border-radius: 3px;
-text-align: center;
+  width: 20rem;
+  font-size: 12px;
+  background-color: rgb(8, 64, 167);
+  color: var(--second-text-color);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: center;
 }
 
-p.input__submit a{
-  color:#ccc;
+p.input__submit a {
+  color: #ccc;
 }
 
 
