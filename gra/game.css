@@ -35,6 +35,14 @@ body {
   background-size: cover; */
 }
 
+.game--instruction {
+  text-align: center;
+}
+
+.game--record {
+  text-align: center;
+}
+
 .game--element {
   --position-left: 0px;
   --position-top: 0px;

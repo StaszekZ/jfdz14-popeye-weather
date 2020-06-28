@@ -18,11 +18,10 @@
   <!-- <div class="showFunctionalityDescription"></div> -->
   <div class="cookie hidden">
     <div class="cookie__container">
-      <p class="cookie__container__alert">This website uses cookies to improve your experience. We'll assume you're ok
-        with this, but you can opt-out if you wish.
-        <a class="cookie__container__alert--link" href="#" title="Accept">What For?</a></p>
+      <p class="cookie__container__alert" data-i18n="cookie.info">
+        <a class="cookie__container__alert--link" href="#" title="Accept" data-i18n="cookie.what"></a></p>
     </div>
-    <button class="cookie__button">Accept</button>
+    <button class="cookie__button" data-i18n="cookie.accept"></button>
   </div>
 
   <nav class="navigation">
@@ -111,17 +110,17 @@
         </div>
         <div class="slides hidden Four">
           <header>
-            <h1 class="inSlide inSlide--header" data-i18n=""> CENNIK WERSJI PRO</h1>
+            <h1 class="inSlide inSlide--header" data-i18n="marketing.header4"></h1>
           </header>
           <hr class="inSlide--hr"> <br>
           <p class="inSlide inSlide--para">
             <div class="count">
               <form name="registrationForm">
-                <p class="inSlide inSlide--para">ILOŚĆ LICENCJI: </p><input class="countInput" type="range"
+                <p class="inSlide inSlide--para" data-i18n="marketing.info"></p><input class="countInput" type="range"
                   id="countInputId" value="3" min="1" max="5" oninput="countOutputId.value = countInputId.value">
                 <output name="countOutputName" id="countOutputId" class="inSlide inSlide--para"></output><br>
                 <input class="submitCount" type="button" value="POTWIERDŹ">
-                <p class="summary">TWOJA CENA TO:
+                <p class="summary"> Twoja cena to:
                   <span class="summaryScore"></span></p><br>
               </form>
             </div>
@@ -237,14 +236,13 @@
           <h2 class="form__title" data-i18n="form.header"></h2>
         </div>
         <div class="container__form">
-          <h3 class="header__inForm">Tell us your email and you can be sure that you will not miss premiere</h3>
+          <h3 class="header__inForm" data-i18n="form.h3"></h3>
           <!-- <br> -->
-          <p class="form__notification">You will be notified of successful enrollment only once. <br>Please be
-            aware that we protect your data.</p>
+          <p class="form__notification" data-i18n="form.noti">.</p>
           <div class="form__img__wrap">
             <img class="form__img" src="./img/popeye_girl_form.png" alt="">
             <div class="form__input__wrap">
-              <label for="email">E-mail:
+              <label for="email">Email:
                 <input type="email" id="email" placeholder="E-mail address" name="mail" required>
               </label>
               <!-- <input type="submit" id="submit" value="Subscribe"> -->
