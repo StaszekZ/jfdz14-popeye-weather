@@ -167,6 +167,44 @@ const slidesLength = slides.length;
 
 let currentState = 0;
 
+//active dots
+
+dots[0].addEventListener("click", () => {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("dots--active"));
+  slides[0].classList.add("active");
+  dots[0].classList.add("dots--active");
+});
+
+dots[1].addEventListener("click", () => {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("dots--active"));
+  slides[1].classList.add("active");
+  dots[1].classList.add("dots--active");
+});
+
+dots[2].addEventListener("click", () => {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("dots--active"));
+  slides[2].classList.add("active");
+  dots[2].classList.add("dots--active");
+});
+
+dots[3].addEventListener("click", () => {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("dots--active"));
+  slides[3].classList.add("active");
+  dots[3].classList.add("dots--active");
+});
+// const dots = document.querySelectorAll(".dots");
+// dots.forEach(function (dot, index) {
+//   console.log(index);
+
+//   dot.addEventListener("click", function () {
+//     slides[index + 1].classList.add(".active");
+//   });
+// });
+
 slides[currentState].classList.add("active");
 dots[currentState].classList.add("dots--active");
 
@@ -337,42 +375,27 @@ const toHighlight = function (entries) {
     if (entry.isIntersecting) {
       if (entry.target.attributes[1].value === "home") {
         console.log(entry.target.attributes[1].value);
+        navigationElementsLinks.forEach((el) => el.classList.remove("active2"));
         navigationElementsLinks[0].classList.add("active2");
-        navigationElementsLinks[1].classList.remove("active2");
-        navigationElementsLinks[2].classList.remove("active2");
-        navigationElementsLinks[3].classList.remove("active2");
-        navigationElementsLinks[4].classList.remove("active2");
       }
       if (entry.target.attributes[1].value === "features") {
         console.log(entry.target.attributes[1].value);
-        navigationElementsLinks[0].classList.remove("active2");
+        navigationElementsLinks.forEach((el) => el.classList.remove("active2"));
         navigationElementsLinks[1].classList.add("active2");
-        navigationElementsLinks[2].classList.remove("active2");
-        navigationElementsLinks[3].classList.remove("active2");
-        navigationElementsLinks[4].classList.remove("active2");
       }
       if (entry.target.attributes[1].value === "functionality") {
         console.log(entry.target.attributes[1].value);
-        navigationElementsLinks[0].classList.remove("active2");
-        navigationElementsLinks[1].classList.remove("active2");
+        navigationElementsLinks.forEach((el) => el.classList.remove("active2"));
         navigationElementsLinks[2].classList.add("active2");
-        navigationElementsLinks[3].classList.remove("active2");
-        navigationElementsLinks[4].classList.remove("active2");
       }
       if (entry.target.attributes[1].value === "form") {
         console.log(entry.target.attributes[1].value);
-        navigationElementsLinks[0].classList.remove("active2");
-        navigationElementsLinks[1].classList.remove("active2");
-        navigationElementsLinks[2].classList.remove("active2");
+        navigationElementsLinks.forEach((el) => el.classList.remove("active2"));
         navigationElementsLinks[3].classList.add("active2");
-        navigationElementsLinks[4].classList.remove("active2");
       }
       if (entry.target.attributes[1].value === "team") {
         console.log(entry.target.attributes[1].value);
-        navigationElementsLinks[0].classList.remove("active2");
-        navigationElementsLinks[1].classList.remove("active2");
-        navigationElementsLinks[2].classList.remove("active2");
-        navigationElementsLinks[3].classList.remove("active2");
+        navigationElementsLinks.forEach((el) => el.classList.remove("active2"));
         navigationElementsLinks[4].classList.add("active2");
       }
     }
