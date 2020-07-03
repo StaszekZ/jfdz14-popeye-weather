@@ -160,50 +160,9 @@ const buttonPrev = document.querySelector(".button__prev");
 const buttonNext = document.querySelector(".button__next");
 const slides = document.querySelectorAll(".slides");
 const dots = document.querySelectorAll(".dots");
-
 const slidesLength = slides.length;
 
-// console.log(slides)
-
 let currentState = 0;
-
-//active dots
-
-dots[0].addEventListener("click", () => {
-  slides.forEach((slide) => slide.classList.remove("active"));
-  dots.forEach((dot) => dot.classList.remove("dots--active"));
-  slides[0].classList.add("active");
-  dots[0].classList.add("dots--active");
-});
-
-dots[1].addEventListener("click", () => {
-  slides.forEach((slide) => slide.classList.remove("active"));
-  dots.forEach((dot) => dot.classList.remove("dots--active"));
-  slides[1].classList.add("active");
-  dots[1].classList.add("dots--active");
-});
-
-dots[2].addEventListener("click", () => {
-  slides.forEach((slide) => slide.classList.remove("active"));
-  dots.forEach((dot) => dot.classList.remove("dots--active"));
-  slides[2].classList.add("active");
-  dots[2].classList.add("dots--active");
-});
-
-dots[3].addEventListener("click", () => {
-  slides.forEach((slide) => slide.classList.remove("active"));
-  dots.forEach((dot) => dot.classList.remove("dots--active"));
-  slides[3].classList.add("active");
-  dots[3].classList.add("dots--active");
-});
-// const dots = document.querySelectorAll(".dots");
-// dots.forEach(function (dot, index) {
-//   console.log(index);
-
-//   dot.addEventListener("click", function () {
-//     slides[index + 1].classList.add(".active");
-//   });
-// });
 
 slides[currentState].classList.add("active");
 dots[currentState].classList.add("dots--active");
@@ -229,7 +188,6 @@ const slideRight = () => {
   dots[currentState].classList.remove("dots--active");
   currentState = (currentState + 1) % slidesLength;
   slides[currentState].classList.add("active");
-  // slides[currentState].style.transition = "all 2s";
   dots[currentState].classList.add("dots--active");
 
   resetSliderTimer();
@@ -244,7 +202,39 @@ function resetSliderTimer() {
   clearInterval(intervalRight);
   intervalRight = setInterval(slideRight, 12000);
 }
+//active dots
 
+dots[0].addEventListener("click", () => {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("dots--active"));
+  currentState = 0;
+  slides[0].classList.add("active");
+  dots[0].classList.add("dots--active");
+});
+
+dots[1].addEventListener("click", () => {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("dots--active"));
+  currentState = 1;
+  slides[1].classList.add("active");
+  dots[1].classList.add("dots--active");
+});
+
+dots[2].addEventListener("click", () => {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("dots--active"));
+  currentState = 2;
+  slides[2].classList.add("active");
+  dots[2].classList.add("dots--active");
+});
+
+dots[3].addEventListener("click", () => {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("dots--active"));
+  currentState = 3;
+  slides[3].classList.add("active");
+  dots[3].classList.add("dots--active");
+});
 // info o cookies
 
 const cookie = document.querySelector(".cookie");
@@ -299,34 +289,11 @@ submitCount.addEventListener("click", () => {
     )}zł W tym 15% zniżki!`;
   }
 });
-// AGA active navigation element
 const navigationContainer = document.querySelector(".navigation");
-// const navigationElements = document.querySelector(".navigation__menu__list");
 const navigationElementsLinks = document.querySelectorAll(
   ".navigation__menu__list__link"
 );
 const navigationLogo = document.querySelector(".navigation__logo");
-
-// function addActiveClass(allElementLinks, activeLink) {
-//     for (let i = 0; i < allElementLinks.length; i++) {
-
-//         let link = allElementLinks[i];
-
-//         if (link.classList.contains("active")) {
-//             link.classList.remove("active");
-//         }
-//     }
-
-//     if (!activeLink.classList.contains("active")) {
-//         activeLink.classList.add("active");
-//     }
-// }
-
-// for (let i = 0; i < navigationElementsLinks.length; i++) {
-//     navigationElementsLinks[i].addEventListener("click", function (event) {
-//         addActiveClass(navigationElementsLinks, event.target)
-//     })
-// }
 
 //zwężanie się manu podczas przewijania strony
 
