@@ -550,16 +550,19 @@ section {
   position: fixed;
   width: 60%;
   height: fit-content;
+  max-height: 70%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2rem;
+  padding-bottom: 0;
   text-align: justify;
-  font-size: larger;
+  font-size: 1.4rem;
   border: 1px solid #888;
   border-radius: 1rem;
   background-color: white;
   color: navy;
+  overflow: auto;
 }
 
 .modal__text {
@@ -1161,6 +1164,14 @@ p.input__submit a {
     margin-top: 1rem;
   }
 
+  .modal__content {
+    width: 90%;
+  }
+
+  .modal__text {
+    font-size: 1rem;
+  }
+
   .features__description {
     max-width: 97%;
     margin: auto;
@@ -1210,6 +1221,10 @@ p.input__submit a {
 
   .inSlide--header {
     font-size: 1.4rem;
+  }
+
+  .modal__text {
+    font-size: 0.9rem;
   }
 }
 
