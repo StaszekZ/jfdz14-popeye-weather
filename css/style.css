@@ -529,32 +529,14 @@ section {
   margin: 0 auto;
   font-family: var(--content-font);
   text-overflow: ellipsis;
-  /* margin-bottom: 2rem; */
   cursor: pointer;
   overflow: hidden;
-  /* white-space: nowrap; */
 }
-
-/* .showFunctionalityDescription, */
-/* .active3 { */
-/* height: 200px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  border: 1px solid white;
-  margin: 1%;
-  z-index: 99;
-  color: pink;
-  transition: width 0.5s;
-} */
 
 /* POPUP */
 .modal {
   display: none;
   position: fixed;
-  z-index: 5;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -564,30 +546,35 @@ section {
 }
 
 /* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  width: 500px;
-  height: 300px;
+.modal__content {
   position: fixed;
+  width: 60%;
+  height: fit-content;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 2rem;
+  text-align: justify;
+  font-size: larger;
   border: 1px solid #888;
+  border-radius: 1rem;
+  background-color: white;
+  color: navy;
 }
-.modalText {
+
+.modal__text {
   display: flex;
-  height: 100%;
   align-items: center;
   justify-content: center;
 }
+
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: navy;
   float: right;
-  margin-top: -50px;
-  padding-right: 20px;
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: bold;
+  z-index: 99;
 }
 
 .close:hover,
