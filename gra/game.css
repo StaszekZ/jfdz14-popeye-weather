@@ -1,73 +1,83 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    font-size: 16px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
 }
 
-html,
 body {
-    width: 100%;
-    flex-direction: column;
-
-    font-family: arial;
+  width: 100%;
+  flex-direction: column;
+  font-family: arial;
+  background: url("./underwater_octopus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
 
 /* .game  */
 
 .game--submarine {
-    --position: 0px;
-    background: url(hiclipart.com\ \(2\).png);
-    width: 100px;
-    background-size: contain;
-    height: 80px;
-    background-repeat: no-repeat;
-    position: absolute;
-    transform: translateY(calc(var(--position) - 40px))
+  --position: 0px;
+  background: url(hiclipartBoat.png);
+  width: 100px;
+  background-size: contain;
+  height: 80px;
+  background-repeat: no-repeat;
+  position: absolute;
+  transform: translateY(calc(var(--position) - 40px));
 }
-
+.game {
+  margin: 2rem;
+}
 .game--screen {
-    margin: 40px;
-    padding: 40px 20px;
-    height: 600px;
-    background-color: var(--bgr-color);
-    position: relative;
-    overflow: hidden;
+  margin: 40px;
+  padding: 40px 20px;
+  height: 600px;
+  background-color: var(--bgr-color);
+  position: relative;
+  overflow: hidden;
+  background: url("./inGameBack.png");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid black;
 }
 
-.game--instruction{
-    text-align: center;
-}
-
-.game--record {
-    text-align: center;
+.game--instruction,
+.game--record,
+.game--scores {
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  color: yellow;
 }
 
 .game--element {
-    --position-left: 0px;
-    --position-top: 0px;
-    position: absolute;
-    --speed: 10s;
-    transition-property: transform;
-    transition-timing-function: linear;
-    transition-duration: var(--speed);
-    transform: translate(calc(var(--position-left) - 20px), calc(var(--position-top) - 20px));
+  --position-left: 0px;
+  --position-top: 0px;
+  position: absolute;
+  --speed: 10s;
+  transition-property: transform;
+  transition-timing-function: linear;
+  transition-duration: var(--speed);
+  transform: translate(
+    calc(var(--position-left) - 20px),
+    calc(var(--position-top) - 20px)
+  );
 }
 
 .game--missile {
-    width: 40px;
-    height: 40px;
-    background: url(bomb.svg) no-repeat;
-    background-size: contain;
+  width: 40px;
+  height: 40px;
+  background: url(bomb.svg) no-repeat;
+  background-size: contain;
 }
 
-
-
-.game--scores {
-    text-align: center;
-}
+/* .game--scores {
+  text-align: center;
+} */
 
 .game--score {
-    font-weight: bold;
-    font-size: 30px;
+  font-weight: bold;
+  font-size: 30px;
 }
